@@ -1,7 +1,23 @@
+import Icon from "../icon";
 import * as Styles from "./styles";
+import { colors } from "../../../styles/design-tokens";
 
-function Banner() {
-  return <Styles.Banner>awesome banner</Styles.Banner>;
+const { grey900 } = colors;
+
+function Banner(props) {
+  const { value, link, url, onClick } = props;
+
+  return (
+    <Styles.Banner>
+      <span>{value}</span>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {link}
+      </a>
+      <button onClick={onClick}>
+        <Icon icon="cross" fill={grey900} />
+      </button>
+    </Styles.Banner>
+  );
 }
 
 export default Banner;

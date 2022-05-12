@@ -6,8 +6,16 @@ function App() {
 
   return (
     <>
-      <h1>title</h1>
-      {bannerIsVisible && <Banner value={`asdasd`} />}
+      {bannerIsVisible && (
+        <Banner
+          value={`Bepro.js is now dappKit`}
+          link="Learn more"
+          url="#0"
+          onClick={() => {
+            setBannerIsVisible(false);
+          }}
+        />
+      )}
     </>
   );
 }
