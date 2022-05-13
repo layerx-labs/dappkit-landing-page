@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
-const { green, purple, grey900 } = colors;
+const { green, purple, grey900, black } = colors;
 
 export const Banner = styled.div`
   position: relative;
+  border-bottom: 1px solid ${black};
   background-color: ${green};
   display: flex;
   align-items: center;
