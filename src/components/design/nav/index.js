@@ -1,12 +1,9 @@
 import Icon from "../icon";
 import * as Styles from "./styles";
-import { colors } from "../../../styles/design-tokens";
 import { DappKit } from "../../../utils/brands";
 
-const { grey900 } = colors;
-
 function Nav(props) {
-  const { banner } = props;
+  const { banner, menu, actionButtonValue, actionButtonUrl, github } = props;
 
   return (
     <Styles.Wrapper>
@@ -15,11 +12,32 @@ function Nav(props) {
         <DappKit />
         <Styles.Menu>
           <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
+            {menu &&
+              Array.isArray(menu) &&
+              menu.map((item) => (
+                <li>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.value}
+                  </a>
+                </li>
+              ))}
           </ul>
+          <a
+            className="get-started--link"
+            href={actionButtonUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {actionButtonValue}
+          </a>
+          <a
+            className="github--link"
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon="github" />
+          </a>
         </Styles.Menu>
       </Styles.Nav>
     </Styles.Wrapper>

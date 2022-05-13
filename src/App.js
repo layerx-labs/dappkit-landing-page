@@ -5,6 +5,13 @@ import Nav from "./components/design/nav";
 function App() {
   const [bannerIsVisible, setBannerIsVisible] = useState(true);
 
+  const menu = [
+    { value: "Features", url: "#0" },
+    { value: "Templates", url: "#0" },
+    { value: "Community", url: "#0" },
+    { value: "Docs", url: "#0" },
+  ];
+
   return (
     <>
       <Nav
@@ -20,6 +27,10 @@ function App() {
             />
           )
         }
+        menu={menu}
+        actionButtonValue="Get Started"
+        actionButtonUrl="#0"
+        github="#0"
       />
     </>
   );
