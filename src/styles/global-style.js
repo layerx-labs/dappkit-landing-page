@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { rem } from "polished";
 import { colors, typography } from "./design-tokens";
 
-const { regular } = typography;
+const { regular, bold } = typography;
 const { grey900 } = colors;
 
 const GlobalStyle = createGlobalStyle`
@@ -12,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 14px;
+    font-size: 16px;
     scroll-behavior: smooth;
   }
 
@@ -27,7 +28,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: 'Space Mono', monospace;
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-weight: ${bold};
+    font-size: ${rem("80px")};
+    line-height: 1.1;
   }
 `;
 

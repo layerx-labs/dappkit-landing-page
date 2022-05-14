@@ -1,5 +1,6 @@
 export const DappKit = ({ fill = "#ffffff" }) => (
   <svg
+    className="logo"
     width={115}
     height={36}
     viewBox="0 0 115 36"

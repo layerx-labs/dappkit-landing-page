@@ -12,6 +12,7 @@ export const Banner = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${rem("10px")} 0;
+  font-size: ${rem("14px")};
 
   a {
     position: relative;
