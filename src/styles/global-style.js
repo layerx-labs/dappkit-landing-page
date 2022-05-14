@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     margin: 0;
     font-family: "Space Mono", monospace;
     font-weight: ${bold};
@@ -37,6 +37,19 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: ${rem("80px")};
+  }
+
+  h2 {
+    font-size: ${rem("36px")};
+  }
+
+  h3 {
+    font-size: ${rem("24px")};
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0
   }
 `;
 

@@ -92,6 +92,7 @@ export const CodeEditorTabs = styled.div`
 
 export const CodeEditorButton = styled.button`
   flex: 1;
+  margin: 0;
   border: 0;
   background-color: ${(props) => (props.active ? purple : light)};
   color: ${(props) => (props.active ? light : grey900)};
