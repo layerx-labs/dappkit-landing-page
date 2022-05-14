@@ -14,8 +14,8 @@ function Nav(props) {
           <ul>
             {menu &&
               Array.isArray(menu) &&
-              menu.map((item) => (
-                <li>
+              menu.map((item, index) => (
+                <li key={index}>
                   <a href={item.url} target="_blank" rel="noopener noreferrer">
                     {item.value}
                   </a>
