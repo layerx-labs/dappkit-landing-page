@@ -23,16 +23,20 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-weight: ${regular};
     font-feature-settings: 'ss04' on;
+    line-height: 1.75;
     color: ${grey900};
     overflow-x: hidden;
   }
 
-  h1 {
+  h1, h2 {
     margin: 0;
     font-family: "Space Mono", monospace;
     font-weight: ${bold};
-    font-size: ${rem("80px")};
     line-height: 1.1;
+  }
+
+  h1 {
+    font-size: ${rem("80px")};
   }
 `;
 

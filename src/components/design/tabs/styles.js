@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors, typography } from "../../../styles/design-tokens";
 
-const { green, light, grey900 } = colors;
+const { green, light, grey200, grey900, purple } = colors;
 const { regular, bold } = typography;
 
 export const Wrapper = styled.div`
@@ -49,9 +49,92 @@ export const TabButton = styled.button`
   }
 `;
 
-export const TabContent = styled.div`
-  border: 1px solid red;
+export const TabContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: ${rem("60px")};
+`;
+
+export const TabContent = styled.div`
+  &.snippet {
+    padding: 0 ${rem("4px")} ${rem("4px")};
+    overflow: hidden;
+  }
+
+  h2 {
+    margin: ${rem("16px")} 0 ${rem("10px")};
+    font-family: "Space Mono", monospace;
+    font-size: ${rem("50px")};
+    font-weight: ${bold};
+  }
+
+  .subtitle {
+    font-size: ${rem("24px")};
+    font-family: "Space Mono", monospace;
+  }
+
+  p {
+    margin-bottom: ${rem("16px")};
+  }
+`;
+
+export const CodeEditor = styled.div`
+  border: 1px solid ${grey900};
+  border-radius: ${rem("10px")};
+  box-shadow: ${rem("4px")} ${rem("4px")} 0 ${grey900};
+`;
+
+export const CodeEditorTabs = styled.div`
+  height: ${rem("44px")};
+  display: flex;
+  border-bottom: 1px solid ${grey900};
+`;
+
+export const CodeEditorButton = styled.button`
+  flex: 1;
+  border: 0;
+  background-color: ${(props) => (props.active ? purple : light)};
+  color: ${(props) => (props.active ? light : grey900)};
+  font-weight: ${(props) => (props.active ? bold : regular)};
+  font-size: ${rem("16px")};
+  cursor: pointer;
+  pointer-events: ${(props) => (props.active ? "none" : "initial")};
+  transition-duration: 0.3s;
+
+  &:first-child {
+    border-radius: ${rem("9px")} 0 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 ${rem("9px")} 0 0;
+  }
+
+  &:hover {
+    background-color: ${grey200};
+  }
+`;
+
+export const CodeEditorContent = styled.div`
+  pre {
+    margin: 0;
+    line-height: 1.5;
+
+    code {
+      overflow-x: scroll;
+      border-radius: 0 0 ${rem("9px")} ${rem("9px")};
+    }
+  }
+`;
+
+export const InUse = styled.div`
+  margin-bottom: 0px;
+  border-radius: 0 0 ${rem("9px")} ${rem("9px")};
+  background-color: ${light};
+  overflow: hidden;
+
+  img {
+    margin-bottom: ${rem("-8px")};
+    width: 100%;
+    height: auto;
+  }
 `;
