@@ -4,6 +4,7 @@ import Examples from "./components/examples";
 import Sdk from "./components/sdk";
 import Features from "./components/features";
 import Templates from "./components/templates";
+import Bounties from "./components/bounties";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Sdk />
       <Features />
       <Templates />
+      <Bounties />
     </>
   );
 }

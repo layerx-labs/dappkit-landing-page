@@ -13,14 +13,14 @@ const Grid = styled.div`
 function Sdk() {
   const items = [
     {
-      title: "Less time researching",
-      description:
-        "We follow the standards and provide an easy interactable one-stop-shop for all your contract needs.",
-    },
-    {
       title: "Easy setup and user-friendly documentation",
       description:
         "With generated documentation from source and a Gitbook documentation maintained by the community, we have it all.",
+    },
+    {
+      title: "Less time researching",
+      description:
+        "We follow the standards and provide an easy interactable one-stop-shop for all your contract needs.",
     },
     {
       title: "Web3 features integration with just a few lines of code",

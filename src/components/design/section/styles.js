@@ -1,18 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
-const { light, dark, grey800, grey900 } = colors;
+const { light, dark, grey800, grey900, purple500 } = colors;
 
 export const Wrapper = styled.div`
-  background-color: ${(props) => (props.color === "dark" ? dark : light)};
+  background-color: ${light};
   padding: ${rem("100px")} ${rem("30px")};
-  color: ${(props) => (props.color === "dark" ? light : dark)};
+  color: ${dark};
 
   > div {
     margin: 0 auto;
     max-width: ${rem("1240px")};
   }
+
+  ${(props) =>
+    props.color === "dark" &&
+    css`
+      background-color: ${dark};
+      color: ${light};
+    `}
+
+  ${(props) =>
+    props.color === "purple" &&
+    css`
+      background-color: ${purple500};
+    `}
 `;
 
 export const Header = styled.div`
