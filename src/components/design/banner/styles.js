@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
-const { green, purple, grey900, black } = colors;
+const { green, purple500, grey900, black } = colors;
 
 export const Banner = styled.div`
   position: relative;
@@ -17,9 +17,9 @@ export const Banner = styled.div`
   a {
     position: relative;
     margin-left: ${rem("20px")};
-    border-bottom: 1px solid ${purple};
+    border-bottom: 1px solid ${purple500};
     padding-bottom: ${rem("4px")};
-    color: ${purple};
+    color: ${purple500};
     text-decoration: none;
     transition-duration: 0.3s;
 

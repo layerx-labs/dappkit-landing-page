@@ -11,7 +11,7 @@ export const colors = {
   green: "#D2FF62",
   green500: "#BAFF62",
   green900: "#253314",
-  purple: "#7B61FF",
+  purple500: "#7761FF",
 };
 
 export const typography = {

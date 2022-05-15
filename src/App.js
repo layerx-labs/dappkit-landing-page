@@ -3,6 +3,7 @@ import Intro from "./components/intro";
 import Examples from "./components/examples";
 import Sdk from "./components/sdk";
 import Features from "./components/features";
+import Templates from "./components/templates";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Examples />
       <Sdk />
       <Features />
+      <Templates />
     </>
   );
 }

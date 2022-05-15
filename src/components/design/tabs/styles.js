@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors, typography } from "../../../styles/design-tokens";
 
-const { green, light, grey200, grey900, purple } = colors;
+const { green, light, grey200, grey900, purple500 } = colors;
 const { regular, bold } = typography;
 
 export const Wrapper = styled.div`
@@ -94,7 +94,7 @@ export const CodeEditorButton = styled.button`
   flex: 1;
   margin: 0;
   border: 0;
-  background-color: ${(props) => (props.active ? purple : light)};
+  background-color: ${(props) => (props.active ? purple500 : light)};
   color: ${(props) => (props.active ? light : grey900)};
   font-weight: ${(props) => (props.active ? bold : regular)};
   font-size: ${rem("16px")};
