@@ -2,11 +2,16 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import CardCta from "./design/card-cta";
+import { device } from "../styles/design-tokens";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: ${rem("60px")};
+
+  @media ${device.m} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 function Bounties() {
