@@ -20,3 +20,13 @@ export const typography = {
   medium: 500,
   bold: 700,
 };
+
+export const device = {
+  xs: `(min-width: 360px)`,
+  s: `(min-width: 700px)`,
+  m: `(min-width: 900px)`,
+  l: `(min-width: 1280px)`,
+  xl: `(min-width: 1600px)`,
+  touch: `(hover: none) and (pointer: coarse)`,
+  mouse: "(min-width: 538px) and (min-height: 720px)",
+};
