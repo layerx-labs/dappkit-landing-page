@@ -3,12 +3,17 @@ import { rem } from "polished";
 import Section from "./design/section";
 import Card from "./design/card";
 import ButtonLink from "./design/button-link";
+import { device } from "../styles/design-tokens";
 
 const Grid = styled.div`
   margin-bottom: ${rem("60px")};
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: ${rem("30px")};
+
+  @media ${device.l} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   .card {
     padding: ${rem("20px")};
