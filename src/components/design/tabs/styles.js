@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography } from "../../../styles/design-tokens";
+import { colors, typography, device } from "../../../styles/design-tokens";
 
 const { green, light, grey200, grey900, purple500 } = colors;
 const { regular, bold } = typography;
@@ -18,11 +18,26 @@ export const Wrapper = styled.div`
 export const TabsNav = styled.ul`
   margin: 0 0 ${rem("60px")};
   padding: 0;
-  display: flex;
-  justify-content: space-between;
 
   li {
     list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: ${rem("10px")};
+    }
+  }
+
+  @media ${device.m} {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 
@@ -51,8 +66,12 @@ export const TabButton = styled.button`
 
 export const TabContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: ${rem("60px")};
+
+  @media ${device.m} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const TabContent = styled.div`

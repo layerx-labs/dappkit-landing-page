@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Tabs from "./design/tabs";
-import { nft } from "../utils/snippets";
+import { nft, crypto, defi, dao } from "../utils/snippets";
 
 function Examples() {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -25,7 +25,7 @@ function Examples() {
       content:
         "ERC20 Tokens can be used as currency or as tokens to reward your users via gamification techniques",
       url: "#0",
-      snippet: nft,
+      snippet: crypto,
       img: "https://static.news.bitcoin.com/wp-content/uploads/2018/08/AP325540479269-1024x724.jpg",
     },
     {
@@ -36,7 +36,7 @@ function Examples() {
       content:
         "dappKit comes preloaded with default DeFi smart contracts you can use to jumpstart your business",
       url: "#0",
-      snippet: nft,
+      snippet: defi,
       img: "https://static.news.bitcoin.com/wp-content/uploads/2018/08/AP325540479269-1024x724.jpg",
     },
     {
@@ -47,7 +47,7 @@ function Examples() {
       content:
         "Base your DAO on our Network and take advantage of a community made smart contract",
       url: "#0",
-      snippet: nft,
+      snippet: dao,
       img: "https://static.news.bitcoin.com/wp-content/uploads/2018/08/AP325540479269-1024x724.jpg",
     },
   ];
