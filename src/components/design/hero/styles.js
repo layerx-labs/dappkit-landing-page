@@ -7,7 +7,7 @@ const { light, dark, grey800 } = colors;
 export const Wrapper = styled.div`
   min-height: calc(100vh - ${rem("208px")});
   background-color: ${light};
-  padding: ${rem("64px")} ${rem("30px")} 0 ${rem("30px")};
+  padding: ${rem("200px")} ${rem("30px")} ${rem("100px")} ${rem("30px")};
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -33,12 +33,13 @@ export const Wrapper = styled.div`
 `;
 
 export const ActionButtons = styled.div`
-  margin-top: ${rem("40px")};
+  margin-top: ${rem("30px")};
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  a:not(:last-child) {
-    margin-right: ${rem("20px")};
+  a {
+    margin: ${rem("10px")};
   }
 `;

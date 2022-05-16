@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
-import { colors, typography } from "./design-tokens";
+import { colors, typography, device } from "./design-tokens";
 
 const { regular, medium, bold } = typography;
 const { grey900 } = colors;
@@ -36,7 +36,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: ${rem("80px")};
+    font-size: ${rem("50px")};
+
+    @media ${device.m} {
+      font-size: ${rem("80px")};
+    }
   }
 
   h2 {
