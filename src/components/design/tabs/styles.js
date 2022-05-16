@@ -140,8 +140,14 @@ export const CodeEditorContent = styled.div`
     line-height: 1.5;
 
     code {
-      overflow-x: scroll;
       border-radius: 0 0 ${rem("9px")} ${rem("9px")};
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      -webkit-scrollbar-width: none;
+      -moz-scrollbar-width: none;
+      -ms-scrollbar-width: none;
+      scrollbar-width: none;
     }
   }
 `;

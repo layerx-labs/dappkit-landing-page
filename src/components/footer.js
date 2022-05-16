@@ -4,11 +4,11 @@ function Footer() {
   const social = [
     {
       channel: "github",
-      url: "#0",
+      url: "https://github.com/taikai/dappkit",
     },
     {
       channel: "discord",
-      url: "#0",
+      url: "https://discord.gg/9aUufhzhfm",
     },
     {
       channel: "twitter",
@@ -23,22 +23,25 @@ function Footer() {
         {
           value: "Docs",
           url: "#0",
+          external: true,
         },
         {
           value: "Learn",
           url: "#0",
+          external: true,
         },
         {
           value: "Blog",
-          url: "#0",
+          url: "https://bepronetwork.medium.com",
+          external: true,
         },
         {
           value: "Features",
-          url: "#0",
+          url: "#features",
         },
         {
           value: "Pricing",
-          url: "#0",
+          url: "#pricing",
         },
       ],
     },
@@ -47,19 +50,23 @@ function Footer() {
       links: [
         {
           value: "About",
-          url: "#0",
+          url: "https://taikai.network/about-us",
+          external: true,
         },
         {
           value: "GitHub",
-          url: "#0",
+          url: "https://github.com/taikai/dappkit",
+          external: true,
         },
         {
           value: "Discord",
-          url: "#0",
+          url: "https://discord.gg/9aUufhzhfm",
+          external: true,
         },
         {
           value: "Twitter",
           url: "#0",
+          external: true,
         },
       ],
     },
@@ -71,7 +78,7 @@ function Footer() {
           url: "#0",
         },
         {
-          value: "Termos of Service",
+          value: "Terms of Service",
           url: "#0",
         },
       ],

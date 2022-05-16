@@ -7,7 +7,7 @@ import Templates from "./components/templates";
 import Bounties from "./components/bounties";
 import Pricing from "./components/pricing";
 import Projects from "./components/projects";
-import Data from "./components/data";
+// import Data from "./components/data";
 import Support from "./components/support";
 import Footer from "./components/footer";
 
@@ -18,12 +18,12 @@ function App() {
       <Intro />
       <Examples />
       <Sdk />
-      <Features />
-      <Templates />
+      <Features id="features" />
+      <Templates id="templates" />
       <Bounties />
-      <Pricing />
+      <Pricing id="pricing" />
       <Projects />
-      <Data />
+      {/* <Data /> */}
       <Support />
       <Footer />
     </>

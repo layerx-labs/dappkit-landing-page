@@ -50,7 +50,7 @@ const Grid = styled.div`
   }
 `;
 
-function Features() {
+function Features({ id }) {
   const items = [
     {
       title:
@@ -116,7 +116,7 @@ function Features() {
   ];
 
   return (
-    <Section color="dark" title="Advanced Features">
+    <Section id={id} color="dark" title="Advanced Features">
       <Grid>
         {items &&
           Array.isArray(items) &&

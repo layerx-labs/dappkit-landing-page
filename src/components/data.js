@@ -37,19 +37,19 @@ function Sdk() {
   const items = [
     {
       title: "Total Transaction Volume",
-      value: "1+",
+      value: "###",
     },
     {
       title: "Users",
-      value: "1+",
+      value: "3.5k+",
     },
     {
       title: "Transactions",
-      value: "1+",
+      value: "###",
     },
     {
       title: "Adopters",
-      value: "1+",
+      value: "###",
     },
   ];
 

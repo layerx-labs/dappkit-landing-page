@@ -1,9 +1,9 @@
 import Section from "./design/section";
 import Price from "./design/price";
 
-function Pricing() {
+function Pricing({ id }) {
   return (
-    <Section color="green">
+    <Section id={id} color="green">
       <Price
         title="Pricing"
         description={[

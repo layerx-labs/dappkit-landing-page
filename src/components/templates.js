@@ -17,14 +17,23 @@ const Grid = styled.ul`
   }
 `;
 
-function Templates() {
+function Templates({ id }) {
   const templates = [
-    { name: "Node.js", url: "#0", img: <Nodejs /> },
-    { name: "Next.js", url: "#0", img: <Nextjs /> },
+    {
+      name: "Node.js",
+      url: "https://stackblitz.com/edit/node-b3cgaa?file=index.js",
+      img: <Nodejs />,
+    },
+    {
+      name: "Next.js",
+      url: "NextJS & ReactJS https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js",
+      img: <Nextjs />,
+    },
     { name: "Angular", url: "#0", img: <Angular /> },
   ];
   return (
     <Section
+      id={id}
       title="Project templates"
       subtitle="Start your project with an open-source repository."
     >

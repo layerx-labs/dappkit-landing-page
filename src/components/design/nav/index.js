@@ -33,8 +33,8 @@ function Nav(props) {
                   <li key={index}>
                     <a
                       href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
                     >
                       {item.value}
                     </a>

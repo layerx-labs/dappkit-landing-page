@@ -7,10 +7,14 @@ function NavMenu() {
   const [drawerOpened, setDrawerOpened] = useState(false);
 
   const menu = [
-    { value: "Features", url: "#0" },
-    { value: "Templates", url: "#0" },
-    { value: "Community", url: "#0" },
-    { value: "Docs", url: "#0" },
+    { value: "Features", url: "#features" },
+    { value: "Templates", url: "#templates" },
+    {
+      value: "Community",
+      url: "https://discord.gg/9aUufhzhfm",
+      external: true,
+    },
+    { value: "Docs", url: "#0", external: true },
   ];
 
   return (
@@ -30,7 +34,7 @@ function NavMenu() {
       menu={menu}
       actionButtonValue="Get Started"
       actionButtonUrl="#0"
-      github="#0"
+      github="https://github.com/taikai/dappkit"
       drawerOpened={drawerOpened}
       drawerOnClick={() => {
         setDrawerOpened(!drawerOpened);
