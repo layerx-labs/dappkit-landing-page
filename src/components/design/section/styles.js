@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
-const { light, dark, grey800, grey900, purple500 } = colors;
+const { light, dark, grey800, grey900, purple500, green500 } = colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
@@ -25,6 +25,12 @@ export const Wrapper = styled.div`
     props.color === "purple" &&
     css`
       background-color: ${purple500};
+    `}
+
+  ${(props) =>
+    props.color === "green" &&
+    css`
+      background-color: ${green500};
     `}
 `;
 

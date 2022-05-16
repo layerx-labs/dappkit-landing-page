@@ -5,6 +5,7 @@ import Sdk from "./components/sdk";
 import Features from "./components/features";
 import Templates from "./components/templates";
 import Bounties from "./components/bounties";
+import Pricing from "./components/pricing";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Features />
       <Templates />
       <Bounties />
+      <Pricing />
     </>
   );
 }
