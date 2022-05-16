@@ -2,42 +2,50 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import Card from "./design/card";
+import { device } from "../styles/design-tokens";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: ${rem("20px")};
 
-  > div {
-    &:first-child {
-      grid-column: 1 / 8;
-      grid-row: 1 / 2;
-    }
+  @media ${device.s} {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    &:nth-child(2) {
-      grid-column: 8 / 13;
-      grid-row: 1 / 2;
-    }
+  @media ${device.m} {
+    grid-template-columns: repeat(12, 1fr);
 
-    &:nth-child(3) {
-      grid-column: 1 / 6;
-      grid-row: 2 / 3;
-    }
+    > div {
+      &:first-child {
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+      }
 
-    &:nth-child(4) {
-      grid-column: 6 / 13;
-      grid-row: 2 / 3;
-    }
+      &:nth-child(2) {
+        grid-column: 8 / 13;
+        grid-row: 1 / 2;
+      }
 
-    &:nth-child(5) {
-      grid-column: 1 / 7;
-      grid-row: 3 / 4;
-    }
+      &:nth-child(3) {
+        grid-column: 1 / 6;
+        grid-row: 2 / 3;
+      }
 
-    &:last-child {
-      grid-column: 7 / 13;
-      grid-row: 3 / 4;
+      &:nth-child(4) {
+        grid-column: 6 / 13;
+        grid-row: 2 / 3;
+      }
+
+      &:nth-child(5) {
+        grid-column: 1 / 7;
+        grid-row: 3 / 4;
+      }
+
+      &:last-child {
+        grid-column: 7 / 13;
+        grid-row: 3 / 4;
+      }
     }
   }
 `;
