@@ -2,12 +2,17 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import Card from "./design/card";
+import { device } from "../styles/design-tokens";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: ${rem("30px")};
+
+  @media ${device.s} {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 function Sdk() {
