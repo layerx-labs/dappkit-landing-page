@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { typography } from "../../../styles/design-tokens";
+import { typography, device } from "../../../styles/design-tokens";
 
 const { medium } = typography;
 
@@ -19,7 +19,14 @@ export const Wrapper = styled.div`
       justify-content: center;
 
       &:first-child {
-        padding-right: ${rem("30px")};
+        flex: 1;
+        text-align: center;
+
+        @media ${device.m} {
+          flex: inherit;
+          padding-right: ${rem("30px")};
+          text-align: left;
+        }
 
         h2 {
           margin-bottom: ${rem("10px")};
@@ -41,17 +48,28 @@ export const Wrapper = styled.div`
       }
 
       &:last-child {
+        display: none;
+
         img {
           position: absolute;
           width: auto;
           height: 200%;
+        }
+
+        @media ${device.m} {
+          display: inherit;
         }
       }
     }
   }
 
   > img {
-    position: absolute;
+    display: none;
+
+    @media ${device.l} {
+      display: inherit;
+      position: absolute;
+    }
 
     &.dollar-coin-1 {
       top: 0;
