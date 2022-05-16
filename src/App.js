@@ -9,6 +9,7 @@ import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Data from "./components/data";
 import Support from "./components/support";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Projects />
       <Data />
       <Support />
+      <Footer />
     </>
   );
 }

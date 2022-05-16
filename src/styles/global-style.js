@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
 import { colors, typography } from "./design-tokens";
 
-const { regular, bold } = typography;
+const { regular, medium, bold } = typography;
 const { grey900 } = colors;
 
 const GlobalStyle = createGlobalStyle`
@@ -46,6 +46,12 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: ${rem("24px")};
     line-height: 1.5;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: ${medium};
   }
 
   p {
