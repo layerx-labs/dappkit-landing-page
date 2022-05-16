@@ -11,6 +11,7 @@ export const colors = {
   green: "#D2FF62",
   green500: "#BAFF62",
   green900: "#253314",
+  purple200: "#C9C0FF",
   purple500: "#7761FF",
 };
 

@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
-const { light, dark, grey800, grey900, purple500, green500 } = colors;
+const { light, dark, grey800, grey900, purple200, purple500, green500 } =
+  colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
@@ -27,6 +28,12 @@ export const Wrapper = styled.div`
       background-color: ${purple500};
     `}
 
+    ${(props) =>
+    props.color === "light-purple" &&
+    css`
+      background-color: ${purple200};
+    `}
+
   ${(props) =>
     props.color === "green" &&
     css`
@@ -36,7 +43,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
   margin-bottom: ${rem("60px")};
-  text-align: center;
+  text-align: ${(props) => (props.align === "left" ? "left" : "center")};
 
   h2 {
     color: ${(props) => (props.color === "dark" ? light : grey900)};

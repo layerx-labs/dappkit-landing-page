@@ -1,13 +1,19 @@
 import * as Styles from "./styles";
 
 function Section(props) {
-  const { color = "light", title, subtitle, children } = props;
+  const {
+    color = "light",
+    align = "center",
+    title,
+    subtitle,
+    children,
+  } = props;
 
   return (
-    <Styles.Wrapper color={color}>
+    <Styles.Wrapper color={color} align={align}>
       <div>
         {(title || subtitle) && (
-          <Styles.Header color={color}>
+          <Styles.Header color={color} align={align}>
             {title && <h2>{title}</h2>}
             {subtitle && <span>{subtitle}</span>}
           </Styles.Header>

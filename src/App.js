@@ -8,6 +8,7 @@ import Bounties from "./components/bounties";
 import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Data from "./components/data";
+import Support from "./components/support";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Pricing />
       <Projects />
       <Data />
+      <Support />
     </>
   );
 }
