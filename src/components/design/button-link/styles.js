@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { colors, typography } from "../../../styles/design-tokens";
 
@@ -45,4 +45,15 @@ export const Button = styled.a`
     box-shadow: ${rem("8px")} ${rem("8px")} 0
       ${(props) => (props.color === "dark" ? grey600 : dark)};
   }
+
+  ${(props) =>
+    props.variant === "text" &&
+    css`
+      border: 0;
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    `}
 `;

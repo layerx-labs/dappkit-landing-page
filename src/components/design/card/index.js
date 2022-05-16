@@ -1,7 +1,7 @@
 import * as Styles from "./styles";
 
 function Card(props) {
-  const { className, color = "light", title, description } = props;
+  const { className = "card", color = "light", title, description } = props;
 
   return (
     <Styles.Wrapper className={className} color={color}>

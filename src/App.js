@@ -7,6 +7,7 @@ import Templates from "./components/templates";
 import Bounties from "./components/bounties";
 import Pricing from "./components/pricing";
 import Projects from "./components/projects";
+import Data from "./components/data";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Bounties />
       <Pricing />
       <Projects />
+      <Data />
     </>
   );
 }

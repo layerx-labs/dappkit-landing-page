@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { rem } from "polished";
 import { colors } from "../../../styles/design-tokens";
 
