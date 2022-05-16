@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography } from "../../../styles/design-tokens";
+import { colors, typography, device } from "../../../styles/design-tokens";
 
-const { light, dark } = colors;
+const { light, dark, grey100 } = colors;
 const { bold } = typography;
 
 export const Wrapper = styled.div`
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid ${dark};
   font-size: ${rem("14px")};
+  z-index: 3;
 `;
 
 export const Nav = styled.div`
@@ -27,8 +30,7 @@ export const Nav = styled.div`
 `;
 
 export const Menu = styled.div`
-  display: flex;
-  align-items: center;
+  display: none;
 
   a {
     color: ${dark};
@@ -98,5 +100,101 @@ export const Menu = styled.div`
       height: var(--size);
       fill: ${dark};
     }
+  }
+
+  @media ${device.m} {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const HamburgerButton = styled.button`
+  border: 0;
+  display: block;
+  background-color: transparent;
+  width: ${rem("30px")};
+  padding: 0;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    border-radius: 999px;
+    background-color: ${dark};
+    height: ${rem("4px")};
+    transition: all 200ms ease-in-out;
+  }
+
+  &:before {
+    box-shadow: 0 ${rem("8px")} 0 ${dark};
+    margin-bottom: ${rem("12px")};
+  }
+
+  &.opened:before {
+    box-shadow: 0 0 0 ${dark};
+    transform: translateY(${rem("10px")}) rotate(45deg);
+  }
+
+  &.opened:after {
+    transform: translateY(${rem("-6px")}) rotate(-45deg);
+  }
+
+  @media ${device.m} {
+    display: none;
+  }
+`;
+
+export const Drawer = styled.div`
+  position: fixed;
+  background-color: ${light};
+  width: 100vw;
+  height: 0;
+  padding: 0 ${rem("30px")};
+  overflow-y: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+
+  ul {
+    margin: 0 0 ${rem("60px")} 0;
+    padding: 0;
+    z-index: 2;
+
+    li {
+      list-style: none;
+      border-bottom: ${rem("1px")} solid ${grey100};
+      padding-bottom: ${rem("5px")};
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-bottom: ${rem("20px")};
+      }
+
+      a {
+        color: ${dark};
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.opened {
+    height: 100vh;
+    padding: ${rem("150px")} ${rem("30px")};
+    overflow-y: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  > a:not(:last-child) {
+    margin-bottom: ${rem("14px")};
+  }
+
+  @media ${device.m} {
+    display: none;
   }
 `;

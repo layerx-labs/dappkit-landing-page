@@ -4,6 +4,7 @@ import Banner from "./design/banner";
 
 function NavMenu() {
   const [bannerIsVisible, setBannerIsVisible] = useState(true);
+  const [drawerOpened, setDrawerOpened] = useState(false);
 
   const menu = [
     { value: "Features", url: "#0" },
@@ -30,6 +31,10 @@ function NavMenu() {
       actionButtonValue="Get Started"
       actionButtonUrl="#0"
       github="#0"
+      drawerOpened={drawerOpened}
+      drawerOnClick={() => {
+        setDrawerOpened(!drawerOpened);
+      }}
     />
   );
 }

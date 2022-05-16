@@ -7,7 +7,7 @@ const { light, dark, grey800 } = colors;
 export const Wrapper = styled.div`
   min-height: calc(100vh - ${rem("208px")});
   background-color: ${light};
-  padding: 0 ${rem("30px")};
+  padding: ${rem("64px")} ${rem("30px")} 0 ${rem("30px")};
   text-align: center;
   display: flex;
   flex-direction: column;
