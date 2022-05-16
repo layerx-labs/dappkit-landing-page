@@ -3,13 +3,22 @@ import { rem } from "polished";
 import Section from "./design/section";
 import ButtonLink from "./design/button-link";
 import { Polkamarkets, RealFevr, DappKit } from "../utils/brands";
+import { device } from "../styles/design-tokens";
 
 const Grid = styled.ul`
   margin: 0 0 ${rem("60px")} 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-row-gap: ${rem("30px")};
+
+  @media ${device.s} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   li {
     list-style: none;
