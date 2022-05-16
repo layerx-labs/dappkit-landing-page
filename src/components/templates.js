@@ -5,17 +5,15 @@ import CardLink from "./design/card-link";
 import { Nodejs, Nextjs, Angular } from "../utils/brands";
 
 const Grid = styled.ul`
-  margin: 0;
-  padding: 0;
+  margin: ${rem("-20px")} 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 
   li {
     list-style: none;
-
-    &:not(:last-child) {
-      margin-right: ${rem("40px")};
-    }
+    margin: ${rem("20px")};
   }
 `;
 
