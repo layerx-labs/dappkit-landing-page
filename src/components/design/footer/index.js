@@ -12,7 +12,7 @@ export function Footer(props) {
     <Styles.Wrapper>
       <div>
         <Styles.Columns>
-          <div>
+          <div className="social">
             <Styles.Social>
               {social &&
                 Array.isArray(social) &&

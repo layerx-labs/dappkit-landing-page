@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors } from "../../../styles/design-tokens";
+import { colors, device } from "../../../styles/design-tokens";
 
 const { light, dark, grey100 } = colors;
 
@@ -17,8 +17,24 @@ export const Wrapper = styled.div`
 
 export const Columns = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, ${rem("180px")});
-  grid-gap: ${rem("100px")};
+  grid-template-columns: 1fr;
+  grid-gap: ${rem("50px")};
+
+  .social {
+    grid-column: 1 / -1;
+  }
+
+  @media ${device.m} {
+    grid-template-columns: repeat(auto-fill, ${rem("180px")});
+  }
+
+  @media ${device.l} {
+    grid-gap: ${rem("100px")};
+
+    .social {
+      grid-column: inherit;
+    }
+  }
 
   ul {
     margin: 0;
