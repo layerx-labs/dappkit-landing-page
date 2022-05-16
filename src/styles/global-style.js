@@ -3,7 +3,7 @@ import { rem } from "polished";
 import { colors, typography, device } from "./design-tokens";
 
 const { regular, medium, bold } = typography;
-const { grey900 } = colors;
+const { purple500, green500, grey900 } = colors;
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.75;
     color: ${grey900};
     overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: ${purple500};
+    color: ${green500};
   }
 
   h1, h2, h3 {

@@ -5,18 +5,53 @@ import Card from "./design/card";
 import { device } from "../styles/design-tokens";
 
 const Grid = styled.div`
+  margin: 0 ${rem("-30px")};
   display: grid;
-  grid-template-columns: 1fr;
+  grid-auto-flow: column;
   grid-gap: ${rem("20px")};
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: ${rem("60px")};
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    width: ${rem("15px")};
+  }
+
+  > div {
+    width: calc(100vw - ${rem("120px")});
+    scroll-snap-align: start;
+  }
 
   @media ${device.s} {
-    grid-template-columns: 1fr 1fr;
+    > div {
+      width: calc(100vw - ${rem("300px")});
+    }
   }
 
   @media ${device.m} {
+    margin: 0;
+    display: grid;
+    grid-auto-flow: inherit;
     grid-template-columns: repeat(12, 1fr);
 
+    &:before,
+    &:after {
+      content: inherit;
+      width: 0;
+    }
+
     > div {
+      width: inherit;
+
       &:first-child {
         grid-column: 1 / 8;
         grid-row: 1 / 2;
