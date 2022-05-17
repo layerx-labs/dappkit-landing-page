@@ -1,26 +1,24 @@
+import Section from "../section";
+import { Coin1, Coin2, Coin3, Coin4, Coin5, Coin6 } from "../../../utils/coins";
 import * as Styles from "./styles";
-const dollars = "/images/dollars.png";
-const dollarCoin1 = "/images/dollar-coin-1.svg";
-const dollarCoin2 = "/images/dollar-coin-2.svg";
 
 function Price(props) {
-  const { title, description } = props;
+  const { id, title, description, blink } = props;
 
   return (
     <Styles.Wrapper>
-      <div>
-        <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
-        <div>
-          <img src={dollars} alt="Dollar symbols" />
-        </div>
-      </div>
+      <Coin1 />
+      <Coin2 />
+      <Coin3 />
+      <Coin4 />
+      <Coin5 />
+      <Coin6 />
 
-      <img className="dollar-coin-1" src={dollarCoin1} alt="Dollar symbols" />
-      <img className="dollar-coin-2" src={dollarCoin1} alt="Dollar symbols" />
-      <img className="dollar-coin-3" src={dollarCoin2} alt="Dollar symbols" />
+      <Section id={id} color="green">
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <span>{blink}</span> 😉
+      </Section>
     </Styles.Wrapper>
   );
 }

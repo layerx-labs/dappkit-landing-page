@@ -1,91 +1,64 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { typography, device } from "../../../styles/design-tokens";
-
-const { medium } = typography;
+import { device } from "../../../styles/design-tokens";
 
 export const Wrapper = styled.div`
   position: relative;
+  text-align: center;
+  font-family: "Space Mono", monospace;
 
-  > div {
-    margin: 0 auto;
-    max-width: 800px;
-    display: flex;
+  svg {
+    display: none;
+    position: absolute;
 
-    > div {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    @media ${device.m} {
+      display: inherit;
+    }
 
-      &:first-child {
-        flex: 1;
-        text-align: center;
+    &.coin-1 {
+      top: ${rem("-70px")};
+      left: 20%;
+    }
 
-        @media ${device.m} {
-          flex: inherit;
-          padding-right: ${rem("30px")};
-          text-align: left;
-        }
+    &.coin-2 {
+      top: ${rem("-50px")};
+      right: 20%;
+    }
 
-        h2 {
-          margin-bottom: ${rem("10px")};
-        }
+    &.coin-3 {
+      top: ${rem("30px")};
+      left: 0;
+    }
 
-        p {
-          span {
-            &:first-child {
-              font-size: ${rem("29px")};
-              font-weight: ${medium};
-            }
+    &.coin-4 {
+      top: ${rem("60px")};
+      right: 0;
+    }
 
-            &:last-child {
-              font-size: ${rem("19px")};
-              line-height: 2.25;
-            }
-          }
-        }
-      }
+    &.coin-5 {
+      bottom: ${rem("-70px")};
+      left: 5%;
+    }
 
-      &:last-child {
-        display: none;
-
-        img {
-          position: absolute;
-          width: auto;
-          height: 200%;
-        }
-
-        @media ${device.m} {
-          display: inherit;
-        }
-      }
+    &.coin-6 {
+      bottom: ${rem("-60px")};
+      right: 20%;
     }
   }
 
-  > img {
-    display: none;
+  h2 {
+    margin-bottom: ${rem("10px")};
+  }
 
-    @media ${device.l} {
-      display: inherit;
-      position: absolute;
-    }
+  p {
+    margin-bottom: ${rem("5px")};
+    font-size: ${rem("28px")};
+    line-height: 1.5;
+  }
 
-    &.dollar-coin-1 {
-      top: 0;
-      margin-top: ${rem("-160px")};
-    }
-
-    &.dollar-coin-2 {
-      bottom: 0;
-      left: ${rem("50px")};
-      margin-bottom: ${rem("-180px")};
-    }
-
-    &.dollar-coin-3 {
-      top: 0;
-      right: 0;
-      margin-top: ${rem("-210px")};
-    }
+  span {
+    font-size: ${rem("19px")};
+    font-style: italic;
+    line-height: 2.25;
   }
 `;
