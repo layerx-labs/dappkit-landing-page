@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     margin: 0;
     font-size: 1rem;
-    font-weight: ${medium};
+    font-weight: ${bold};
   }
 
   p {

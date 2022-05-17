@@ -7,8 +7,6 @@ import Templates from "./components/templates";
 import Bounties from "./components/bounties";
 import Pricing from "./components/pricing";
 import Projects from "./components/projects";
-// import Data from "./components/data";
-import Support from "./components/support";
 import Footer from "./components/footer";
 
 function App() {
@@ -23,8 +21,6 @@ function App() {
       <Bounties />
       <Pricing id="pricing" />
       <Projects />
-      {/* <Data /> */}
-      <Support />
       <Footer />
     </>
   );

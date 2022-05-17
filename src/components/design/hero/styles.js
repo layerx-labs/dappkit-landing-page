@@ -4,7 +4,7 @@ import { colors } from "../../../styles/design-tokens";
 
 const { light, dark, grey800 } = colors;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   min-height: calc(100vh - ${rem("208px")});
   background-color: ${light};
   padding: ${rem("200px")} ${rem("30px")} ${rem("100px")} ${rem("30px")};

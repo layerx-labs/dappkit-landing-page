@@ -5,7 +5,7 @@ import { colors, typography, device } from "../../../styles/design-tokens";
 const { light, dark, grey100 } = colors;
 const { bold } = typography;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
   border-bottom: 1px solid ${dark};

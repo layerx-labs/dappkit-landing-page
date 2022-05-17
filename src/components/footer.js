@@ -1,21 +1,6 @@
 import { Footer as Component } from "./design/footer";
 
 function Footer() {
-  const social = [
-    {
-      channel: "github",
-      url: "https://github.com/taikai/dappkit",
-    },
-    {
-      channel: "discord",
-      url: "https://discord.gg/9aUufhzhfm",
-    },
-    {
-      channel: "twitter",
-      url: "#0",
-    },
-  ];
-
   const links = [
     {
       title: "General Resources",
@@ -31,8 +16,8 @@ function Footer() {
           external: true,
         },
         {
-          value: "Blog",
-          url: "https://bepronetwork.medium.com",
+          value: "About",
+          url: "https://taikai.network/about-us",
           external: true,
         },
         {
@@ -42,31 +27,6 @@ function Footer() {
         {
           value: "Pricing",
           url: "#pricing",
-        },
-      ],
-    },
-    {
-      title: "About dappKit",
-      links: [
-        {
-          value: "About",
-          url: "https://taikai.network/about-us",
-          external: true,
-        },
-        {
-          value: "GitHub",
-          url: "https://github.com/taikai/dappkit",
-          external: true,
-        },
-        {
-          value: "Discord",
-          url: "https://discord.gg/9aUufhzhfm",
-          external: true,
-        },
-        {
-          value: "Twitter",
-          url: "#0",
-          external: true,
         },
       ],
     },
@@ -82,6 +42,21 @@ function Footer() {
           url: "#0",
         },
       ],
+    },
+  ];
+
+  const social = [
+    {
+      channel: "github",
+      url: "https://github.com/taikai/dappkit",
+    },
+    {
+      channel: "discord",
+      url: "https://discord.gg/9aUufhzhfm",
+    },
+    {
+      channel: "twitter",
+      url: "#0",
     },
   ];
 
