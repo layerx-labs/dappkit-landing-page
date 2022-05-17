@@ -8,22 +8,22 @@ function Price(props) {
 
   return (
     <Styles.Wrapper>
-      <ParallaxLayer offset={0.15} speed={0.05}>
+      <ParallaxLayer offset={0.15} speed={0.05} factor={0}>
         <Coin1 />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.3} speed={0.1}>
+      <ParallaxLayer offset={0.3} speed={0.1} factor={0}>
         <Coin2 />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.5} speed={0.15}>
+      <ParallaxLayer offset={0.8} speed={0.25} factor={0}>
         <Coin3 />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.6} speed={0.2}>
+      <ParallaxLayer offset={0.6} speed={0.2} factor={0}>
         <Coin4 />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.05} speed={0.25}>
+      <ParallaxLayer offset={0.55} speed={0.1} factor={0}>
         <Coin5 />
       </ParallaxLayer>
-      <ParallaxLayer offset={0.1} speed={0.3}>
+      <ParallaxLayer offset={0.95} speed={0.25} factor={0}>
         <Coin6 />
       </ParallaxLayer>
 
