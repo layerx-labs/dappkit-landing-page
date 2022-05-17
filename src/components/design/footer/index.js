@@ -41,8 +41,8 @@ export function Footer(props) {
                           {link.external ? (
                             <a
                               href={link.url}
-                              target={"_blank"}
-                              rel={"noopener noreferrer"}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {link.value}
                             </a>
