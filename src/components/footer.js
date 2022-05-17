@@ -7,7 +7,7 @@ function Footer() {
       links: [
         {
           value: "Docs",
-          url: "#0",
+          url: "https://doc.dappkit.dev",
           external: true,
         },
         {
@@ -64,6 +64,8 @@ function Footer() {
     <Component
       supportTitle="We’re here to help"
       supportSubtitle="Let us know if you have any questions."
+      community="https://discord.gg/9aUufhzhfm"
+      docs="https://doc.dappkit.dev"
       links={links}
       social={social}
       copyright="Copyright © 2022 All rights reserved. TAIKAI — Builder Hub"

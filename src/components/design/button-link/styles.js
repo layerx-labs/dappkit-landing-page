@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors, typography } from "../../../styles/design-tokens";
+import { colors } from "../../../styles/design-tokens";
 
 const { light, dark, grey600 } = colors;
-const { bold } = typography;
 
 export const Button = styled.a`
   position: relative;
@@ -15,7 +14,6 @@ export const Button = styled.a`
   align-items: center;
   padding: 0 ${rem("54px")} 0 ${rem("20px")};
   font-family: "Space Mono", monospace;
-  font-weight: ${bold};
   color: ${(props) => (props.color === "dark" ? light : dark)};
   white-space: nowrap;
   text-decoration: none;

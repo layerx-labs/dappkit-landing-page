@@ -7,7 +7,15 @@ import * as Styles from "./styles";
 const { dark } = colors;
 
 export function Footer(props) {
-  const { supportTitle, supportSubtitle, links, social, copyright } = props;
+  const {
+    supportTitle,
+    supportSubtitle,
+    docs,
+    community,
+    links,
+    social,
+    copyright,
+  } = props;
 
   return (
     <Styles.Wrapper>
@@ -19,11 +27,11 @@ export function Footer(props) {
             <div>
               <ButtonLink
                 color="dark"
-                url="https://discord.gg/9aUufhzhfm"
+                url={community}
                 value="Discord"
                 external
               />
-              <ButtonLink url="#0" value="Documentation" external />
+              <ButtonLink url={docs} value="Documentation" external />
             </div>
           </Styles.Support>
 

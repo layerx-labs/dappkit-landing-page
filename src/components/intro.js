@@ -2,7 +2,10 @@ import Hero from "./design/hero";
 
 function Intro() {
   return (
-    <Hero getStartedUrl="#0" docsUrl="#0">
+    <Hero
+      getStartedUrl="https://sdk.dappkit.dev"
+      docsUrl="https://doc.dappkit.dev"
+    >
       <h1>
         <span>Your Web3 project</span>
         <br /> <span>3 lines of code away</span>

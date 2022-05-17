@@ -43,11 +43,12 @@ export const TabsNav = styled.ul`
 
 export const TabButton = styled.button`
   border: 0;
+  border-bottom: 1px solid transparent;
   height: ${rem("48px")};
   background-color: ${(props) => (props.active ? grey900 : "transparent")};
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 0 0 ${rem("4px")} 0;
   font-family: "Space Mono", monospace;
   font-size: ${rem("32px")};
   font-weight: ${(props) => (props.active ? bold : regular)};
@@ -58,9 +59,7 @@ export const TabButton = styled.button`
   pointer-events: ${(props) => (props.active ? "none" : "initial")};
 
   &:hover {
-    background-color: ${light};
-    color: ${grey900};
-    box-shadow: ${rem("4px")} ${rem("4px")} 0 ${grey900};
+    border-color: ${grey900};
   }
 `;
 

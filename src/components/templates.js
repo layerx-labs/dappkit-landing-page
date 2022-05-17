@@ -26,7 +26,7 @@ function Templates({ id }) {
     },
     {
       name: "Next.js",
-      url: "NextJS & ReactJS https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js",
+      url: "https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js",
       img: <Nextjs />,
     },
     { name: "Angular", url: "#0", img: <Angular /> },
