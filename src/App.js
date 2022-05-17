@@ -26,8 +26,8 @@ function App() {
   const parallax = useRef(null);
   return (
     <Wrapper>
+      <NavMenu />
       <Parallax ref={parallax} pages={0}>
-        <NavMenu />
         <Intro />
         <Examples />
         <Sdk />
