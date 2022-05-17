@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   width: ${rem("260px")};
   height: ${rem("100px")};
   transition-duration: 0.3s;
-  box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
 
   a {
     width: 100%;
@@ -22,6 +21,6 @@ export const Wrapper = styled.div`
   }
 
   &:hover {
-    box-shadow: ${rem("8px")} ${rem("8px")} 0 ${dark};
+    box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
   }
 `;

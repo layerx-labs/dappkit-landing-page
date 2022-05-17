@@ -10,13 +10,6 @@ export const Wrapper = styled.div`
   padding: ${rem("100px")} ${rem("30px")};
   color: ${dark};
 
-  /* &:target:before {
-    content: "";
-    display: block;
-    height: ${rem("100px")};
-    margin: ${rem("-100px")} 0 0;
-  } */
-
   > div {
     margin: 0 auto;
     max-width: ${rem("1240px")};

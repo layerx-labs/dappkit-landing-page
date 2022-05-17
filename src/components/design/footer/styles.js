@@ -144,7 +144,6 @@ export const Social = styled.ul`
     width: ${rem("40px")};
     height: ${rem("40px")};
     padding: ${rem("8px")};
-    box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
     transition-duration: 0.3s;
 
     &:not(:last-child) {
@@ -152,7 +151,7 @@ export const Social = styled.ul`
     }
 
     &:hover {
-      box-shadow: ${rem("8px")} ${rem("8px")} 0 ${dark};
+      box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
     }
   }
 

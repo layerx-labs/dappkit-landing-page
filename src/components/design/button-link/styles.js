@@ -20,8 +20,6 @@ export const Button = styled.a`
   white-space: nowrap;
   text-decoration: none;
   transition-duration: 0.3s;
-  box-shadow: ${rem("4px")} ${rem("4px")} 0
-    ${(props) => (props.color === "dark" ? grey600 : dark)};
 
   &:after {
     --iconSize: ${rem("24px")};
@@ -42,7 +40,7 @@ export const Button = styled.a`
   }
 
   &:hover {
-    box-shadow: ${rem("8px")} ${rem("8px")} 0
+    box-shadow: ${rem("4px")} ${rem("4px")} 0
       ${(props) => (props.color === "dark" ? grey600 : dark)};
   }
 
