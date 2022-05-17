@@ -42,6 +42,7 @@ const Grid = styled.div`
     display: grid;
     grid-auto-flow: inherit;
     grid-template-columns: repeat(12, 1fr);
+    overflow: inherit;
 
     &:before,
     &:after {

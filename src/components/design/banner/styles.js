@@ -7,7 +7,7 @@ const { green, purple500, grey900, dark } = colors;
 
 export const Banner = styled.div`
   position: relative;
-  border-bottom: 1px solid ${dark};
+  border-bottom: 2px solid ${dark};
   background-color: ${green};
   display: flex;
   align-items: center;

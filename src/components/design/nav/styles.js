@@ -7,7 +7,7 @@ const { light, dark, grey100, grey600 } = colors;
 export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid ${dark};
+  border-bottom: 2px solid ${dark};
   font-size: ${rem("14px")};
   z-index: 3;
 `;
@@ -61,10 +61,11 @@ export const Menu = styled.div`
   }
 
   > a {
-    border: 1px solid ${dark};
+    border: 2px solid ${dark};
     height: ${rem("46px")};
     padding: ${rem("10px")} ${rem("20px")};
     font-family: "Space Mono", monospace;
+    font-feature-settings: "ss01" on;
     white-space: nowrap;
 
     &.get-started--link {

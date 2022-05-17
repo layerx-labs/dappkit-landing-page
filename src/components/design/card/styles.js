@@ -6,11 +6,11 @@ const { light, dark, grey100, grey800, grey900, green500, green900 } = colors;
 
 export const Wrapper = styled.div`
   position: relative;
-  border: 1px solid ${dark};
+  border: ${rem("2px")} solid ${dark};
   background-color: ${light};
   padding: ${rem("30px")};
-  box-shadow: ${light} ${rem("4px")} ${rem("4px")} 0px -1px,
-    ${dark} ${rem("4px")} ${rem("4px")};
+  box-shadow: ${light} ${rem("6px")} ${rem("6px")} 0px -2px,
+    ${dark} ${rem("6px")} ${rem("6px")};
 
   h3 {
     margin-bottom: ${rem("10px")};
@@ -24,10 +24,10 @@ export const Wrapper = styled.div`
   ${(props) =>
     props.color === "dark" &&
     css`
-      border: 1px solid ${light};
+      border: 2px solid ${light};
       background-color: ${dark};
-      box-shadow: ${dark} ${rem("4px")} ${rem("4px")} 0px -1px,
-        ${light} ${rem("4px")} ${rem("4px")};
+      box-shadow: ${dark} ${rem("6px")} ${rem("6px")} 0px -2px,
+        ${light} ${rem("6px")} ${rem("6px")};
 
       h3 {
         color: ${light};

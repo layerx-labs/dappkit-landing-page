@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: "Space Mono", monospace;
     font-weight: ${bold};
+    font-feature-settings: 'ss01' on;
     line-height: 1.1;
   }
 

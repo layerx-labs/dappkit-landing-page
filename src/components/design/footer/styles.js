@@ -38,6 +38,7 @@ export const Support = styled.div`
     margin-top: ${rem("10px")};
     font-family: "Space Mono", monospace;
     font-size: ${rem("24px")};
+    font-feature-settings: "ss01" on;
     line-height: 1.5;
   }
 
@@ -65,6 +66,7 @@ export const Menu = styled.div`
   grid-template-columns: 1fr;
   grid-gap: ${rem("50px")};
   font-family: "Space Mono", monospace;
+  font-feature-settings: "ss01" on;
 
   @media (min-width: 1080px) {
     grid-template-columns: repeat(2, ${rem("180px")});
@@ -139,7 +141,7 @@ export const Social = styled.ul`
   display: flex;
 
   li {
-    border: 1px solid ${dark};
+    border: 2px solid ${dark};
     background-color: ${light};
     width: ${rem("40px")};
     height: ${rem("40px")};

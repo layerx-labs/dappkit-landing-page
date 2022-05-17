@@ -6,7 +6,7 @@ const { light, dark, grey600 } = colors;
 
 export const Button = styled.a`
   position: relative;
-  border: 1px solid ${dark};
+  border: 2px solid ${dark};
   width: min-content;
   height: ${rem("48px")};
   background-color: ${(props) => (props.color === "dark" ? dark : light)};
@@ -14,6 +14,7 @@ export const Button = styled.a`
   align-items: center;
   padding: 0 ${rem("54px")} 0 ${rem("20px")};
   font-family: "Space Mono", monospace;
+  font-feature-settings: "ss01" on;
   color: ${(props) => (props.color === "dark" ? light : dark)};
   white-space: nowrap;
   text-decoration: none;

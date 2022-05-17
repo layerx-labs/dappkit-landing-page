@@ -43,7 +43,7 @@ export const TabsNav = styled.ul`
 
 export const TabButton = styled.button`
   border: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: ${rem("2px")} solid transparent;
   height: ${rem("48px")};
   background-color: ${(props) => (props.active ? grey900 : "transparent")};
   display: flex;
@@ -52,6 +52,7 @@ export const TabButton = styled.button`
   font-family: "Space Mono", monospace;
   font-size: ${rem("32px")};
   font-weight: ${(props) => (props.active ? bold : regular)};
+  font-feature-settings: "ss01" on;
   color: ${(props) => (props.active ? light : grey900)};
   white-space: nowrap;
   transition-duration: 0.3s;
@@ -84,11 +85,13 @@ export const TabContent = styled.div`
     font-family: "Space Mono", monospace;
     font-size: ${rem("50px")};
     font-weight: ${bold};
+    font-feature-settings: "ss01" on;
   }
 
   .subtitle {
     font-size: ${rem("24px")};
     font-family: "Space Mono", monospace;
+    font-feature-settings: "ss01" on;
   }
 
   p {
@@ -97,7 +100,7 @@ export const TabContent = styled.div`
 `;
 
 export const CodeEditor = styled.div`
-  border: 1px solid ${grey900};
+  border: 2px solid ${grey900};
   border-radius: ${rem("10px")};
   box-shadow: ${rem("4px")} ${rem("4px")} 0 ${grey900};
 `;
@@ -105,7 +108,7 @@ export const CodeEditor = styled.div`
 export const CodeEditorTabs = styled.div`
   height: ${rem("44px")};
   display: flex;
-  border-bottom: 1px solid ${grey900};
+  border-bottom: ${rem("2px")} solid ${grey900};
 `;
 
 export const CodeEditorButton = styled.button`

@@ -6,7 +6,7 @@ const { dark } = colors;
 
 export const Wrapper = styled.div`
   position: relative;
-  border: 1px solid ${dark};
+  border: 2px solid ${dark};
   width: ${rem("260px")};
   height: ${rem("100px")};
   transition-duration: 0.3s;

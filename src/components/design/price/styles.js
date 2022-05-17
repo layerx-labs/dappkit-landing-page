@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   position: relative;
   text-align: center;
   font-family: "Space Mono", monospace;
+  font-feature-settings: "ss01" on;
 
   svg {
     display: none;
