@@ -62,8 +62,10 @@ function Footer() {
 
   return (
     <Component
-      social={social}
+      supportTitle="We’re here to help"
+      supportSubtitle="Let us know if you have any questions."
       links={links}
+      social={social}
       copyright="Copyright © 2022 All rights reserved. TAIKAI — Builder Hub"
     />
   );

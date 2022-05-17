@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
 import { colors, typography, device } from "./design-tokens";
 
-const { regular, medium, bold } = typography;
+const { regular, bold } = typography;
 const { purple500, green500, grey900 } = colors;
 
 const GlobalStyle = createGlobalStyle`

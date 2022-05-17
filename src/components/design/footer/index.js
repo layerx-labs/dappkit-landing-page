@@ -7,15 +7,15 @@ import * as Styles from "./styles";
 const { dark } = colors;
 
 export function Footer(props) {
-  const { social, links, copyright } = props;
+  const { supportTitle, supportSubtitle, links, social, copyright } = props;
 
   return (
     <Styles.Wrapper>
       <div>
         <Styles.Columns>
           <Styles.Support>
-            <h2>We’re here to help</h2>
-            <p>Let us know if you have any questions.</p>
+            <h2>{supportTitle}</h2>
+            <p>{supportSubtitle}</p>
             <div>
               <ButtonLink
                 color="dark"
@@ -38,15 +38,17 @@ export function Footer(props) {
                       Array.isArray(column.links) &&
                       column.links.map((link, index) => (
                         <li key={index}>
-                          <a
-                            href={link.url}
-                            target={link.external ? "_blank" : undefined}
-                            rel={
-                              link.external ? "noopener noreferrer" : undefined
-                            }
-                          >
-                            {link.value}
-                          </a>
+                          {link.external ? (
+                            <a
+                              href={link.url}
+                              target={"_blank"}
+                              rel={"noopener noreferrer"}
+                            >
+                              {link.value}
+                            </a>
+                          ) : (
+                            <a href={link.url}>{link.value}</a>
+                          )}
                         </li>
                       ))}
                   </ul>
