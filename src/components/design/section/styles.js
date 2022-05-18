@@ -3,8 +3,7 @@ import { rem } from "polished";
 import { sizes, colors } from "../../../styles/design-tokens";
 
 const { defaultSize } = sizes;
-const { light, dark, grey800, grey900, purple200, purple500, green500 } =
-  colors;
+const { light, dark, purple200, purple500, green500 } = colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
@@ -47,12 +46,15 @@ export const Header = styled.div`
   text-align: ${(props) => (props.align === "left" ? "left" : "center")};
 
   h2 {
-    color: ${(props) => (props.color === "dark" ? light : grey900)};
+    color: ${(props) => (props.color === "dark" ? light : dark)};
   }
 
   span {
     display: inline-block;
-    margin-top: ${rem("10px", defaultSize)};
-    color: ${(props) => (props.color === "dark" ? light : grey800)};
+    margin-top: ${rem("20px", defaultSize)};
+    font-size: ${rem("20px", defaultSize)};
+    font-family: "Space Mono", monospace;
+    font-feature-settings: "ss01" on;
+    color: ${(props) => (props.color === "dark" ? light : dark)};
   }
 `;

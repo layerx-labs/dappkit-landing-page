@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { device } from "../../../styles/design-tokens";
+import { device, sizes } from "../../../styles/design-tokens";
+
+const { defaultSize } = sizes;
 
 export const Wrapper = styled.div`
   position: relative;
@@ -48,18 +50,17 @@ export const Wrapper = styled.div`
   }
 
   h2 {
-    margin-bottom: ${rem("10px")};
+    margin-bottom: ${rem("10px", defaultSize)};
   }
 
   p {
-    margin-bottom: ${rem("5px")};
-    font-size: ${rem("28px")};
+    margin-bottom: ${rem("10px", defaultSize)};
+    font-size: ${rem("28px", defaultSize)};
     line-height: 1.5;
   }
 
   span {
-    font-size: ${rem("19px")};
+    font-size: ${rem("20px", defaultSize)};
     font-style: italic;
-    line-height: 2.25;
   }
 `;

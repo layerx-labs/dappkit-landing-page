@@ -2,27 +2,32 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import ButtonLink from "./design/button-link";
-import { Polkamarkets, RealFevr, DappKit } from "../utils/brands";
-import { device } from "../styles/design-tokens";
+import { Polkamarkets, RealFevr, Lepricon, Bepro } from "../utils/brands";
+import { device, sizes, colors } from "../styles/design-tokens";
+
+const { defaultSize } = sizes;
+const { grey600 } = colors;
 
 const Grid = styled.ul`
-  margin: 0 0 ${rem("60px")} 0;
+  margin: 0 0 ${rem("60px", defaultSize)} 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: ${rem("30px")};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  ${"" /* grid-template-columns: 1fr; */}
 
   @media ${device.s} {
-    grid-template-columns: repeat(2, 1fr);
+    ${"" /* grid-template-columns: repeat(2, 1fr); */}
   }
 
   @media ${device.m} {
-    grid-template-columns: repeat(3, 1fr);
+    ${"" /* grid-template-columns: repeat(3, 1fr); */}
   }
 
   li {
+    width: ${rem("300px", defaultSize)};
     list-style: none;
-    padding: ${rem("30px")};
+    padding: ${rem("30px", defaultSize)};
 
     a {
       display: flex;
@@ -35,13 +40,16 @@ const Grid = styled.ul`
     svg {
       width: 100%;
       height: 100%;
-      max-width: ${rem("250px")};
-      max-height: ${rem("50px")};
+      max-width: ${rem("250px", defaultSize)};
+      max-height: ${rem("50px", defaultSize)};
     }
   }
 
   & + a {
-    margin: 0 auto;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: ${grey600};
   }
 `;
 
@@ -49,10 +57,8 @@ function Projects() {
   const projects = [
     { url: "#0", img: <Polkamarkets /> },
     { url: "#0", img: <RealFevr /> },
-    { url: "#0", img: <DappKit mainColor="white" /> },
-    { url: "#0", img: <DappKit mainColor="white" /> },
-    { url: "#0", img: <DappKit mainColor="white" /> },
-    { url: "#0", img: <DappKit mainColor="white" /> },
+    { url: "#0", img: <Lepricon /> },
+    { url: "#0", img: <Bepro /> },
   ];
 
   return (
@@ -62,7 +68,9 @@ function Projects() {
           Array.isArray(projects) &&
           projects.map((project, index) => (
             <li key={index}>
-              <a href={project.url}>{project.img}</a>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                {project.img}
+              </a>
             </li>
           ))}
       </Grid>

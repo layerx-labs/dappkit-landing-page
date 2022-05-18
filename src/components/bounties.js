@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import CardCta from "./design/card-cta";
-import { device } from "../styles/design-tokens";
+import { device, sizes } from "../styles/design-tokens";
+
+const { defaultSize } = sizes;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: ${rem("60px")};
+  grid-gap: ${rem("60px", defaultSize)};
 
   @media ${device.m} {
     grid-template-columns: 1fr 1fr;

@@ -2,19 +2,21 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import Card from "./design/card";
-import { device } from "../styles/design-tokens";
+import { sizes, device } from "../styles/design-tokens";
+
+const { defaultSize } = sizes;
 
 const Grid = styled.div`
-  margin: 0 ${rem("-30px")};
+  margin: 0 ${rem("-30px", defaultSize)};
   display: grid;
   grid-auto-flow: column;
-  grid-gap: ${rem("20px")};
+  grid-gap: ${rem("30px", defaultSize)};
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: ${rem("60px")};
+  scroll-padding-left: ${rem("60px", defaultSize)};
 
   &::-webkit-scrollbar {
     display: none;
@@ -23,17 +25,17 @@ const Grid = styled.div`
   &:before,
   &:after {
     content: "";
-    width: ${rem("15px")};
+    width: ${rem("15px", defaultSize)};
   }
 
   > div {
-    width: calc(100vw - ${rem("120px")});
+    width: calc(100vw - ${rem("120px", defaultSize)});
     scroll-snap-align: start;
   }
 
   @media ${device.s} {
     > div {
-      width: calc(100vw - ${rem("300px")});
+      width: calc(100vw - ${rem("300px", defaultSize)});
     }
   }
 

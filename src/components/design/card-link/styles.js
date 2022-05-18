@@ -1,26 +1,34 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/design-tokens";
 
-const { dark } = colors;
+const { light, dark } = colors;
+const { defaultSize, shadow } = sizes;
 
 export const Wrapper = styled.div`
   position: relative;
-  border: 2px solid ${dark};
-  width: ${rem("260px")};
-  height: ${rem("100px")};
+  background-color: ${dark};
+  width: ${rem("260px", defaultSize)};
+  height: ${rem("100px", defaultSize)};
   transition-duration: 0.3s;
 
   a {
+    border: ${rem("2px", defaultSize)} solid ${dark};
+    background-color: ${light};
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: ${rem("20px")};
+    padding: ${rem("20px", defaultSize)};
+    transition-duration: 0.3s;
   }
 
   &:hover {
-    box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
+    --translate: ${rem(shadow, defaultSize)};
+
+    a {
+      transform: translate(var(--translate), var(--translate));
+    }
   }
 `;

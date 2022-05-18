@@ -2,10 +2,13 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import CardLink from "./design/card-link";
+import { sizes } from "../styles/design-tokens";
 import { Nodejs, Nextjs, Angular } from "../utils/brands";
 
+const { defaultSize } = sizes;
+
 const Grid = styled.ul`
-  margin: ${rem("-20px")} 0;
+  margin: ${rem("-25px", defaultSize)} 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,7 +16,7 @@ const Grid = styled.ul`
 
   li {
     list-style: none;
-    margin: ${rem("20px")};
+    margin: ${rem("25px", defaultSize)};
   }
 `;
 

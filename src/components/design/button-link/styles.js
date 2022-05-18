@@ -16,7 +16,6 @@ export const Button = styled.a`
   text-decoration: none;
 
   span {
-    transition-duration: 0.3s;
     border: ${rem("2px", defaultSize)} solid ${dark};
     background-color: ${(props) => (props.color === "dark" ? dark : light)};
     width: ${(props) =>
@@ -29,6 +28,7 @@ export const Button = styled.a`
       props.icon
         ? 0
         : `0 ${rem("16px", defaultSize)} 0 ${rem("20px", defaultSize)}`};
+    transition-duration: 0.3s;
 
     &::after {
       --iconSize: ${rem("20px", defaultSize)};

@@ -1,16 +1,18 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/design-tokens";
 
 const { light, dark, grey100, grey800, grey900, green500, green900 } = colors;
+const { defaultSize, border } = sizes;
 
 export const Wrapper = styled.div`
   position: relative;
-  border: ${rem("2px")} solid ${dark};
+  border: ${rem(border, defaultSize)} solid ${dark};
   background-color: ${light};
-  padding: ${rem("30px")};
-  box-shadow: ${light} ${rem("6px")} ${rem("6px")} 0px -2px,
-    ${dark} ${rem("6px")} ${rem("6px")};
+  padding: ${rem("30px", defaultSize)};
+  box-shadow: ${light} ${rem("10px", defaultSize)} ${rem("10px", defaultSize)} 0
+      ${rem("-2px", defaultSize)},
+    ${dark} ${rem("10px", defaultSize)} ${rem("10px", defaultSize)};
 
   h3 {
     margin-bottom: ${rem("10px")};
@@ -24,10 +26,11 @@ export const Wrapper = styled.div`
   ${(props) =>
     props.color === "dark" &&
     css`
-      border: 2px solid ${light};
+      border: ${rem(border, defaultSize)} solid ${light};
       background-color: ${dark};
-      box-shadow: ${dark} ${rem("6px")} ${rem("6px")} 0px -2px,
-        ${light} ${rem("6px")} ${rem("6px")};
+      box-shadow: ${dark} ${rem("10px", defaultSize)}
+          ${rem("10px", defaultSize)} 0 ${rem("-2px", defaultSize)},
+        ${light} ${rem("10px", defaultSize)} ${rem("10px", defaultSize)};
 
       h3 {
         color: ${light};
@@ -37,9 +40,11 @@ export const Wrapper = styled.div`
         color: ${grey100};
 
         span {
-          border-radius: ${rem("1px")};
+          border-radius: ${(rem("1px"), defaultSize)};
           background-color: ${green900};
-          padding: 0 ${rem("2px")};
+          padding: 0 ${rem("2px", defaultSize)};
+          font-family: "Space Mono", monospace;
+          font-feature-settings: "ss01" on;
           color: ${green500};
         }
       }

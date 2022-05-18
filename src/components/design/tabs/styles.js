@@ -7,12 +7,12 @@ import {
   sizes,
 } from "../../../styles/design-tokens";
 
-const { dark, green, light, grey200, purple500 } = colors;
+const { dark, green500, light, grey50, grey200, purple500 } = colors;
 const { regular, bold } = typography;
 const { border, defaultSize } = sizes;
 
 export const Wrapper = styled.div`
-  background-color: ${green};
+  background-color: ${green500};
   padding: ${rem("100px", defaultSize)} ${rem("30px", defaultSize)};
 
   > div {
@@ -81,6 +81,10 @@ export const TabContainer = styled.div`
 `;
 
 export const TabContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &.snippet {
     padding: 0 ${rem("8px", defaultSize)} ${rem("8px", defaultSize)};
     overflow: hidden;
@@ -103,7 +107,7 @@ export const TabContent = styled.div`
   }
 
   .button {
-    display: inline-block;
+    max-width: min-content;
   }
 `;
 
@@ -125,8 +129,10 @@ export const CodeEditorButton = styled.button`
   border: 0;
   background-color: ${(props) => (props.active ? purple500 : light)};
   color: ${(props) => (props.active ? light : dark)};
-  font-weight: ${(props) => (props.active ? bold : regular)};
-  font-size: ${rem("16px")};
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  font-feature-settings: "ss01" on;
+  font-weight: ${bold};
   cursor: pointer;
   pointer-events: ${(props) => (props.active ? "none" : "initial")};
   transition-duration: 0.3s;
@@ -146,6 +152,16 @@ export const CodeEditorButton = styled.button`
 `;
 
 export const CodeEditorContent = styled.div`
+  position: relative;
+  border-radius: ${rem("8px", defaultSize)};
+  background-color: ${grey50};
+  width: 100%;
+
+  > * {
+    top: 0;
+    width: 100%;
+  }
+
   pre {
     margin: 0;
     font-size: ${rem("14px", defaultSize)};
@@ -153,7 +169,8 @@ export const CodeEditorContent = styled.div`
 
     code {
       border-radius: 0 0 ${rem("7px", defaultSize)} ${rem("7px", defaultSize)};
-      overflow-x: auto;
+      background-color: ${grey50};
+      overflow: auto;
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -161,6 +178,14 @@ export const CodeEditorContent = styled.div`
       &::-webkit-scrollbar {
         display: none;
       }
+    }
+  }
+
+  @media ${device.m} {
+    padding-top: 56.25%;
+
+    > * {
+      position: absolute;
     }
   }
 `;
