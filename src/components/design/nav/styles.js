@@ -1,35 +1,36 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, device } from "../../../styles/design-tokens";
+import { colors, device, sizes } from "../../../styles/design-tokens";
 
-const { light, dark, grey100, grey600 } = colors;
+const { light, dark } = colors;
+const { defaultSize, border } = sizes;
 
 export const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
-  border-bottom: 2px solid ${dark};
-  font-size: ${rem("14px")};
+  border-bottom: ${rem(border, defaultSize)} solid ${dark};
   z-index: 3;
 `;
 
 export const Nav = styled.div`
-  height: ${rem("64px")};
+  height: ${rem("68px", defaultSize)};
   background-color: ${light};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 ${rem("40px")};
+  padding: 0 ${rem("40px", defaultSize)};
 
   svg.logo {
-    margin-top: ${rem("5px")};
-    min-width: ${rem("115px")};
-    width: ${rem("115px")};
-    height: auto;
+    margin-top: ${rem("5px", defaultSize)};
+    width: auto;
+    height: ${rem("40px", defaultSize)};
   }
 `;
 
 export const Menu = styled.div`
   display: none;
+  font-family: "Space Mono", monospace;
+  font-feature-settings: "ss01" on;
 
   a {
     color: ${dark};
@@ -46,8 +47,7 @@ export const Menu = styled.div`
       list-style: none;
 
       a {
-        border-bottom: 1px solid transparent;
-        padding-bottom: ${rem("4px")};
+        border-bottom: ${rem(border, defaultSize)} solid transparent;
 
         &:hover {
           border-color: ${dark};
@@ -55,32 +55,33 @@ export const Menu = styled.div`
       }
 
       &:not(:last-child) {
-        margin-right: ${rem("40px")};
+        margin-right: ${rem("40px", defaultSize)};
       }
     }
   }
 
   > a {
-    border: 2px solid ${dark};
-    height: ${rem("46px")};
-    padding: ${rem("10px")} ${rem("20px")};
+    border: ${rem("2px", defaultSize)} solid ${dark};
+    height: ${rem("48px", defaultSize)};
+    display: flex;
+    align-items: center;
+    padding: 0 ${rem("20px", defaultSize)};
     font-family: "Space Mono", monospace;
     font-feature-settings: "ss01" on;
+    font-size: ${rem("20px", defaultSize)};
     white-space: nowrap;
 
     &.get-started--link {
-      margin: 0 ${rem("20px")} 0 ${rem("30px")};
-      position: relative;
+      margin: 0 ${rem("20px", defaultSize)} 0 ${rem("30px", defaultSize)};
       background-color: ${dark};
-      padding-right: ${rem("50px")};
+      padding-right: ${rem("12px", defaultSize)};
       color: ${light};
 
       &:after {
-        --iconSize: ${rem("24px")};
+        --iconSize: ${rem("18px", defaultSize)};
 
         content: "";
-        position: absolute;
-        margin-left: ${rem("10px")};
+        margin-left: ${rem("6px", defaultSize)};
         width: var(--iconSize);
         height: var(--iconSize);
         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' width='32' height='32' viewbox='0 0 32 32'><path d='M7.044 17.425h14.893l-6.507 6.507c-0.241 0.243-0.39 0.577-0.39 0.947s0.149 0.704 0.39 0.947l-0-0c0.241 0.242 0.574 0.392 0.942 0.392s0.701-0.15 0.942-0.392l8.783-8.783c0.241-0.24 0.39-0.573 0.39-0.94s-0.149-0.699-0.39-0.94l-8.783-8.787c-0.239-0.234-0.567-0.379-0.929-0.379-0.734 0-1.329 0.595-1.329 1.329 0 0.362 0.145 0.69 0.379 0.929l-0-0 6.507 6.507h-14.897c-0.736 0-1.333 0.597-1.333 1.333s0.597 1.333 1.333 1.333v0z' /></svg>");
@@ -89,15 +90,15 @@ export const Menu = styled.div`
       }
 
       &:hover {
-        box-shadow: ${rem("4px")} ${rem("4px")} 0 ${grey600};
+        box-shadow: ${rem("6px")} ${rem("6px")} 0 ${dark};
       }
     }
 
     &.github--link {
-      --size: ${rem("24px")};
+      --size: ${rem("22px")};
 
       &:hover {
-        box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
+        box-shadow: ${rem("6px")} ${rem("6px")} 0 ${dark};
       }
 
       svg {
@@ -156,24 +157,24 @@ export const Drawer = styled.div`
   background-color: ${light};
   width: 100vw;
   height: 0;
-  padding: 0 ${rem("30px")};
+  padding: 0 ${rem("30px", defaultSize)};
   overflow-y: hidden;
   z-index: 1;
   transition: all 0.3s ease-in-out;
 
   ul {
-    margin: 0 0 ${rem("60px")} 0;
+    margin: 0 0 ${rem("60px", defaultSize)} 0;
     padding: 0;
     z-index: 2;
 
     li {
       list-style: none;
-      border-bottom: ${rem("1px")} solid ${grey100};
-      padding-bottom: ${rem("5px")};
+      border-bottom: ${rem(border, defaultSize)} solid ${dark};
+      padding-bottom: ${rem("5px", defaultSize)};
       white-space: nowrap;
 
       &:not(:last-child) {
-        margin-bottom: ${rem("20px")};
+        margin-bottom: ${rem("20px", defaultSize)};
       }
 
       a {
@@ -185,7 +186,7 @@ export const Drawer = styled.div`
 
   &.opened {
     height: 100vh;
-    padding: ${rem("150px")} ${rem("30px")};
+    padding: ${rem("150px", defaultSize)} ${rem("30px", defaultSize)};
     overflow-y: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -197,7 +198,7 @@ export const Drawer = styled.div`
   }
 
   > a:not(:last-child) {
-    margin-bottom: ${rem("14px")};
+    margin-bottom: ${rem("14px", defaultSize)};
   }
 
   @media ${device.m} {

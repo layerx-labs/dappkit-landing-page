@@ -2,7 +2,7 @@ import Icon from "../icon";
 import * as Styles from "./styles";
 import { colors } from "../../../styles/design-tokens";
 
-const { grey900 } = colors;
+const { dark } = colors;
 
 function Banner(props) {
   const { value, link, url, onClick } = props;
@@ -14,7 +14,7 @@ function Banner(props) {
         {link}
       </a>
       <button onClick={onClick}>
-        <Icon icon="cross" fill={grey900} />
+        <Icon icon="cross" fill={dark} />
       </button>
     </Styles.Banner>
   );

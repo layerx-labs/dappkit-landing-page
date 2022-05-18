@@ -82,7 +82,6 @@ export const TabContent = styled.div`
 
   h2 {
     margin: ${rem("16px")} 0 ${rem("10px")};
-    font-family: "Space Mono", monospace;
     font-size: ${rem("50px")};
     font-weight: ${bold};
     font-feature-settings: "ss01" on;
