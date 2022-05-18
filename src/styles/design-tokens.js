@@ -1,5 +1,3 @@
-import { rem } from "polished";
-
 export const colors = {
   dark: "#000000",
   light: "#ffffff",
@@ -26,7 +24,7 @@ export const typography = {
 export const sizes = {
   defaultSize: "18px",
   border: "2px",
-  shaddow: "6px",
+  shadow: "-8px",
 };
 
 export const device = {

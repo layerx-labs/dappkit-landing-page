@@ -7,7 +7,7 @@ const { purple500, green500, grey900 } = colors;
 const { defaultSize } = sizes;
 
 const GlobalStyle = createGlobalStyle`
-  * {
+  *, :before, :after {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

@@ -1,4 +1,3 @@
-import Icon from "../icon";
 import ButtonLink from "../button-link";
 import { DappKit } from "../../../utils/brands";
 import * as Styles from "./styles";
@@ -9,7 +8,6 @@ function Nav(props) {
     menu,
     actionButtonValue,
     actionButtonUrl,
-    github,
     drawerOpened = false,
     drawerOnClick,
   } = props;
@@ -45,22 +43,14 @@ function Nav(props) {
                   </li>
                 ))}
             </ul>
-            <a
-              className="get-started--link"
-              href={actionButtonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {actionButtonValue}
-            </a>
-            <a
-              className="github--link"
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon icon="github" />
-            </a>
+            <ButtonLink
+              className="get-started--button"
+              color="dark"
+              url={actionButtonUrl}
+              value={actionButtonValue}
+              external
+            />
+            <ButtonLink url={actionButtonUrl} icon="github" external />
           </Styles.Menu>
         </Styles.Nav>
       </Styles.Wrapper>

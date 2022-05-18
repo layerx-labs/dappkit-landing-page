@@ -1,18 +1,19 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors } from "../../../styles/design-tokens";
+import { sizes, colors } from "../../../styles/design-tokens";
 
+const { defaultSize } = sizes;
 const { light, dark, grey800, grey900, purple200, purple500, green500 } =
   colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
-  padding: ${rem("100px")} ${rem("30px")};
+  padding: ${rem("100px", defaultSize)} ${rem("30px", defaultSize)};
   color: ${dark};
 
   > div {
     margin: 0 auto;
-    max-width: ${rem("1240px")};
+    max-width: ${rem("1240px", defaultSize)};
   }
 
   ${(props) =>
@@ -42,7 +43,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.div`
-  margin-bottom: ${rem("60px")};
+  margin-bottom: ${rem("60px", defaultSize)};
   text-align: ${(props) => (props.align === "left" ? "left" : "center")};
 
   h2 {
@@ -51,7 +52,7 @@ export const Header = styled.div`
 
   span {
     display: inline-block;
-    margin-top: ${rem("10px")};
+    margin-top: ${rem("10px", defaultSize)};
     color: ${(props) => (props.color === "dark" ? light : grey800)};
   }
 `;
