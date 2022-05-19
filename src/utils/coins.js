@@ -1,6 +1,6 @@
-export const Coin1 = () => (
+export const Coin1 = ({ className }) => (
   <svg
-    className="coin-1"
+    className={className}
     width="170"
     height="186"
     viewBox="0 0 170 186"
@@ -32,9 +32,9 @@ export const Coin1 = () => (
   </svg>
 );
 
-export const Coin2 = () => (
+export const Coin2 = ({ className }) => (
   <svg
-    className="coin-2"
+    className={className}
     width="106"
     height="106"
     viewBox="0 0 106 106"
@@ -66,9 +66,9 @@ export const Coin2 = () => (
   </svg>
 );
 
-export const Coin3 = () => (
+export const Coin3 = ({ className }) => (
   <svg
-    className="coin-3"
+    className={className}
     width="85"
     height="130"
     viewBox="0 0 85 130"
@@ -100,9 +100,9 @@ export const Coin3 = () => (
   </svg>
 );
 
-export const Coin4 = () => (
+export const Coin4 = ({ className }) => (
   <svg
-    className="coin-4"
+    className={className}
     width="135"
     height="211"
     viewBox="0 0 135 211"
@@ -134,9 +134,9 @@ export const Coin4 = () => (
   </svg>
 );
 
-export const Coin5 = () => (
+export const Coin5 = ({ className }) => (
   <svg
-    className="coin-5"
+    className={className}
     width="150"
     height="171"
     viewBox="0 0 150 171"
@@ -168,9 +168,9 @@ export const Coin5 = () => (
   </svg>
 );
 
-export const Coin6 = () => (
+export const Coin6 = ({ className }) => (
   <svg
-    className="coin-6"
+    className={className}
     width="126"
     height="116"
     viewBox="0 0 126 116"

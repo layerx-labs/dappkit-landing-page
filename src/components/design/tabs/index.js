@@ -13,7 +13,7 @@ function Tabs(props) {
 
   useEffect(() => {
     hljs.initHighlighting();
-  }, [codeEditorTab]);
+  }, [codeEditorTab, content]);
 
   return (
     <Styles.Wrapper>

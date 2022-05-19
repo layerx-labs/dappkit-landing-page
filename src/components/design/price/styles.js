@@ -11,27 +11,54 @@ export const Wrapper = styled.div`
   font-feature-settings: "ss01" on;
 
   svg {
+    /* border: 1px solid red; */
     display: none;
     position: absolute;
+    /* width: 100%;
+    height: 100%; */
 
     @media ${device.m} {
       display: inherit;
     }
 
     &.coin-1 {
-      top: ${rem("-70px")};
+      top: 0;
       left: 20%;
+      transition-duration: 1s;
+
+      &.in-view {
+        top: ${rem("-70px")};
+      }
     }
 
     &.coin-2 {
-      top: ${rem("-50px")};
+      top: ${rem("50px")};
       right: 20%;
+      transition-duration: 2s;
+
+      &.in-view {
+        top: ${rem("-50px")};
+      }
     }
 
     &.coin-3 {
-      top: ${rem("30px")};
+      top: ${rem("60px")};
       left: 0;
+      transition-duration: 3s;
+
+      &.in-view {
+        top: ${rem("30px")};
+      }
     }
+  }
+
+  svg {
+    /* display: none;
+    position: absolute;
+
+    @media ${device.m} {
+      display: inherit;
+    } */
 
     &.coin-4 {
       top: ${rem("60px")};
