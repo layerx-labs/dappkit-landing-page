@@ -3,7 +3,7 @@ import { rem } from "polished";
 import { colors, typography, device, sizes } from "./design-tokens";
 
 const { regular, bold } = typography;
-const { purple500, green500, grey900 } = colors;
+const { purple500, green500, dark } = colors;
 const { defaultSize } = sizes;
 
 const GlobalStyle = createGlobalStyle`
@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: ${regular};
     font-feature-settings: 'ss04' on;
     line-height: 1.75;
-    color: ${grey900};
+    color: ${dark};
     overflow-x: hidden;
   }
 

@@ -2,12 +2,12 @@ import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { colors, sizes } from "../../../styles/design-tokens";
 
-const { light, dark, grey600 } = colors;
+const { light, dark, purple500 } = colors;
 const { defaultSize, shadow } = sizes;
 
 export const Button = styled.a`
   position: relative;
-  background-color: ${(props) => (props.color === "dark" ? grey600 : dark)};
+  background-color: ${(props) => (props.color === "dark" ? purple500 : dark)};
   font-family: "Space Mono", monospace;
   font-size: ${rem("20px", defaultSize)};
   font-feature-settings: "ss01" on;
@@ -31,17 +31,17 @@ export const Button = styled.a`
     transition-duration: 0.3s;
 
     &::after {
-      --iconSize: ${rem("20px", defaultSize)};
+      --iconSize: ${rem("18px", defaultSize)};
 
       display: ${(props) => (props.icon ? "none" : "inherit")};
       content: "";
-      margin-left: ${rem("6px", defaultSize)};
+      margin-left: ${rem("10px", defaultSize)};
       width: var(--iconSize);
       height: var(--iconSize);
       background-image: ${(props) =>
         props.color === "dark"
-          ? `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' width='32' height='32' viewbox='0 0 32 32'><path d='M7.044 17.425h14.893l-6.507 6.507c-0.241 0.243-0.39 0.577-0.39 0.947s0.149 0.704 0.39 0.947l-0-0c0.241 0.242 0.574 0.392 0.942 0.392s0.701-0.15 0.942-0.392l8.783-8.783c0.241-0.24 0.39-0.573 0.39-0.94s-0.149-0.699-0.39-0.94l-8.783-8.787c-0.239-0.234-0.567-0.379-0.929-0.379-0.734 0-1.329 0.595-1.329 1.329 0 0.362 0.145 0.69 0.379 0.929l-0-0 6.507 6.507h-14.897c-0.736 0-1.333 0.597-1.333 1.333s0.597 1.333 1.333 1.333v0z' /></svg>")`
-          : `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000000' width='32' height='32' viewbox='0 0 32 32'><path d='M7.044 17.425h14.893l-6.507 6.507c-0.241 0.243-0.39 0.577-0.39 0.947s0.149 0.704 0.39 0.947l-0-0c0.241 0.242 0.574 0.392 0.942 0.392s0.701-0.15 0.942-0.392l8.783-8.783c0.241-0.24 0.39-0.573 0.39-0.94s-0.149-0.699-0.39-0.94l-8.783-8.787c-0.239-0.234-0.567-0.379-0.929-0.379-0.734 0-1.329 0.595-1.329 1.329 0 0.362 0.145 0.69 0.379 0.929l-0-0 6.507 6.507h-14.897c-0.736 0-1.333 0.597-1.333 1.333s0.597 1.333 1.333 1.333v0z' /></svg>")`};
+          ? `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' width='32' height='32' viewbox='0 0 32 32'><path d='M32 16L29.5518 18.4889L17.311 6.04443L19.7592 3.55554L32 16Z M29.5519 13.5111L32 16L19.7592 28.4444L17.3111 25.9555L29.5519 13.5111Z M2.17301e-07 17.6348L0 14.115L29.4289 14.115V17.6348L2.17301e-07 17.6348Z' /></svg>")`
+          : `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000000' width='32' height='32' viewbox='0 0 32 32'><path d='M32 16L29.5518 18.4889L17.311 6.04443L19.7592 3.55554L32 16Z M29.5519 13.5111L32 16L19.7592 28.4444L17.3111 25.9555L29.5519 13.5111Z M2.17301e-07 17.6348L0 14.115L29.4289 14.115V17.6348L2.17301e-07 17.6348Z' /></svg>")`};
       background-repeat: no-repeat;
       background-size: var(--iconSize);
     }

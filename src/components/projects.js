@@ -13,7 +13,7 @@ import {
 import { sizes, colors } from "../styles/design-tokens";
 
 const { defaultSize } = sizes;
-const { grey600 } = colors;
+const { purple500 } = colors;
 
 const Grid = styled.ul`
   margin: 0 0 ${rem("60px", defaultSize)} 0;
@@ -47,7 +47,7 @@ const Grid = styled.ul`
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
-    background-color: ${grey600};
+    background-color: ${purple500};
   }
 `;
 

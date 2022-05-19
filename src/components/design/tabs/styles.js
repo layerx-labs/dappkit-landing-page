@@ -104,6 +104,7 @@ export const TabContent = styled.div`
 
   p {
     margin-bottom: ${rem("40px", defaultSize)};
+    font-size: ${rem("24px", defaultSize)};
   }
 
   .button {
@@ -164,7 +165,7 @@ export const CodeEditorContent = styled.div`
 
   pre {
     margin: 0;
-    font-size: ${rem("14px", defaultSize)};
+    font-size: ${rem("16px", defaultSize)};
     line-height: 1.5;
 
     code {

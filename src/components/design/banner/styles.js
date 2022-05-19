@@ -56,8 +56,8 @@ export const Banner = styled.div`
     right: ${rem("18px", defaultSize)};
     border: 0;
     background-color: transparent;
-    width: ${rem("24px", defaultSize)};
-    height: ${rem("24px", defaultSize)};
+    width: ${rem("14px", defaultSize)};
+    height: ${rem("14px", defaultSize)};
     padding: 0;
     cursor: pointer;
     transition-duration: 0.3s;

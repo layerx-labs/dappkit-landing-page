@@ -31,7 +31,7 @@ function Examples() {
     {
       id: 2,
       name: "DeFi platforms",
-      title: "DeFi platforms",
+      title: "Decetralised Finance Platforms",
       subtitle: "Sablier, Loophole, or more contracts",
       content:
         "dappKit comes preloaded with default DeFi smart contracts you can use to jumpstart your business",
@@ -42,7 +42,7 @@ function Examples() {
     {
       id: 3,
       name: "DAOs",
-      title: "DAOs",
+      title: "Decentralised Autonomous Organisations",
       subtitle: "Vote contract and network contract",
       content:
         "Base your DAO on our Network and take advantage of a community made smart contract",

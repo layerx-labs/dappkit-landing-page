@@ -27,7 +27,7 @@ function Bounties() {
       description:
         "Create bounties and have a Web3 developer community building the right solution for your projects.",
       ctaValue: "Create Bounty",
-      ctaUrl: "https://www.bepro.network",
+      ctaUrl: "https://development.bepro.network/create-bounty",
     },
     {
       title: "Start contributing with dappKit and get rewarded",
