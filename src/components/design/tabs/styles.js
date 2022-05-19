@@ -7,11 +7,14 @@ import {
   sizes,
 } from "../../../styles/design-tokens";
 
-const { dark, green500, light, grey50, grey200, purple500 } = colors;
+const { dark, green500, light, grey50, purple500 } = colors;
 const { regular, bold } = typography;
 const { border, defaultSize } = sizes;
 
 export const Wrapper = styled.div`
+  border-width: ${rem(border, defaultSize)} 0;
+  border-style: solid;
+  border-color: ${dark};
   background-color: ${green500};
   padding: ${rem("100px", defaultSize)} ${rem("30px", defaultSize)};
 
@@ -148,7 +151,8 @@ export const CodeEditorButton = styled.button`
   }
 
   &:hover {
-    background-color: ${grey200};
+    background-color: ${dark};
+    color: ${light};
   }
 `;
 

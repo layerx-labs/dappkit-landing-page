@@ -2,13 +2,14 @@ import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { sizes, colors } from "../../../styles/design-tokens";
 
-const { defaultSize } = sizes;
+const { defaultSize, border } = sizes;
 const { light, dark, purple200, purple500, green500 } = colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
   padding: ${rem("100px", defaultSize)} ${rem("30px", defaultSize)};
   color: ${dark};
+  border-bottom: ${rem(border, defaultSize)} solid ${dark};
 
   > div {
     margin: 0 auto;
