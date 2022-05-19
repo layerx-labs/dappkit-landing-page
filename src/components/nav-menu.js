@@ -14,7 +14,7 @@ function NavMenu() {
       url: "https://discord.gg/9aUufhzhfm",
       external: true,
     },
-    { value: "Docs", url: "https://doc.dappkit.dev", external: true },
+    { value: "Docs", url: "https://docs.dappkit.dev", external: true },
   ];
 
   return (
@@ -33,7 +33,7 @@ function NavMenu() {
       }
       menu={menu}
       actionButtonValue="Get Started"
-      actionButtonUrl="https://sdk.dappkit.dev"
+      actionButtonUrl="https://docs.dappkit.dev/start-building"
       github="https://github.com/taikai/dappkit"
       drawerOpened={drawerOpened}
       drawerOnClick={() => {

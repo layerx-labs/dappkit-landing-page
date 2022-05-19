@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    font-size: ${rem("24px", defaultSize)};
+    font-size: ${rem("28px", defaultSize)};
     line-height: 1.5;
   }
 

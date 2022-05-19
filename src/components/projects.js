@@ -2,8 +2,15 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import ButtonLink from "./design/button-link";
-import { Polkamarkets, RealFevr, Lepricon, Bepro } from "../utils/brands";
-import { device, sizes, colors } from "../styles/design-tokens";
+import {
+  Polkamarkets,
+  RealFevr,
+  Lepricon,
+  Onda,
+  Bepro,
+  Subvisual,
+} from "../utils/brands";
+import { sizes, colors } from "../styles/design-tokens";
 
 const { defaultSize } = sizes;
 const { grey600 } = colors;
@@ -14,15 +21,6 @@ const Grid = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  ${"" /* grid-template-columns: 1fr; */}
-
-  @media ${device.s} {
-    ${"" /* grid-template-columns: repeat(2, 1fr); */}
-  }
-
-  @media ${device.m} {
-    ${"" /* grid-template-columns: repeat(3, 1fr); */}
-  }
 
   li {
     width: ${rem("300px", defaultSize)};
@@ -55,10 +53,12 @@ const Grid = styled.ul`
 
 function Projects() {
   const projects = [
-    { url: "#0", img: <Polkamarkets /> },
-    { url: "#0", img: <RealFevr /> },
-    { url: "#0", img: <Lepricon /> },
-    { url: "#0", img: <Bepro /> },
+    { url: "https://polkamarkets.com", img: <Polkamarkets /> },
+    { url: "https://realfevr.com", img: <RealFevr /> },
+    { url: "https://subvisual.com", img: <Subvisual /> },
+    { url: "https://ondastudio.co", img: <Onda /> },
+    { url: "https://lepricon.io", img: <Lepricon /> },
+    { url: "https://bepro.network", img: <Bepro /> },
   ];
 
   return (

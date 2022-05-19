@@ -32,7 +32,11 @@ function Templates({ id }) {
       url: "https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js",
       img: <Nextjs />,
     },
-    { name: "Angular", url: "#0", img: <Angular /> },
+    {
+      name: "Angular",
+      url: "https://github.com/taikai/dappkit-testflight",
+      img: <Angular />,
+    },
   ];
   return (
     <Section

@@ -13,7 +13,7 @@ function Examples() {
       subtitle: "ERC-721 or ERC1155",
       content:
         "Create, Deploy and Mint your own NFTs following the industry standards",
-      url: "https://sdk.dappkit.dev",
+      url: "https://docs.dappkit.dev/start-building/how-to-guides/create-an-nft",
       snippet: nft,
       img: "./images/example-nfts.svg",
     },
@@ -24,7 +24,7 @@ function Examples() {
       subtitle: "Launch your own ERC-20 tokens",
       content:
         "ERC20 Tokens can be used as currency or as tokens to reward your users via gamification techniques",
-      url: "https://sdk.dappkit.dev",
+      url: "https://docs.dappkit.dev/start-building/how-to-guides/create-an-erc-20-token",
       snippet: crypto,
       img: "./images/example-crypto-tokens.svg",
     },
@@ -35,7 +35,7 @@ function Examples() {
       subtitle: "Sablier, Loophole, or more contracts",
       content:
         "dappKit comes preloaded with default DeFi smart contracts you can use to jumpstart your business",
-      url: "https://sdk.dappkit.dev",
+      url: "https://docs.dappkit.dev/start-building/how-to-guides/usage",
       snippet: defi,
       img: "./images/example-defi.svg",
     },
@@ -46,7 +46,7 @@ function Examples() {
       subtitle: "Vote contract and network contract",
       content:
         "Base your DAO on our Network and take advantage of a community made smart contract",
-      url: "https://sdk.dappkit.dev",
+      url: "https://docs.dappkit.dev/start-building/how-to-guides/usage",
       snippet: dao,
       img: "./images/example-daos.svg",
     },

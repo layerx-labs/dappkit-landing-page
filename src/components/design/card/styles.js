@@ -40,7 +40,7 @@ export const Wrapper = styled.div`
         color: ${grey100};
 
         span {
-          border-radius: ${(rem("1px"), defaultSize)};
+          ${"" /* border-radius: ${(rem("1px"), defaultSize)}; */}
           background-color: ${green900};
           padding: 0 ${rem("2px", defaultSize)};
           font-family: "Space Mono", monospace;

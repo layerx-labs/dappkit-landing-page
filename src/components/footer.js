@@ -7,12 +7,12 @@ function Footer() {
       links: [
         {
           value: "Docs",
-          url: "https://doc.dappkit.dev",
+          url: "https://docs.dappkit.dev",
           external: true,
         },
         {
           value: "Learn",
-          url: "#0",
+          url: "https://sdk.dappkit.dev",
           external: true,
         },
         {
@@ -35,28 +35,13 @@ function Footer() {
       links: [
         {
           value: "Privacy Policy",
-          url: "#0",
+          url: "https://bepro.network/privacy",
         },
         {
           value: "Terms of Service",
-          url: "#0",
+          url: "https://bepro.network/terms-and-conditions",
         },
       ],
-    },
-  ];
-
-  const social = [
-    {
-      channel: "github",
-      url: "https://github.com/taikai/dappkit",
-    },
-    {
-      channel: "discord",
-      url: "https://discord.gg/9aUufhzhfm",
-    },
-    {
-      channel: "twitter",
-      url: "#0",
     },
   ];
 
@@ -65,10 +50,19 @@ function Footer() {
       supportTitle="We’re here to help"
       supportSubtitle="Let us know if you have any questions."
       community="https://discord.gg/9aUufhzhfm"
-      docs="https://doc.dappkit.dev"
+      docs="https://docs.dappkit.dev"
       links={links}
-      social={social}
-      copyright="Copyright © 2022 All rights reserved. TAIKAI — Builder Hub"
+      copyright={[
+        "Copyright © 2022 All rights reserved. ",
+        <a
+          key={1}
+          href="https://taikai.network"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TAIKAI — Builder Hub
+        </a>,
+      ]}
     />
   );
 }

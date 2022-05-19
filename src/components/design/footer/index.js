@@ -1,4 +1,3 @@
-import Icon from "../icon";
 import ButtonLink from "../button-link";
 import { DappKit } from "../../../utils/brands";
 import { colors } from "../../../styles/design-tokens";
@@ -7,15 +6,8 @@ import * as Styles from "./styles";
 const { dark } = colors;
 
 export function Footer(props) {
-  const {
-    supportTitle,
-    supportSubtitle,
-    docs,
-    community,
-    links,
-    social,
-    copyright,
-  } = props;
+  const { supportTitle, supportSubtitle, docs, community, links, copyright } =
+    props;
 
   return (
     <Styles.Wrapper>
@@ -40,7 +32,6 @@ export function Footer(props) {
               Array.isArray(links) &&
               links.map((column, index) => (
                 <Styles.ColumnMenu key={index}>
-                  <h4>{column.title}</h4>
                   <ul>
                     {column.links &&
                       Array.isArray(column.links) &&
@@ -65,20 +56,26 @@ export function Footer(props) {
           </Styles.Menu>
         </Styles.Columns>
         <Styles.Copyright>
-          <div>
+          <div className="copyright">
             <DappKit mainColor={dark} />
             <span>{copyright}</span>
           </div>
           <Styles.Social>
-            {social &&
-              Array.isArray(social) &&
-              social.map((item, index) => (
-                <li key={index}>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <Icon fill={dark} icon={item.channel} />
-                  </a>
-                </li>
-              ))}
+            <ButtonLink
+              url="https://github.com/taikai/dappkit"
+              icon="github"
+              external
+            />
+            <ButtonLink
+              url="https://discord.gg/9aUufhzhfm"
+              icon="discord"
+              external
+            />
+            <ButtonLink
+              url="https://twitter.com/bepronet"
+              icon="twitter"
+              external
+            />
           </Styles.Social>
         </Styles.Copyright>
       </div>

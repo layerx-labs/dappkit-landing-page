@@ -197,7 +197,7 @@ export const InUse = styled.div`
   overflow: hidden;
 
   img {
-    margin-bottom: ${rem("-8px", defaultSize)};
+    margin: ${rem("-2px", defaultSize)} 0 ${rem("-8px", defaultSize)} 0;
     width: 100%;
     height: auto;
   }

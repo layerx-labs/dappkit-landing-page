@@ -11,7 +11,7 @@ function CardCta(props) {
         <p>{description}</p>
       </div>
       <div>
-        <ButtonLink color="dark" url={ctaUrl} value={ctaValue} />
+        <ButtonLink color="dark" url={ctaUrl} value={ctaValue} external />
       </div>
     </Styles.Wrapper>
   );

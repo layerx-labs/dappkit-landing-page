@@ -1,17 +1,24 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, device } from "../../../styles/design-tokens";
+import {
+  colors,
+  device,
+  sizes,
+  typography,
+} from "../../../styles/design-tokens";
 
-const { light, dark } = colors;
+const { light, dark, purple500 } = colors;
+const { bold } = typography;
+const { defaultSize } = sizes;
 
 export const Wrapper = styled.footer`
   background-color: ${light};
-  padding: ${rem("60px")} ${rem("30px")};
+  padding: ${rem("60px", defaultSize)} ${rem("30px", defaultSize)};
   color: ${dark};
 
   > div {
     margin: 0 auto;
-    max-width: ${rem("1240px")};
+    max-width: ${rem("1240px", defaultSize)};
   }
 
   ul {
@@ -35,15 +42,15 @@ export const Support = styled.div`
   margin-bottom: ${rem("50px")};
 
   p {
-    margin-top: ${rem("10px")};
+    margin-top: ${rem("10px", defaultSize)};
     font-family: "Space Mono", monospace;
-    font-size: ${rem("24px")};
+    font-size: ${rem("24px", defaultSize)};
     font-feature-settings: "ss01" on;
     line-height: 1.5;
   }
 
   div {
-    margin-top: ${rem("25px")};
+    margin-top: ${rem("30px", defaultSize)};
     display: flex;
     flex-wrap: wrap;
 
@@ -69,7 +76,7 @@ export const Menu = styled.div`
   font-feature-settings: "ss01" on;
 
   @media (min-width: 1080px) {
-    grid-template-columns: repeat(2, ${rem("180px")});
+    grid-template-columns: repeat(2, ${rem("180px", defaultSize)});
   }
 
   @media ${device.l} {
@@ -78,50 +85,57 @@ export const Menu = styled.div`
 `;
 
 export const ColumnMenu = styled.div`
-  h4 {
-    margin-bottom: ${rem("24px")};
-    line-height: 1;
-  }
+  ul {
+    li {
+      font-size: ${rem("14px", defaultSize)};
 
-  ul li {
-    line-height: 1;
+      a {
+        color: ${dark};
+        text-decoration: none;
+        transition-duration: 0.3s;
 
-    a {
-      border-bottom: 0;
-      color: ${dark};
-      text-decoration: none;
-      transition-duration: 0.3s;
-
-      &:hover {
-        border-bottom: 1px solid ${dark};
+        &:hover {
+          color: ${purple500};
+        }
       }
-    }
 
-    &:not(:last-child) {
-      margin-bottom: ${rem("14px")};
+      &:not(:last-child) {
+        margin-bottom: ${rem("10px", defaultSize)};
+      }
     }
   }
 `;
 
 export const Copyright = styled.div`
-  margin-top: ${rem("60px")};
+  margin-top: ${rem("100px", defaultSize)};
   display: flex;
   flex-direction: column;
 
-  > div {
+  > div.copyright {
     flex: 1;
     order: 2;
-    margin-top: ${rem("50px")};
+    margin-top: ${rem("100px", defaultSize)};
 
     svg {
       width: auto;
-      height: ${rem("34px")};
+      height: ${rem("40px", defaultSize)};
     }
 
     span {
       margin-top: ${rem("-5px")};
       display: block;
-      font-size: ${rem("14px")};
+      font-size: ${rem("14px", defaultSize)};
+
+      a {
+        color: ${dark};
+        font-weight: ${bold};
+        text-decoration: none;
+        transition-duration: 0.3s;
+
+        &:hover {
+          color: ${purple500};
+        }
+      }
     }
   }
 
@@ -129,31 +143,30 @@ export const Copyright = styled.div`
     flex-direction: row;
     align-items: flex-end;
 
-    > div {
+    > div.copyright {
       order: 1;
       margin-top: 0;
     }
   }
 `;
 
-export const Social = styled.ul`
+export const Social = styled.div`
   order: 1;
   display: flex;
 
-  li {
-    border: 2px solid ${dark};
-    background-color: ${light};
-    width: ${rem("40px")};
-    height: ${rem("40px")};
-    padding: ${rem("8px")};
-    transition-duration: 0.3s;
+  a {
+    span {
+      width: ${rem("32px", defaultSize)};
+      height: ${rem("32px", defaultSize)};
 
-    &:not(:last-child) {
-      margin-right: ${rem("20px")};
+      svg {
+        width: ${rem("18px", defaultSize)};
+        height: ${rem("18px", defaultSize)};
+      }
     }
 
-    &:hover {
-      box-shadow: ${rem("4px")} ${rem("4px")} 0 ${dark};
+    &:not(:last-child) {
+      margin-right: ${rem("20px", defaultSize)};
     }
   }
 

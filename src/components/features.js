@@ -54,6 +54,9 @@ const Grid = styled.div`
 
     > div {
       width: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       &:first-child {
         grid-column: 1 / 8;
