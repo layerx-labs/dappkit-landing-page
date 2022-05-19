@@ -45,13 +45,25 @@ export const Menu = styled.div`
       list-style: none;
 
       a {
-        border-bottom: ${rem(border, defaultSize)} solid transparent;
+        position: relative;
         color: ${dark};
         text-decoration: none;
-        transition-duration: 0.3s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: ${rem(border, defaultSize)};
+          background-color: ${dark};
+          transition-duration: 0.3s;
+        }
 
         &:hover {
-          border-color: ${dark};
+          &:after {
+            width: 100%;
+          }
         }
       }
 

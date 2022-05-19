@@ -51,8 +51,8 @@ export const TabsNav = styled.ul`
 `;
 
 export const TabButton = styled.button`
+  position: relative;
   border: 0;
-  border-bottom: ${rem(border, defaultSize)} solid transparent;
   height: ${rem("48px", defaultSize)};
   background-color: ${(props) => (props.active ? dark : "transparent")};
   display: flex;
@@ -68,8 +68,21 @@ export const TabButton = styled.button`
   cursor: pointer;
   pointer-events: ${(props) => (props.active ? "none" : "initial")};
 
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: ${rem(border, defaultSize)};
+    background-color: ${dark};
+    transition-duration: 0.3s;
+  }
+
   &:hover {
-    border-color: ${dark};
+    &:after {
+      width: 100%;
+    }
   }
 `;
 
