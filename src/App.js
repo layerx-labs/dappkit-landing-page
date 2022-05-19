@@ -11,7 +11,7 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 
 function App() {
-  const [hightlightButton, setHighlightButton] = useState(false);
+  const [hightlightButton, setHighlightButton] = useState(true);
 
   return (
     <>
