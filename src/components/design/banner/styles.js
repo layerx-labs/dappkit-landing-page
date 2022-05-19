@@ -1,17 +1,22 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography, sizes } from "../../../styles/design-tokens";
+import {
+  colors,
+  typography,
+  sizes,
+  device,
+} from "../../../styles/design-tokens";
 
 const { bold } = typography;
 const { purple500, dark, light } = colors;
 const { defaultSize, border } = sizes;
 
 export const Banner = styled.div`
+  display: none;
   position: relative;
   border-bottom: ${rem(border, defaultSize)} solid ${dark};
   height: ${rem("52px", defaultSize)};
   background-color: ${dark};
-  display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Space Mono", monospace;
@@ -61,5 +66,9 @@ export const Banner = styled.div`
     padding: 0;
     cursor: pointer;
     transition-duration: 0.3s;
+  }
+
+  @media ${device.s} {
+    display: flex;
   }
 `;

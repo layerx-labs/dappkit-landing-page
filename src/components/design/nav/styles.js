@@ -18,12 +18,16 @@ export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 ${rem("40px", defaultSize)};
+  padding: 0 ${rem("30px", defaultSize)};
 
   svg.logo {
     margin-top: ${rem("5px", defaultSize)};
     width: auto;
     height: ${rem("40px", defaultSize)};
+  }
+
+  @media (min-width: 960px) {
+    padding: 0 ${rem("40px", defaultSize)};
   }
 `;
 
@@ -59,13 +63,24 @@ export const Menu = styled.div`
 
   a {
     &.get-started--button {
-      margin: 0 ${rem("20px", defaultSize)} 0 ${rem("30px", defaultSize)};
+      margin-left: ${rem("30px", defaultSize)};
+    }
+
+    &.github--button {
+      display: none;
+      margin-left: ${rem("20px", defaultSize)};
     }
   }
 
-  @media ${device.m} {
+  @media (min-width: 960px) {
     display: flex;
     align-items: center;
+  }
+
+  @media ${device.l} {
+    a.github--button {
+      display: inherit;
+    }
   }
 `;
 
@@ -73,7 +88,7 @@ export const HamburgerButton = styled.button`
   border: 0;
   display: block;
   background-color: transparent;
-  width: ${rem("30px")};
+  width: ${rem("30px", defaultSize)};
   padding: 0;
   cursor: pointer;
 
@@ -83,25 +98,25 @@ export const HamburgerButton = styled.button`
     display: block;
     border-radius: 999px;
     background-color: ${dark};
-    height: ${rem("4px")};
+    height: ${rem("4px", defaultSize)};
     transition: all 200ms ease-in-out;
   }
 
   &:before {
-    box-shadow: 0 ${rem("8px")} 0 ${dark};
-    margin-bottom: ${rem("12px")};
+    box-shadow: 0 ${rem("8px", defaultSize)} 0 ${dark};
+    margin-bottom: ${rem("12px", defaultSize)};
   }
 
   &.opened:before {
     box-shadow: 0 0 0 ${dark};
-    transform: translateY(${rem("10px")}) rotate(45deg);
+    transform: translateY(${rem("10px", defaultSize)}) rotate(45deg);
   }
 
   &.opened:after {
-    transform: translateY(${rem("-6px")}) rotate(-45deg);
+    transform: translateY(${rem("-6px", defaultSize)}) rotate(-45deg);
   }
 
-  @media ${device.m} {
+  @media (min-width: 960px) {
     display: none;
   }
 `;
@@ -136,11 +151,24 @@ export const Drawer = styled.div`
         text-decoration: none;
       }
     }
+
+    & + div {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        max-width: min-content;
+
+        &:not(:last-child) {
+          margin-bottom: ${rem("20px", defaultSize)};
+        }
+      }
+    }
   }
 
   &.opened {
     height: 100vh;
-    padding: ${rem("150px", defaultSize)} ${rem("30px", defaultSize)};
+    padding: ${rem("120px", defaultSize)} ${rem("30px", defaultSize)};
     overflow-y: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -149,10 +177,6 @@ export const Drawer = styled.div`
     &::-webkit-scrollbar {
       display: none;
     }
-  }
-
-  > a:not(:last-child) {
-    margin-bottom: ${rem("14px", defaultSize)};
   }
 
   @media ${device.m} {

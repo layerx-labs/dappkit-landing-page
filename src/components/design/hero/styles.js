@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, sizes } from "../../../styles/design-tokens";
+import { colors, sizes, device } from "../../../styles/design-tokens";
 
 const { light, dark } = colors;
 const { defaultSize } = sizes;
@@ -18,23 +18,27 @@ export const Wrapper = styled.header`
 
   h1 {
     margin-bottom: ${rem("20px", defaultSize)};
-
-    @supports (-webkit-text-stroke-width: 1px) and
-      (-webkit-text-stroke-color: black) and (text-shadow: inherit) {
-      span:first-child {
-        color: ${light};
-        -webkit-text-stroke-width: ${rem("2px", defaultSize)};
-        -webkit-text-stroke-color: ${dark};
-        text-shadow: ${rem("8px", defaultSize)} ${rem("8px", defaultSize)} 0
-          ${dark};
-      }
-    }
   }
 
   > span {
     font-family: "Space Mono", monospace;
     font-feature-settings: "ss01" on;
     font-size: ${rem("24px", defaultSize)};
+  }
+
+  @media ${device.m} {
+    h1 {
+      @supports (-webkit-text-stroke-width: 1px) and
+        (-webkit-text-stroke-color: black) and (text-shadow: inherit) {
+        span:first-child {
+          color: ${light};
+          -webkit-text-stroke-width: ${rem("2px", defaultSize)};
+          -webkit-text-stroke-color: ${dark};
+          text-shadow: ${rem("8px", defaultSize)} ${rem("8px", defaultSize)} 0
+            ${dark};
+        }
+      }
+    }
   }
 `;
 

@@ -50,7 +50,12 @@ function Nav(props) {
               value={actionButtonValue}
               external
             />
-            <ButtonLink url={actionButtonUrl} icon="github" external />
+            <ButtonLink
+              className="github--button"
+              url={actionButtonUrl}
+              icon="github"
+              external
+            />
           </Styles.Menu>
         </Styles.Nav>
       </Styles.Wrapper>
@@ -66,8 +71,19 @@ function Nav(props) {
               </li>
             ))}
         </ul>
-        <ButtonLink color="dark" url="#0" value={actionButtonValue} />
-        <ButtonLink url="#0" value="GitHub" />
+        <div>
+          <ButtonLink
+            color="dark"
+            url="https://docs.dappkit.dev/start-building"
+            value={actionButtonValue}
+            external
+          />
+          <ButtonLink
+            url="https://github.com/taikai/dappkit"
+            value="GitHub"
+            external
+          />
+        </div>
       </Styles.Drawer>
     </>
   );
