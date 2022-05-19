@@ -11,80 +11,68 @@ function Price(props) {
       <div className="coins">
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-1 in-view" : "coin-1"}
-              >
-                <Coin1 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-1 in-view" : "coin-1"}
+            >
+              <Coin1 />
+            </Styles.CoinWrapper>
           )}
         </InView>
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-2 in-view" : "coin-2"}
-              >
-                <Coin2 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-2 in-view" : "coin-2"}
+            >
+              <Coin2 />
+            </Styles.CoinWrapper>
           )}
         </InView>
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-3 in-view" : "coin-3"}
-              >
-                <Coin3 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-3 in-view" : "coin-3"}
+            >
+              <Coin3 />
+            </Styles.CoinWrapper>
           )}
         </InView>
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-4 in-view" : "coin-4"}
-              >
-                <Coin4 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-4 in-view" : "coin-4"}
+            >
+              <Coin4 />
+            </Styles.CoinWrapper>
           )}
         </InView>
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-5 in-view" : "coin-5"}
-              >
-                <Coin5 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-5 in-view" : "coin-5"}
+            >
+              <Coin5 />
+            </Styles.CoinWrapper>
           )}
         </InView>
         <InView>
           {({ inView, ref }) => (
-            <>
-              <div
-                ref={ref}
-                inView={inView}
-                className={inView ? "coin-6 in-view" : "coin-6"}
-              >
-                <Coin6 />
-              </div>
-            </>
+            <Styles.CoinWrapper
+              ref={ref}
+              inView={inView}
+              className={inView ? "coin-6 in-view" : "coin-6"}
+            >
+              <Coin6 />
+            </Styles.CoinWrapper>
           )}
         </InView>
       </div>

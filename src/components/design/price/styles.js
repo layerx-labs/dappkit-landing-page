@@ -126,3 +126,5 @@ export const Wrapper = styled.div`
     font-style: italic;
   }
 `;
+
+export const CoinWrapper = styled.div``;
