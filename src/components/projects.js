@@ -48,6 +48,10 @@ const Grid = styled.ul`
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: ${purple500};
+
+    span {
+      border: 0;
+    }
   }
 `;
 
