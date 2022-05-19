@@ -1,6 +1,6 @@
 import { InView } from "react-intersection-observer";
 import Section from "../section";
-import { Coin1, Coin2, Coin3 } from "../../../utils/coins";
+import { Coin1, Coin2, Coin3, Coin4, Coin5, Coin6 } from "../../../utils/coins";
 import * as Styles from "./styles";
 
 function Price(props) {
@@ -8,33 +8,86 @@ function Price(props) {
 
   return (
     <Styles.Wrapper id={id}>
-      <InView threshold={0.25}>
-        {({ inView, ref, entry }) => (
-          <>
-            <div ref={ref} inView={inView}>
-              <Coin1 className={inView ? "coin-1 in-view" : "coin-1"} />
-            </div>
-          </>
-        )}
-      </InView>
-      <InView threshold={0.25}>
-        {({ inView, ref, entry }) => (
-          <>
-            <div ref={ref} inView={inView}>
-              <Coin2 className={inView ? "coin-2 in-view" : "coin-2"} />
-            </div>
-          </>
-        )}
-      </InView>
-      <InView threshold={0.25}>
-        {({ inView, ref, entry }) => (
-          <>
-            <div ref={ref} inView={inView}>
-              <Coin3 className={inView ? "coin-3 in-view" : "coin-3"} />
-            </div>
-          </>
-        )}
-      </InView>
+      <div className="coins">
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-1 in-view" : "coin-1"}
+              >
+                <Coin1 />
+              </div>
+            </>
+          )}
+        </InView>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-2 in-view" : "coin-2"}
+              >
+                <Coin2 />
+              </div>
+            </>
+          )}
+        </InView>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-3 in-view" : "coin-3"}
+              >
+                <Coin3 />
+              </div>
+            </>
+          )}
+        </InView>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-4 in-view" : "coin-4"}
+              >
+                <Coin4 />
+              </div>
+            </>
+          )}
+        </InView>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-5 in-view" : "coin-5"}
+              >
+                <Coin5 />
+              </div>
+            </>
+          )}
+        </InView>
+        <InView>
+          {({ inView, ref }) => (
+            <>
+              <div
+                ref={ref}
+                inView={inView}
+                className={inView ? "coin-6 in-view" : "coin-6"}
+              >
+                <Coin6 />
+              </div>
+            </>
+          )}
+        </InView>
+      </div>
 
       <Section color="green">
         <h2>{title}</h2>
