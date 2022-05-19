@@ -59,32 +59,32 @@ const Grid = styled.div`
       justify-content: center;
 
       &:first-child {
-        grid-column: 1 / 8;
+        grid-column: 1 / 6;
         grid-row: 1 / 2;
       }
 
       &:nth-child(2) {
-        grid-column: 8 / 13;
+        grid-column: 6 / 13;
         grid-row: 1 / 2;
       }
 
       &:nth-child(3) {
-        grid-column: 1 / 6;
+        grid-column: 1 / 8;
         grid-row: 2 / 3;
       }
 
       &:nth-child(4) {
-        grid-column: 6 / 13;
+        grid-column: 8 / 13;
         grid-row: 2 / 3;
       }
 
       &:nth-child(5) {
-        grid-column: 1 / 7;
+        grid-column: 1 / 5;
         grid-row: 3 / 4;
       }
 
       &:last-child {
-        grid-column: 7 / 13;
+        grid-column: 5 / 13;
         grid-row: 3 / 4;
       }
     }
@@ -94,8 +94,7 @@ const Grid = styled.div`
 function Features({ id }) {
   const items = [
     {
-      title:
-        "Connect to an EVM Blockchain node (Ethereum, Fantom, Polygon, ...) in 3 lines of code",
+      title: "Connect to an EVM Blockchain node in 3 lines of code",
       description: [
         "Connecting is as easy as providing a RPC Url and (optionally) a private key to the ",
         <span key={1}>WebConnection</span>,
@@ -117,11 +116,6 @@ function Features({ id }) {
         <span key={4}>contract.methods</span>,
         " property getter.",
       ],
-    },
-    {
-      title: "Wallet Integration ",
-      description:
-        "Integrates easily with Metamask to sign and submit smart contract transactions in your javascript dapp.",
     },
     {
       title: "Deploy standard and custom contracts",
@@ -148,6 +142,11 @@ function Features({ id }) {
         <span key={2}>Web3Connection.Web3.utils</span>,
         " property.",
       ],
+    },
+    {
+      title: "Wallet Integration ",
+      description:
+        "Integrates easily with Metamask to sign and submit smart contract transactions in your javascript dapp.",
     },
     {
       title: "Generate a wrapper for your EVM contract",

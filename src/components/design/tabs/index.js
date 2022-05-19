@@ -39,7 +39,7 @@ function Tabs(props) {
             <span className="subtitle">{content.subtitle}</span>
             <h2>{content.title}</h2>
             <p>{content.content}</p>
-            <ButtonLink color="dark" url={content.url} value="Get Started" />
+            <ButtonLink color="dark" url={content.url} value="Documentation" />
           </Styles.TabContent>
           <Styles.TabContent className="snippet">
             <Styles.CodeEditor>
