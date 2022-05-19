@@ -2,7 +2,7 @@ import { useState } from "react";
 import Nav from "./design/nav";
 import Banner from "./design/banner";
 
-function NavMenu() {
+function NavMenu({ hightlightButton }) {
   const [bannerIsVisible, setBannerIsVisible] = useState(true);
   const [drawerOpened, setDrawerOpened] = useState(false);
 
@@ -32,6 +32,7 @@ function NavMenu() {
         )
       }
       menu={menu}
+      actionButtonHighlight={hightlightButton}
       actionButtonValue="Get Started"
       actionButtonUrl="https://docs.dappkit.dev/start-building"
       github="https://github.com/taikai/dappkit"

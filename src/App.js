@@ -1,3 +1,4 @@
+import { useState } from "react";
 import NavMenu from "./components/nav-menu";
 import Intro from "./components/intro";
 import Examples from "./components/examples";
@@ -10,10 +11,12 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 
 function App() {
+  const [hightlightButton, setHighlightButton] = useState(false);
+
   return (
     <>
-      <NavMenu />
-      <Intro />
+      <NavMenu hightlightButton={hightlightButton} />
+      <Intro visible={(visible) => setHighlightButton(visible)} />
       <Examples />
       <Sdk />
       <Features id="features" />

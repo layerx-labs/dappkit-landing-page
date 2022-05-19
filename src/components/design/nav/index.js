@@ -6,6 +6,7 @@ function Nav(props) {
   const {
     banner,
     menu,
+    actionButtonHighlight,
     actionButtonValue,
     actionButtonUrl,
     drawerOpened = false,
@@ -45,7 +46,7 @@ function Nav(props) {
             </ul>
             <ButtonLink
               className="get-started--button"
-              color="dark"
+              color={actionButtonHighlight ? "light" : "dark"}
               url={actionButtonUrl}
               value={actionButtonValue}
               external
