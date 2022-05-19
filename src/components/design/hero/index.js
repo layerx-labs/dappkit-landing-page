@@ -8,8 +8,13 @@ function Hero(props) {
     <Styles.Wrapper>
       {children}
       <Styles.ActionButtons>
-        <ButtonLink color="dark" url={getStartedUrl} value="Get Started" />
-        <ButtonLink url={docsUrl} value="Documentation" />
+        <ButtonLink
+          color="dark"
+          url={getStartedUrl}
+          value="Get Started"
+          external
+        />
+        <ButtonLink url={docsUrl} value="Documentation" external />
       </Styles.ActionButtons>
     </Styles.Wrapper>
   );
