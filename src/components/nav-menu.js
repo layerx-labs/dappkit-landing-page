@@ -15,7 +15,7 @@ function NavMenu(props) {
       url: "https://discord.gg/9aUufhzhfm",
       external: true,
     },
-    { value: "Docs", url: "https://docs.dappkit.dev", external: true },
+    { value: "Docs", url: "https://sdk.dappkit.dev", external: true },
   ];
 
   return (
@@ -26,7 +26,6 @@ function NavMenu(props) {
           <Banner
             value={`Bepro.js is now dappKit`}
             link="Learn more"
-            url="#0"
             onClick={() => {
               setBannerIsVisible(false);
             }}

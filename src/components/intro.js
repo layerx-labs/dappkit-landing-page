@@ -11,7 +11,7 @@ function Intro({ isVisible }) {
         <CoinWrapper ref={ref} inView={inView}>
           <Hero
             getStartedUrl="https://docs.dappkit.dev/start-building"
-            docsUrl="https://docs.dappkit.dev"
+            docsUrl="https://sdk.dappkit.dev"
           >
             <h1>
               <span>Your Web3 project</span>

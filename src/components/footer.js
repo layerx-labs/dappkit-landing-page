@@ -7,12 +7,12 @@ function Footer({ comicTheme = false }) {
       links: [
         {
           value: "Docs",
-          url: "https://docs.dappkit.dev",
+          url: "https://sdk.dappkit.dev",
           external: true,
         },
         {
           value: "Learn",
-          url: "https://sdk.dappkit.dev",
+          url: "https://docs.dappkit.dev/start-building",
           external: true,
         },
         {

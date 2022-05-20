@@ -32,7 +32,7 @@ function App() {
       <Sdk />
       <Features id="features" />
       <Templates id="templates" />
-      <Bounties />
+      <Bounties comicTheme={comicTheme} />
       <Pricing id="pricing" comicTheme={comicTheme} />
       <Projects />
       <Footer comicTheme={comicTheme} />

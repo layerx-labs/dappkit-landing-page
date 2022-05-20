@@ -16,7 +16,7 @@ const { defaultSize } = sizes;
 const { purple500 } = colors;
 
 const Grid = styled.ul`
-  margin: 0 0 ${rem("60px", defaultSize)} 0;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +45,7 @@ const Grid = styled.ul`
 
   & + a {
     display: inline-block;
-    margin-left: 50%;
+    margin: ${rem("60px", defaultSize)} 0 0 50%;
     transform: translateX(-50%);
     background-color: ${purple500};
 
@@ -78,7 +78,7 @@ function Projects() {
             </li>
           ))}
       </Grid>
-      <ButtonLink url="#0" value="Case Studies" />
+      {/* <ButtonLink url="#0" value="Case Studies" /> */}
     </Section>
   );
 }

@@ -16,7 +16,7 @@ const Grid = styled.div`
   }
 `;
 
-function Bounties() {
+function Bounties({ comicTheme = false }) {
   const bounties = [
     {
       title: [
@@ -42,7 +42,7 @@ function Bounties() {
   ];
 
   return (
-    <Section color="purple">
+    <Section color={comicTheme ? "blue" : "purple"}>
       <Grid>
         {bounties &&
           Array.isArray(bounties) &&

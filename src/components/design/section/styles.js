@@ -3,7 +3,7 @@ import { rem } from "polished";
 import { sizes, colors } from "../../../styles/variables";
 
 const { defaultSize, border } = sizes;
-const { light, dark, purple200, purple500, green500, orange } = colors;
+const { light, dark, purple200, purple500, green500, orange, blue } = colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
@@ -41,10 +41,16 @@ export const Wrapper = styled.div`
       background-color: ${green500};
     `}
 
-    ${(props) =>
+  ${(props) =>
     props.color === "orange" &&
     css`
       background-color: ${orange};
+    `}
+
+  ${(props) =>
+    props.color === "blue" &&
+    css`
+      background-color: ${blue};
     `}
 `;
 
