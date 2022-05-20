@@ -17,7 +17,7 @@ const {
 export const main = {
   defaultFont: fontDefault,
   defaultHeadingFont: fontMono,
-  menuFont: fontDefault,
+  menuFont: fontMono,
   buttonFont: fontMono,
   bannerFont: fontMono,
   heroFont: fontMono,
