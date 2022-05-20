@@ -117,11 +117,18 @@ export const Copyright = styled.div`
     }
 
     span {
-      margin-top: ${rem("-5px")};
-      display: block;
+      display: flex;
+      align-items: center;
       font-size: ${rem("14px", defaultSize)};
 
+      svg {
+        margin: 0 ${rem("5px", defaultSize)};
+        width: auto;
+        height: ${rem("24px", defaultSize)};
+      }
+
       a {
+        margin-left: ${rem("4px", defaultSize)};
         color: ${dark};
         font-weight: ${bold};
         text-decoration: none;
