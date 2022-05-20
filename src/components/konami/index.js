@@ -27,7 +27,7 @@ const KonamiTrigger = ({ easterEggIsActive }) => {
         "color: white; background: #7761FF; font-family:monospace;"
       );
     }
-  }, []);
+  });
 
   /**
    * Callback triggered when the user has pressed
