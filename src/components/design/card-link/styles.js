@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, sizes } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/variables";
 
 const { light, dark } = colors;
 const { defaultSize, shadow } = sizes;

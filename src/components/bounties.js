@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import CardCta from "./design/card-cta";
-import { device, sizes } from "../styles/design-tokens";
+import { device, sizes } from "../styles/variables";
 
 const { defaultSize } = sizes;
 

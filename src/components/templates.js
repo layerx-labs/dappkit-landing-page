@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Section from "./design/section";
 import CardLink from "./design/card-link";
-import { sizes } from "../styles/design-tokens";
+import { sizes } from "../styles/variables";
 import { Nodejs, Nextjs, Angular } from "../utils/brands";
 
 const { defaultSize } = sizes;

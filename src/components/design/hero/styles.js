@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, sizes, device } from "../../../styles/design-tokens";
+import { colors, sizes, device } from "../../../styles/variables";
 
 const { light, dark } = colors;
 const { defaultSize } = sizes;
@@ -21,7 +21,7 @@ export const Wrapper = styled.header`
   }
 
   > span {
-    font-family: "Space Mono", monospace;
+    font-family: ${(props) => props.theme.heroFont};
     font-feature-settings: "ss01" on;
     font-size: ${rem("24px", defaultSize)};
   }

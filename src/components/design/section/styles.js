@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { sizes, colors } from "../../../styles/design-tokens";
+import { sizes, colors } from "../../../styles/variables";
 
 const { defaultSize, border } = sizes;
-const { light, dark, purple200, purple500, green500 } = colors;
+const { light, dark, purple200, purple500, green500, orange } = colors;
 
 export const Wrapper = styled.div`
   background-color: ${light};
@@ -40,6 +40,12 @@ export const Wrapper = styled.div`
     css`
       background-color: ${green500};
     `}
+
+    ${(props) =>
+    props.color === "orange" &&
+    css`
+      background-color: ${orange};
+    `}
 `;
 
 export const Header = styled.div`
@@ -54,7 +60,7 @@ export const Header = styled.div`
     display: inline-block;
     margin-top: ${rem("20px", defaultSize)};
     font-size: ${rem("20px", defaultSize)};
-    font-family: "Space Mono", monospace;
+    font-family: ${(props) => props.theme.sectionSubtitleFont};
     font-feature-settings: "ss01" on;
     color: ${(props) => (props.color === "dark" ? light : dark)};
   }

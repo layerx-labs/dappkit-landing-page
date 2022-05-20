@@ -11,7 +11,7 @@ function Nav(props) {
     actionButtonUrl,
     drawerOpened = false,
     drawerOnClick,
-    easterEgg = false,
+    comicTheme = false,
   } = props;
 
   return (
@@ -24,7 +24,7 @@ function Nav(props) {
             onClick={drawerOnClick}
             aria-label="Menu"
           />
-          {easterEgg ? <DappKitComic /> : <DappKit />}
+          {comicTheme ? <DappKitComic /> : <DappKit />}
           <Styles.Menu>
             <ul>
               {menu &&

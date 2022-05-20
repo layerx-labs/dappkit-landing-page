@@ -1,4 +1,8 @@
-export const Coin1 = ({ className }) => (
+export const Coin1 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="170"
@@ -13,7 +17,7 @@ export const Coin1 = ({ className }) => (
       rx="68.9864"
       ry="45.3673"
       transform="rotate(-120.061 89.8651 89.8327)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -22,7 +26,7 @@ export const Coin1 = ({ className }) => (
       rx="68.9864"
       ry="45.3673"
       transform="rotate(-120.061 79.3404 95.9244)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path
@@ -32,7 +36,11 @@ export const Coin1 = ({ className }) => (
   </svg>
 );
 
-export const Coin2 = ({ className }) => (
+export const Coin2 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="106"
@@ -47,7 +55,7 @@ export const Coin2 = ({ className }) => (
       rx="42.8139"
       ry="28.1556"
       transform="rotate(-44.0834 55.593 55.4319)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -56,7 +64,7 @@ export const Coin2 = ({ className }) => (
       rx="42.8139"
       ry="28.1556"
       transform="rotate(-44.0834 50.3424 50.0108)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path
@@ -66,7 +74,11 @@ export const Coin2 = ({ className }) => (
   </svg>
 );
 
-export const Coin3 = ({ className }) => (
+export const Coin3 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="85"
@@ -81,7 +93,7 @@ export const Coin3 = ({ className }) => (
       rx="42.8139"
       ry="28.1556"
       transform="rotate(-28.5975 20.9276 68.2625)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -90,7 +102,7 @@ export const Coin3 = ({ className }) => (
       rx="42.8139"
       ry="28.1556"
       transform="rotate(-28.5975 17.3151 61.6362)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path
@@ -100,7 +112,11 @@ export const Coin3 = ({ className }) => (
   </svg>
 );
 
-export const Coin4 = ({ className }) => (
+export const Coin4 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="135"
@@ -115,7 +131,7 @@ export const Coin4 = ({ className }) => (
       rx="70.3481"
       ry="46.2628"
       transform="rotate(45.5479 95.7583 109.36)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -124,7 +140,7 @@ export const Coin4 = ({ className }) => (
       rx="70.3481"
       ry="46.2628"
       transform="rotate(45.5479 104.61 100.675)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path
@@ -134,7 +150,11 @@ export const Coin4 = ({ className }) => (
   </svg>
 );
 
-export const Coin5 = ({ className }) => (
+export const Coin5 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="150"
@@ -149,7 +169,7 @@ export const Coin5 = ({ className }) => (
       rx="67.3946"
       ry="44.3205"
       transform="rotate(68.2456 69.1356 87.4384)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -158,7 +178,7 @@ export const Coin5 = ({ className }) => (
       rx="67.3946"
       ry="44.3205"
       transform="rotate(68.2456 80.1693 83.0351)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path
@@ -168,7 +188,11 @@ export const Coin5 = ({ className }) => (
   </svg>
 );
 
-export const Coin6 = ({ className }) => (
+export const Coin6 = ({
+  className,
+  mainColor = "#BAFF62",
+  sideColor = "#95CC4E",
+}) => (
   <svg
     className={className}
     width="126"
@@ -183,7 +207,7 @@ export const Coin6 = ({ className }) => (
       rx="46.1622"
       ry="30.3575"
       transform="rotate(-32.204 64.9888 61.2108)"
-      fill="#95CC4E"
+      fill={sideColor}
       stroke="black"
     />
     <ellipse
@@ -192,7 +216,7 @@ export const Coin6 = ({ className }) => (
       rx="46.1622"
       ry="30.3575"
       transform="rotate(-32.204 60.6519 54.3255)"
-      fill="#BAFF62"
+      fill={mainColor}
       stroke="black"
     />
     <path

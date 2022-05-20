@@ -1,6 +1,6 @@
 import { Footer as Component } from "./design/footer";
 
-function Footer() {
+function Footer({ comicTheme = false }) {
   const links = [
     {
       title: "General Resources",
@@ -47,6 +47,7 @@ function Footer() {
 
   return (
     <Component
+      comicTheme={comicTheme}
       supportTitle="We’re here to help"
       supportSubtitle="Let us know if you have any questions."
       community="https://discord.gg/9aUufhzhfm"

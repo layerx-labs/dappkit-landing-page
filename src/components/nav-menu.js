@@ -3,7 +3,7 @@ import Nav from "./design/nav";
 import Banner from "./design/banner";
 
 function NavMenu(props) {
-  const { heroIsVisible = true, easterEgg = false } = props;
+  const { heroIsVisible = true, comicTheme = false } = props;
   const [bannerIsVisible, setBannerIsVisible] = useState(true);
   const [drawerOpened, setDrawerOpened] = useState(false);
 
@@ -20,7 +20,7 @@ function NavMenu(props) {
 
   return (
     <Nav
-      easterEgg={easterEgg}
+      comicTheme={comicTheme}
       banner={
         bannerIsVisible && (
           <Banner

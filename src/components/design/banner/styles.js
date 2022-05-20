@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import {
-  colors,
-  typography,
-  sizes,
-  device,
-} from "../../../styles/design-tokens";
+import { colors, typography, sizes, device } from "../../../styles/variables";
 
 const { bold } = typography;
 const { purple500, dark, light } = colors;
@@ -19,7 +14,7 @@ export const Banner = styled.div`
   background-color: ${dark};
   align-items: center;
   justify-content: center;
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.bannerFont};
   font-size: ${rem("16px", defaultSize)};
   font-feature-settings: "ss01" on;
   color: ${light};

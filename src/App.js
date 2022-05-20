@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { main, comic } from "./styles/design-tokens";
+import GlobalStyle from "./styles/global-style";
 import NavMenu from "./components/nav-menu";
 import Intro from "./components/intro";
 import Examples from "./components/examples";
@@ -13,26 +16,27 @@ import KonamiTrigger from "./components/konami";
 
 function App() {
   const [heroIsVisible, setHeroIsVisible] = useState(true);
-  const [easterEgg, setEasterEgg] = useState(false);
+  const [comicTheme, setComicTheme] = useState(false);
 
   return (
-    <>
+    <ThemeProvider theme={comicTheme ? comic : main}>
+      <GlobalStyle comicTheme={comicTheme} />
       <KonamiTrigger
         easterEggIsActive={(easterEggIsActive) =>
-          setEasterEgg(easterEggIsActive)
+          setComicTheme(easterEggIsActive)
         }
       />
-      <NavMenu heroIsVisible={heroIsVisible} easterEgg={easterEgg} />
+      <NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
       <Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
-      <Examples />
+      <Examples comicTheme={comicTheme} />
       <Sdk />
       <Features id="features" />
       <Templates id="templates" />
       <Bounties />
-      <Pricing id="pricing" />
+      <Pricing id="pricing" comicTheme={comicTheme} />
       <Projects />
-      <Footer />
-    </>
+      <Footer comicTheme={comicTheme} />
+    </ThemeProvider>
   );
 }
 

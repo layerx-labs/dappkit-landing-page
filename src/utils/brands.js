@@ -1,4 +1,4 @@
-import { colors } from "../styles/design-tokens";
+import { colors } from "../styles/variables";
 
 const { light, dark, grey300 } = colors;
 

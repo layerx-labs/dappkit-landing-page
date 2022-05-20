@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, sizes } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/variables";
 
 const { light, dark, purple100, purple500 } = colors;
 const { defaultSize, border } = sizes;
@@ -25,7 +25,8 @@ export const Wrapper = styled.div`
       color: ${dark};
 
       span {
-        background-color: ${purple100};
+        background-color: ${(props) => props.theme.cardCtaTitleHighlightBg};
+        color: ${(props) => props.theme.cardCtaTitleHighlightColor};
       }
     }
 
@@ -34,7 +35,7 @@ export const Wrapper = styled.div`
       color: ${dark};
 
       span {
-        color: ${purple500};
+        color: ${(props) => props.theme.cardCtaTextHighlightColor};
       }
     }
   }

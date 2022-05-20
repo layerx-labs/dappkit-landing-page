@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, device, sizes } from "../../../styles/design-tokens";
+import { colors, device, sizes } from "../../../styles/variables";
 
 const { light, dark } = colors;
 const { defaultSize, border } = sizes;
@@ -33,7 +33,7 @@ export const Nav = styled.div`
 
 export const Menu = styled.div`
   display: none;
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.menuFont};
   font-feature-settings: "ss01" on;
 
   ul {

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors, sizes } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/variables";
 
 const { light, dark, grey100, grey800, grey900, green500, green900 } = colors;
 const { defaultSize, border } = sizes;
@@ -40,12 +40,11 @@ export const Wrapper = styled.div`
         color: ${grey100};
 
         span {
-          ${"" /* border-radius: ${(rem("1px"), defaultSize)}; */}
-          background-color: ${green900};
+          background-color: ${(props) => props.theme.cardTextHighlightBg};
           padding: 0 ${rem("2px", defaultSize)};
-          font-family: "Space Mono", monospace;
+          font-family: ${(props) => props.theme.cardTextHighlightFont};
           font-feature-settings: "ss01" on;
-          color: ${green500};
+          color: ${(props) => props.theme.cardTextHighlightColor};
         }
       }
     `}

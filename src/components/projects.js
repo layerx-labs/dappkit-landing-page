@@ -10,7 +10,7 @@ import {
   Bepro,
   Subvisual,
 } from "../utils/brands";
-import { sizes, colors } from "../styles/design-tokens";
+import { sizes, colors } from "../styles/variables";
 
 const { defaultSize } = sizes;
 const { purple500 } = colors;

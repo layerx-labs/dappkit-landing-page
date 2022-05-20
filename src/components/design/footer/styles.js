@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import {
-  colors,
-  device,
-  sizes,
-  typography,
-} from "../../../styles/design-tokens";
+import { colors, device, sizes, typography } from "../../../styles/variables";
 
 const { light, dark, purple500 } = colors;
 const { bold } = typography;
@@ -43,7 +38,7 @@ export const Support = styled.div`
 
   p {
     margin-top: ${rem("10px", defaultSize)};
-    font-family: "Space Mono", monospace;
+    font-family: ${(props) => props.theme.footerSupportSubtitle};
     font-size: ${rem("24px", defaultSize)};
     font-feature-settings: "ss01" on;
     line-height: 1.5;
@@ -72,7 +67,7 @@ export const Menu = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: ${rem("50px")};
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.footerMenuFont};
   font-feature-settings: "ss01" on;
 
   @media (min-width: 1080px) {

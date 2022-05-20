@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
-import { colors, typography, device, sizes } from "./design-tokens";
+import { colors, typography, device, sizes } from "./variables";
 
-const { regular, bold } = typography;
+const { fontMono, regular, bold } = typography;
 const { purple500, green500, dark } = colors;
 const { defaultSize } = sizes;
 
@@ -20,8 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: 'Space Grotesk', Verdana, Arial, Helvetica, sans-serif;
-    ${"" /* font-family: "Comic Sans MS", "Comic Sans", cursive; */}
+    font-family: ${(props) => props.theme.defaultFont};
     font-size: 1rem;
     font-weight: ${regular};
     font-feature-settings: 'ss04' on;
@@ -37,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3 {
     margin: 0;
-    font-family: "Space Mono", monospace;
+    font-family: ${(props) => props.theme.defaultHeadingFont};
     font-weight: ${bold};
     font-feature-settings: 'ss01' on;
     line-height: 1.1;

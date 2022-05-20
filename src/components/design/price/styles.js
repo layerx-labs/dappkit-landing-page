@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { device, sizes } from "../../../styles/design-tokens";
+import { device, sizes } from "../../../styles/variables";
 
 const { defaultSize } = sizes;
 
 export const Wrapper = styled.div`
   position: relative;
   text-align: center;
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.pricingFont};
   font-feature-settings: "ss01" on;
 
   .coins div {

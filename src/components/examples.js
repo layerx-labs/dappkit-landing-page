@@ -1,8 +1,17 @@
 import { useState } from "react";
 import Tabs from "./design/tabs";
+import {
+  ExampleNfts,
+  ExampleCryptoTokens,
+  ExampleDefi,
+  ExampleDaos,
+} from "../utils/examples";
 import { nft, crypto, defi, dao } from "../utils/snippets";
+import { colors } from "../styles/variables";
 
-function Examples() {
+const { orange, green500 } = colors;
+
+function Examples({ comicTheme = false }) {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const tabs = [
@@ -15,7 +24,7 @@ function Examples() {
         "Create, Deploy and Mint your own NFTs following the industry standards",
       url: "https://docs.dappkit.dev/start-building/how-to-guides/create-an-nft",
       snippet: nft,
-      img: "./images/example-nfts.svg",
+      img: <ExampleNfts mainColor={comicTheme ? orange : green500} />,
     },
     {
       id: 1,
@@ -26,7 +35,7 @@ function Examples() {
         "ERC20 Tokens can be used as currency or as tokens to reward your users via gamification techniques",
       url: "https://docs.dappkit.dev/start-building/how-to-guides/create-an-erc-20-token",
       snippet: crypto,
-      img: "./images/example-crypto-tokens.svg",
+      img: <ExampleCryptoTokens mainColor={comicTheme ? orange : green500} />,
     },
     {
       id: 2,
@@ -37,7 +46,7 @@ function Examples() {
         "dappKit comes preloaded with default DeFi smart contracts you can use to jumpstart your business",
       url: "https://docs.dappkit.dev/start-building/how-to-guides/usage",
       snippet: defi,
-      img: "./images/example-defi.svg",
+      img: <ExampleDefi mainColor={comicTheme ? orange : green500} />,
     },
     {
       id: 3,
@@ -48,7 +57,7 @@ function Examples() {
         "Base your DAO on our Network and take advantage of a community made smart contract",
       url: "https://docs.dappkit.dev/start-building/how-to-guides/usage",
       snippet: dao,
-      img: "./images/example-daos.svg",
+      img: <ExampleDaos mainColor={comicTheme ? orange : green500} />,
     },
   ];
 

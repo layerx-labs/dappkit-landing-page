@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors, sizes } from "../../../styles/design-tokens";
+import { colors, sizes } from "../../../styles/variables";
 
 const { light, dark, purple500 } = colors;
 const { defaultSize, shadow } = sizes;
@@ -8,7 +8,7 @@ const { defaultSize, shadow } = sizes;
 export const Button = styled.a`
   position: relative;
   background-color: ${(props) => (props.color === "dark" ? purple500 : dark)};
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.buttonFont};
   font-size: ${rem("20px", defaultSize)};
   font-feature-settings: "ss01" on;
   color: ${(props) => (props.color === "dark" ? light : dark)};

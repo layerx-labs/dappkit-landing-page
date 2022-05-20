@@ -1,13 +1,20 @@
 import ButtonLink from "../button-link";
-import { DappKit } from "../../../utils/brands";
-import { colors } from "../../../styles/design-tokens";
+import { DappKit, DappKitComic } from "../../../utils/brands";
+import { colors } from "../../../styles/variables";
 import * as Styles from "./styles";
 
 const { dark } = colors;
 
 export function Footer(props) {
-  const { supportTitle, supportSubtitle, docs, community, links, copyright } =
-    props;
+  const {
+    supportTitle,
+    supportSubtitle,
+    docs,
+    community,
+    links,
+    copyright,
+    comicTheme = false,
+  } = props;
 
   return (
     <Styles.Wrapper>
@@ -57,7 +64,7 @@ export function Footer(props) {
         </Styles.Columns>
         <Styles.Copyright>
           <div className="copyright">
-            <DappKit mainColor={dark} />
+            {comicTheme ? <DappKitComic /> : <DappKit mainColor={dark} />}
             <span>{copyright}</span>
           </div>
           <Styles.Social>

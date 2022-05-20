@@ -69,9 +69,7 @@ function Tabs(props) {
                   </pre>
                 )}
                 {codeEditorTab === "inUse" && (
-                  <Styles.InUse>
-                    <img src={content.img} alt={content.title} />
-                  </Styles.InUse>
+                  <Styles.InUse>{content.img}</Styles.InUse>
                 )}
               </Styles.CodeEditorContent>
             </Styles.CodeEditor>

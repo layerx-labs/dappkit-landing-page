@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import {
-  colors,
-  typography,
-  device,
-  sizes,
-} from "../../../styles/design-tokens";
+import { colors, typography, device, sizes } from "../../../styles/variables";
 
-const { dark, green500, light, grey50, purple500 } = colors;
+const { dark, light, grey50, purple500 } = colors;
 const { regular, bold } = typography;
 const { border, defaultSize } = sizes;
 
@@ -15,7 +10,7 @@ export const Wrapper = styled.div`
   border-width: ${rem(border, defaultSize)} 0;
   border-style: solid;
   border-color: ${dark};
-  background-color: ${green500};
+  background-color: ${(props) => props.theme.exampleSectionBg};
   padding: ${rem("100px", defaultSize)} ${rem("30px", defaultSize)};
 
   > div {
@@ -58,7 +53,7 @@ export const TabButton = styled.button`
   display: flex;
   align-items: center;
   padding: 0;
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.exampleTabButtonFont};
   font-size: ${rem("36px", defaultSize)};
   font-weight: ${(props) => (props.active ? bold : regular)};
   font-feature-settings: "ss01" on;
@@ -113,7 +108,7 @@ export const TabContent = styled.div`
 
   .subtitle {
     font-size: ${rem("24px", defaultSize)};
-    font-family: "Space Mono", monospace;
+    font-family: ${(props) => props.theme.exampleTabSubtitleFont};
     font-feature-settings: "ss01" on;
     text-transform: uppercase;
   }
@@ -144,9 +139,10 @@ export const CodeEditorButton = styled.button`
   flex: 1;
   margin: 0;
   border: 0;
-  background-color: ${(props) => (props.active ? purple500 : light)};
+  background-color: ${(props) =>
+    props.active ? props.theme.editorButtonBgActive : light};
   color: ${(props) => (props.active ? light : dark)};
-  font-family: "Space Mono", monospace;
+  font-family: ${(props) => props.theme.editorButtonFont};
   font-size: 1rem;
   font-feature-settings: "ss01" on;
   font-weight: ${bold};
@@ -214,8 +210,8 @@ export const InUse = styled.div`
   background-color: ${light};
   overflow: hidden;
 
-  img {
-    margin: ${rem("-2px", defaultSize)} 0 ${rem("-8px", defaultSize)} 0;
+  svg {
+    margin-bottom: ${rem("-8px", defaultSize)};
     width: 100%;
     height: auto;
   }
