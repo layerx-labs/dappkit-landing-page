@@ -9,14 +9,21 @@ import Bounties from "./components/bounties";
 import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
+import KonamiTrigger from "./components/konami";
 
 function App() {
-  const [hightlightButton, setHighlightButton] = useState(true);
+  const [heroIsVisible, setHeroIsVisible] = useState(true);
+  const [easterEgg, setEasterEgg] = useState(false);
 
   return (
     <>
-      <NavMenu hightlightButton={hightlightButton} />
-      <Intro visible={(visible) => setHighlightButton(visible)} />
+      <KonamiTrigger
+        easterEggIsActive={(easterEggIsActive) =>
+          setEasterEgg(easterEggIsActive)
+        }
+      />
+      <NavMenu heroIsVisible={heroIsVisible} easterEgg={easterEgg} />
+      <Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
       <Examples />
       <Sdk />
       <Features id="features" />

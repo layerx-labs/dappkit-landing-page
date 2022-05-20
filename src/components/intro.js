@@ -4,9 +4,9 @@ import Hero from "./design/hero";
 
 const CoinWrapper = styled.div``;
 
-function Intro({ visible }) {
+function Intro({ isVisible }) {
   return (
-    <InView threshold={0.14} onChange={(inView) => visible(inView)}>
+    <InView threshold={0.14} onChange={(inView) => isVisible(inView)}>
       {({ inView, ref }) => (
         <CoinWrapper ref={ref} inView={inView}>
           <Hero

@@ -2,7 +2,8 @@ import { useState } from "react";
 import Nav from "./design/nav";
 import Banner from "./design/banner";
 
-function NavMenu({ hightlightButton }) {
+function NavMenu(props) {
+  const { heroIsVisible = true, easterEgg = false } = props;
   const [bannerIsVisible, setBannerIsVisible] = useState(true);
   const [drawerOpened, setDrawerOpened] = useState(false);
 
@@ -19,6 +20,7 @@ function NavMenu({ hightlightButton }) {
 
   return (
     <Nav
+      easterEgg={easterEgg}
       banner={
         bannerIsVisible && (
           <Banner
@@ -32,7 +34,7 @@ function NavMenu({ hightlightButton }) {
         )
       }
       menu={menu}
-      actionButtonHighlight={hightlightButton}
+      heroIsVisible={heroIsVisible}
       actionButtonValue="Get Started"
       actionButtonUrl="https://docs.dappkit.dev/start-building"
       github="https://github.com/taikai/dappkit"

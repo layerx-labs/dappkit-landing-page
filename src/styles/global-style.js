@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Space Grotesk', Verdana, Arial, Helvetica, sans-serif;
+    ${"" /* font-family: "Comic Sans MS", "Comic Sans", cursive; */}
     font-size: 1rem;
     font-weight: ${regular};
     font-feature-settings: 'ss04' on;
@@ -67,6 +68,18 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0
+  }
+
+  .sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    white-space: nowrap;
   }
 `;
 

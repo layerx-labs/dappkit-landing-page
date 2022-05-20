@@ -12,7 +12,7 @@ function Tabs(props) {
   const [codeEditorTab, setCodeEditorTab] = useState("code");
 
   useEffect(() => {
-    hljs.initHighlighting();
+    hljs.highlightAll();
   }, [codeEditorTab, content]);
 
   return (
@@ -65,7 +65,7 @@ function Tabs(props) {
               <Styles.CodeEditorContent>
                 {codeEditorTab === "code" && (
                   <pre>
-                    <code className="js">{`${content.snippet}`}</code>
+                    <code className="js">{content.snippet}</code>
                   </pre>
                 )}
                 {codeEditorTab === "inUse" && (

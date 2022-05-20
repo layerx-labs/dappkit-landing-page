@@ -1,16 +1,17 @@
 import ButtonLink from "../button-link";
-import { DappKit } from "../../../utils/brands";
+import { DappKit, DappKitComic } from "../../../utils/brands";
 import * as Styles from "./styles";
 
 function Nav(props) {
   const {
     banner,
     menu,
-    actionButtonHighlight,
+    heroIsVisible = true,
     actionButtonValue,
     actionButtonUrl,
     drawerOpened = false,
     drawerOnClick,
+    easterEgg = false,
   } = props;
 
   return (
@@ -23,7 +24,7 @@ function Nav(props) {
             onClick={drawerOnClick}
             aria-label="Menu"
           />
-          <DappKit />
+          {easterEgg ? <DappKitComic /> : <DappKit />}
           <Styles.Menu>
             <ul>
               {menu &&
@@ -46,7 +47,7 @@ function Nav(props) {
             </ul>
             <ButtonLink
               className="get-started--button"
-              color={actionButtonHighlight ? "light" : "dark"}
+              color={heroIsVisible ? "light" : "dark"}
               url={actionButtonUrl}
               value={actionButtonValue}
               external
