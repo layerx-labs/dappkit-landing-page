@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors, sizes } from "../../../styles/variables";
 
-const { light, dark, purple100, purple500 } = colors;
+const { light, dark } = colors;
 const { defaultSize, border } = sizes;
 
 export const Wrapper = styled.div`

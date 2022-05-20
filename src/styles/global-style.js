@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
 import { colors, typography, device, sizes } from "./variables";
 
-const { fontMono, regular, bold } = typography;
+const { regular, bold } = typography;
 const { purple500, green500, dark } = colors;
 const { defaultSize } = sizes;
 

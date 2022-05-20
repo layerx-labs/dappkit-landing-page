@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { colors, typography, device, sizes } from "../../../styles/variables";
 
-const { dark, light, grey50, purple500 } = colors;
+const { dark, light, grey50 } = colors;
 const { regular, bold } = typography;
 const { border, defaultSize } = sizes;
 
