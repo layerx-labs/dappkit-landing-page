@@ -2,14 +2,7 @@
 import React from "react";
 import ReactGA from 'react-ga';
 
-export const AnalyticsContext = React.createContext({
 
-});
-
-export const useAnalytics = ()=> {    
-    const value = React.useContext(AnalyticsContext);  
-    return value;
-}
 
 class AnalyticsHelper {
   disabled = false;
@@ -47,4 +40,16 @@ class AnalyticsHelper {
   }
 }
 
-export default new AnalyticsHelper();
+
+
+
+export const useAnalytics = ()=> {    
+    const value = React.useContext(AnalyticsContext);  
+    return value;
+}
+
+const helper = new AnalyticsHelper();
+
+export const AnalyticsContext = React.createContext(helper);
+
+export default helper;

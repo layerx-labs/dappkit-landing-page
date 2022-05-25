@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect, useContext} from "react";
 import { ThemeProvider } from "styled-components";
 import { main, comic } from "./styles/design-tokens";
 import GlobalStyle from "./styles/global-style";
@@ -13,27 +14,34 @@ import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
 import KonamiTrigger from "./components/konami";
-import {AnalyticsContext} from "./analytics";
-import analytics from './analytics';
+import { AnalyticsContext }  from "./analytics";
 
 function App() {
   const [heroIsVisible, setHeroIsVisible] = useState(true);
   const [comicTheme, setComicTheme] = useState(false);
+  const analytics = useContext(AnalyticsContext);
   analytics.init({
     debug: process.env.NODE_ENV === "production" ? false: true,
   });
 
   useEffect(() => {
-    analytics.pageview(window.location.pathname + window.location.search);
-  }, []);
+      analytics.pageview(window.location.pathname + window.location.search);
+    }, []
+  );
 
   return (
     <ThemeProvider theme={comicTheme ? comic : main}>
       <AnalyticsContext.Provider value={analytics}>
         <GlobalStyle comicTheme={comicTheme} />
         <KonamiTrigger
-          easterEggIsActive={(easterEggIsActive) =>
-            setComicTheme(easterEggIsActive)
+          easterEggIsActive={(easterEggIsActive) => {
+            setComicTheme(easterEggIsActive);
+            analytics.pushEvent({
+              category: "engagement",
+              action: "konami-challenge-solved", 
+              label: "konami-challenge-solve"
+            });
+            }
           }
         />
         <NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
