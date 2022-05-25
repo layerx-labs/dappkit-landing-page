@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useContext} from "react";
+import { useState, useEffect} from "react";
 import { ThemeProvider } from "styled-components";
 import { main, comic } from "./styles/design-tokens";
 import GlobalStyle from "./styles/global-style";
@@ -14,20 +14,19 @@ import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
 import KonamiTrigger from "./components/konami";
-import { AnalyticsContext }  from "./analytics";
+import { useAnalytics, AnalyticsContext }  from "./analytics";
 
 function App() {
   const [heroIsVisible, setHeroIsVisible] = useState(true);
   const [comicTheme, setComicTheme] = useState(false);
-  const analytics = useContext(AnalyticsContext);
+  const analytics = useAnalytics(AnalyticsContext);
   analytics.init({
     debug: process.env.NODE_ENV === "production" ? false: true,
   });
 
   useEffect(() => {
       analytics.pageview(window.location.pathname + window.location.search);
-    }, []
-  );
+    }, [analytics]);
 
   return (
     <ThemeProvider theme={comicTheme ? comic : main}>

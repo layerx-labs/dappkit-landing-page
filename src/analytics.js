@@ -2,8 +2,6 @@
 import React from "react";
 import ReactGA from 'react-ga';
 
-
-
 class AnalyticsHelper {
   disabled = false;
 
@@ -39,9 +37,6 @@ class AnalyticsHelper {
     this.disabled = disableAnalytics;
   }
 }
-
-
-
 
 export const useAnalytics = ()=> {    
     const value = React.useContext(AnalyticsContext);  
