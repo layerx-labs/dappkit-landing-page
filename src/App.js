@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+import { useState, useEffect} from "react";
 import { ThemeProvider } from "styled-components";
 import { main, comic } from "./styles/design-tokens";
 import GlobalStyle from "./styles/global-style";
@@ -13,29 +14,46 @@ import Pricing from "./components/pricing";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
 import KonamiTrigger from "./components/konami";
+import { useAnalytics, AnalyticsContext }  from "./analytics";
 
 function App() {
   const [heroIsVisible, setHeroIsVisible] = useState(true);
   const [comicTheme, setComicTheme] = useState(false);
+  const analytics = useAnalytics(AnalyticsContext);
+  analytics.init({
+    debug: process.env.NODE_ENV === "production" ? false: true,
+  });
+
+  useEffect(() => {
+      analytics.pageview(window.location.pathname + window.location.search);
+    }, [analytics]);
 
   return (
     <ThemeProvider theme={comicTheme ? comic : main}>
-      <GlobalStyle comicTheme={comicTheme} />
-      <KonamiTrigger
-        easterEggIsActive={(easterEggIsActive) =>
-          setComicTheme(easterEggIsActive)
-        }
-      />
-      <NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
-      <Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
-      <Examples comicTheme={comicTheme} />
-      <Sdk />
-      <Features id="features" />
-      <Templates id="templates" />
-      <Bounties comicTheme={comicTheme} />
-      <Pricing id="pricing" comicTheme={comicTheme} />
-      <Projects />
-      <Footer comicTheme={comicTheme} />
+      <AnalyticsContext.Provider value={analytics}>
+        <GlobalStyle comicTheme={comicTheme} />
+        <KonamiTrigger
+          easterEggIsActive={(easterEggIsActive) => {
+            setComicTheme(easterEggIsActive);
+            analytics.pushEvent({
+              category: "engagement",
+              action: "konami-challenge-solved", 
+              label: "konami-challenge-solve"
+            });
+            }
+          }
+        />
+        <NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
+        <Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
+        <Examples comicTheme={comicTheme} />
+        <Sdk />
+        <Features id="features" />
+        <Templates id="templates" />
+        <Bounties comicTheme={comicTheme} />
+        <Pricing id="pricing" comicTheme={comicTheme} />
+        <Projects />
+        <Footer comicTheme={comicTheme} />
+      </AnalyticsContext.Provider>
     </ThemeProvider>
   );
 }
