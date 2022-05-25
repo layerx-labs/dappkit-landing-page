@@ -37,14 +37,12 @@ class AnalyticsHelper {
     this.disabled = disableAnalytics;
   }
 }
+const helper = new AnalyticsHelper();
+export const AnalyticsContext = React.createContext(helper);
 
 export const useAnalytics = ()=> {    
     const value = React.useContext(AnalyticsContext);  
     return value;
 }
-
-const helper = new AnalyticsHelper();
-
-export const AnalyticsContext = React.createContext(helper);
 
 export default helper;
