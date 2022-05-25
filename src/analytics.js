@@ -7,8 +7,8 @@ class AnalyticsHelper {
 
   init(options) {
     this.disabled = options.disabled || false;
-    this.debug =  options.debug || true;
-    ReactGA.initialize("G-0QEQV7B4HH", {});
+    this.debug =  options.debug || false;
+    ReactGA.initialize("UA-171795897-2", {});
     if (this.debug) {
         console.log(`GA ✅`);    
     }
