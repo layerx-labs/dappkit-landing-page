@@ -26,6 +26,7 @@ function NavMenu(props) {
           <Banner
             value={`Bepro.js is now dappKit`}
             link="Learn more"
+            url="https://bepronetwork.medium.com/dappkit-the-simple-way-to-start-your-web3-project-e874c650f13"
             onClick={() => {
               setBannerIsVisible(false);
             }}

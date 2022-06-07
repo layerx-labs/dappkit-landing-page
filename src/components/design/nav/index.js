@@ -9,6 +9,7 @@ function Nav(props) {
     heroIsVisible = true,
     actionButtonValue,
     actionButtonUrl,
+    github,
     drawerOpened = false,
     drawerOnClick,
     comicTheme = false,
@@ -54,7 +55,7 @@ function Nav(props) {
             />
             <ButtonLink
               className="github--button"
-              url={actionButtonUrl}
+              url={github}
               icon="github"
               external
             />
