@@ -17,45 +17,55 @@ import KonamiTrigger from "./components/konami";
 import { useAnalytics, AnalyticsContext }  from "./analytics";
 
 function App() {
-  const [heroIsVisible, setHeroIsVisible] = useState(true);
-  const [comicTheme, setComicTheme] = useState(false);
-  const analytics = useAnalytics(AnalyticsContext);
-  analytics.init({
-    debug: process.env.NODE_ENV === "production" ? false: true,
-  });
+	const [heroIsVisible, setHeroIsVisible] = useState(true);
+	const [comicTheme, setComicTheme] = useState(false);
+	const analytics = useAnalytics(AnalyticsContext);
+	analytics.init({
+		debug: process.env.NODE_ENV === "production" ? false : true,
+	});
 
-  useEffect(() => {
-      analytics.pageview(window.location.pathname + window.location.search);
-    }, [analytics]);
+	useEffect(() => {
+		analytics.pageview(window.location.pathname + window.location.search);
 
-  return (
-    <ThemeProvider theme={comicTheme ? comic : main}>
-      <AnalyticsContext.Provider value={analytics}>
-        <GlobalStyle comicTheme={comicTheme} />
-        <KonamiTrigger
-          easterEggIsActive={(easterEggIsActive) => {
-            setComicTheme(easterEggIsActive);
-            analytics.pushEvent({
-              category: "engagement",
-              action: "konami-challenge-solved", 
-              label: "konami-challenge-solve"
-            });
-            }
-          }
-        />
-        <NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
-        <Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
-        <Examples comicTheme={comicTheme} />
-        <Sdk />
-        <Features id="features" />
-        <Templates id="templates" />
-        <Bounties comicTheme={comicTheme} />
-        <Pricing id="pricing" comicTheme={comicTheme} />
-        <Projects />
-        <Footer comicTheme={comicTheme} />
-      </AnalyticsContext.Provider>
-    </ThemeProvider>
-  );
+		// manually track pageviews to support hash and query parameters for Google Analytics
+		if (window.location === undefined || window.gtag === undefined) return;
+		window.gtag("event", "page_view", {
+			page_path:
+				window.location.pathname +
+				window.location.search +
+				window.location.hash,
+			page_search: window.location.search,
+			page_hash: window.location.hash,
+		});
+	}, [analytics]);
+
+	return (
+		<ThemeProvider theme={comicTheme ? comic : main}>
+			<AnalyticsContext.Provider value={analytics}>
+				<GlobalStyle comicTheme={comicTheme} />
+				<KonamiTrigger
+					easterEggIsActive={(easterEggIsActive) => {
+						setComicTheme(easterEggIsActive);
+						analytics.pushEvent({
+							category: "engagement",
+							action: "konami-challenge-solved",
+							label: "konami-challenge-solve",
+						});
+					}}
+				/>
+				<NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />
+				<Intro isVisible={(isVisible) => setHeroIsVisible(isVisible)} />
+				<Examples comicTheme={comicTheme} />
+				<Sdk />
+				<Features id="features" />
+				<Templates id="templates" />
+				<Bounties comicTheme={comicTheme} />
+				<Pricing id="pricing" comicTheme={comicTheme} />
+				<Projects />
+				<Footer comicTheme={comicTheme} />
+			</AnalyticsContext.Provider>
+		</ThemeProvider>
+	);
 }
 
 export default App;
