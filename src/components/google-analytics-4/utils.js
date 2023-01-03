@@ -1,4 +1,6 @@
 export function GoogleTag() {
+  if (process.env.NODE_ENV === "production" || window === undefined) return [];
+
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push(arguments);
 }
