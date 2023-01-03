@@ -15,6 +15,7 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 import KonamiTrigger from "./components/konami";
 import { useAnalytics, AnalyticsContext }  from "./analytics";
+import GoogleAnalytics4 from "./components/google-analytics-4";
 
 function App() {
 	const [heroIsVisible, setHeroIsVisible] = useState(true);
@@ -26,21 +27,11 @@ function App() {
 
 	useEffect(() => {
 		analytics.pageview(window.location.pathname + window.location.search);
-
-		// manually track pageviews to support hash and query parameters for Google Analytics
-		if (window.location === undefined || window.gtag === undefined) return;
-		window.gtag("event", "page_view", {
-			page_path:
-				window.location.pathname +
-				window.location.search +
-				window.location.hash,
-			page_search: window.location.search,
-			page_hash: window.location.hash,
-		});
 	}, [analytics]);
 
 	return (
 		<ThemeProvider theme={comicTheme ? comic : main}>
+			<GoogleAnalytics4 />
 			<AnalyticsContext.Provider value={analytics}>
 				<GlobalStyle comicTheme={comicTheme} />
 				<KonamiTrigger
