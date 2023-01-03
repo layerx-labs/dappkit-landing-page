@@ -15,7 +15,9 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 import KonamiTrigger from "./components/konami";
 import { useAnalytics, AnalyticsContext }  from "./analytics";
-import GoogleAnalytics4 from "./components/google-analytics-4";
+import GoogleAnalytics4, {
+	pushGoogleAnalyticsEvent,
+} from "./components/google-analytics-4";
 
 function App() {
 	const [heroIsVisible, setHeroIsVisible] = useState(true);
@@ -32,6 +34,7 @@ function App() {
 	return (
 		<ThemeProvider theme={comicTheme ? comic : main}>
 			<GoogleAnalytics4 />
+
 			<AnalyticsContext.Provider value={analytics}>
 				<GlobalStyle comicTheme={comicTheme} />
 				<KonamiTrigger
@@ -42,6 +45,8 @@ function App() {
 							action: "konami-challenge-solved",
 							label: "konami-challenge-solve",
 						});
+
+						pushGoogleAnalyticsEvent("konami_challenge_solved");
 					}}
 				/>
 				<NavMenu heroIsVisible={heroIsVisible} comicTheme={comicTheme} />

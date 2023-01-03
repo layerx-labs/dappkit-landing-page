@@ -1,14 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-import { useExternalScript } from "../utils/use-external-script";
-import { useLocation } from "../utils/use-location";
+import { useExternalScript } from "../../utils/use-external-script";
+import { useLocation } from "../../utils/use-location";
+import { GoogleTag, pushGoogleAnalyticsEvent } from "./utils";
 
 const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GOOGLE_ANALYTCS_4;
-
-function gtag() {
-	window.dataLayer = window.dataLayer || [];
-	window.dataLayer.push(arguments);
-}
 
 const GoogleAnalytics4 = () => {
 	const location = useLocation();
@@ -20,18 +16,18 @@ const GoogleAnalytics4 = () => {
 	useEffect(() => {
 		if (loadGoogleAnalyticsScript === "loading") return;
 
-		gtag("js", new Date());
+		GoogleTag("js", new Date());
 
-		gtag("config", GOOGLE_ANALYTICS_4_ID, {
+		GoogleTag("config", GOOGLE_ANALYTICS_4_ID, {
 			send_page_view: false,
 		});
 	}, [loadGoogleAnalyticsScript]);
 
 	useEffect(() => {
 		// manually track pageviews to support hash and query parameters for Google Analytics
-		gtag("event", "page_view", {
+		pushGoogleAnalyticsEvent("page_view", {
 			page_path:
-				location.pathname + location.search ?? "" + location.hash ?? "",
+				location.pathname + location?.search ?? "" + location?.hash ?? "",
 			page_search: location.search,
 			page_hash: location.hash,
 		});
