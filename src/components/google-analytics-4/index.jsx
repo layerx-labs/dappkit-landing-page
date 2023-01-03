@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
-import { useExternalScript } from "../../utils/use-external-script";
-import { useLocation } from "../../utils/use-location";
+import { useExternalScript, useLocation } from "../../hooks";
+
 import { GoogleTag, pushGoogleAnalyticsEvent } from "./utils";
 
 const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GOOGLE_ANALYTCS_4;
