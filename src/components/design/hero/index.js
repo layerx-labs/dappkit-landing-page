@@ -1,5 +1,5 @@
-import ButtonLink from "../button-link";
-import * as Styles from "./styles";
+import ButtonLink from '../button-link';
+import * as Styles from './styles';
 
 function Hero(props) {
   const { getStartedUrl, docsUrl, children } = props;
@@ -8,12 +8,7 @@ function Hero(props) {
     <Styles.Wrapper>
       {children}
       <Styles.ActionButtons>
-        <ButtonLink
-          color="dark"
-          url={getStartedUrl}
-          value="Get Started"
-          external
-        />
+        <ButtonLink color="dark" url={getStartedUrl} value="Get Started" external />
         <ButtonLink url={docsUrl} value="Documentation" external />
       </Styles.ActionButtons>
     </Styles.Wrapper>

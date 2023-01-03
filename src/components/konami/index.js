@@ -1,18 +1,18 @@
-import { useEffect, useContext, useState } from "react";
-import KonamiContext from "./context";
-import useHotKey from "./useHotKey";
+import { useEffect, useContext, useState } from 'react';
+import KonamiContext from './context';
+import useHotKey from './useHotKey';
 
 const sequence = [
-  "ArrowUp",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "ArrowLeft",
-  "ArrowRight",
-  "b",
-  "a",
+  'ArrowUp',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowLeft',
+  'ArrowRight',
+  'b',
+  'a',
 ];
 
 const KonamiTrigger = ({ easterEggIsActive }) => {
@@ -23,8 +23,8 @@ const KonamiTrigger = ({ easterEggIsActive }) => {
     /* istanbul ignore else  */
     if (!keysPressed && !hasEasterEgg) {
       console.log(
-        "%cThis site is beautiful, but if you try the Konami Code, we will show you a better version!",
-        "color: white; background: #7761FF; font-family:monospace;"
+        '%cThis site is beautiful, but if you try the Konami Code, we will show you a better version!',
+        'color: white; background: #7761FF; font-family:monospace;',
       );
     }
   });
@@ -38,8 +38,8 @@ const KonamiTrigger = ({ easterEggIsActive }) => {
     setKeysPress(status);
     easterEggIsActive(status);
     console.log(
-      "%cNow we are talking! 💅",
-      "color: white; background: #7761FF; font-family:monospace;"
+      '%cNow we are talking! 💅',
+      'color: white; background: #7761FF; font-family:monospace;',
     );
 
     setEasterEgg();
@@ -47,13 +47,7 @@ const KonamiTrigger = ({ easterEggIsActive }) => {
 
   useHotKey(sequence, () => onUnlock(true));
 
-  return (
-    <div
-      className="sr-only"
-      data-testid="konami-code-trigger"
-      data-unlocked={keysPressed}
-    />
-  );
+  return <div className="sr-only" data-testid="konami-code-trigger" data-unlocked={keysPressed} />;
 };
 
 export default KonamiTrigger;

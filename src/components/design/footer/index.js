@@ -1,7 +1,7 @@
-import ButtonLink from "../button-link";
-import { DappKit, DappKitComic } from "../../../utils/brands";
-import { colors } from "../../../styles/variables";
-import * as Styles from "./styles";
+import ButtonLink from '../button-link';
+import { DappKit, DappKitComic } from '../../../utils/brands';
+import { colors } from '../../../styles/variables';
+import * as Styles from './styles';
 
 const { dark } = colors;
 
@@ -24,12 +24,7 @@ export function Footer(props) {
             <h2>{supportTitle}</h2>
             <p>{supportSubtitle}</p>
             <div>
-              <ButtonLink
-                color="dark"
-                url={community}
-                value="Discord"
-                external
-              />
+              <ButtonLink color="dark" url={community} value="Discord" external />
               <ButtonLink url={docs} value="Documentation" external />
             </div>
           </Styles.Support>
@@ -45,11 +40,7 @@ export function Footer(props) {
                       column.links.map((link, index) => (
                         <li key={index}>
                           {link.external ? (
-                            <a
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                            <a href={link.url} target="_blank" rel="noopener noreferrer">
                               {link.value}
                             </a>
                           ) : (
@@ -68,21 +59,9 @@ export function Footer(props) {
             <span>{copyright}</span>
           </div>
           <Styles.Social>
-            <ButtonLink
-              url="https://github.com/taikai/dappkit"
-              icon="github"
-              external
-            />
-            <ButtonLink
-              url="https://discord.gg/9aUufhzhfm"
-              icon="discord"
-              external
-            />
-            <ButtonLink
-              url="https://twitter.com/bepronet"
-              icon="twitter"
-              external
-            />
+            <ButtonLink url="https://github.com/taikai/dappkit" icon="github" external />
+            <ButtonLink url="https://discord.gg/9aUufhzhfm" icon="discord" external />
+            <ButtonLink url="https://twitter.com/bepronet" icon="twitter" external />
           </Styles.Social>
         </Styles.Copyright>
       </div>

@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 function getCurrentLocation() {
-	return {
-		pathname: window.location.pathname,
-		search: window.location.search,
-		hash: window.location.hash,
-		href: window.location.href,
-	};
+  return {
+    pathname: window.location.pathname,
+    search: window.location.search,
+    hash: window.location.hash,
+    href: window.location.href,
+  };
 }
 
 /**
@@ -20,49 +20,47 @@ const listeners = [];
  * update.
  */
 export function notify() {
-	listeners.forEach((listener) => listener());
+  listeners.forEach((listener) => listener());
 }
 
 export function useLocation() {
-	const [{ pathname, search, hash }, setLocation] = useState(
-		getCurrentLocation()
-	);
+  const [{ pathname, search, hash }, setLocation] = useState(getCurrentLocation());
 
-	useEffect(() => {
-		window.addEventListener("popstate", handleChange);
-		return () => window.removeEventListener("popstate", handleChange);
-	}, []);
+  useEffect(() => {
+    window.addEventListener('popstate', handleChange);
+    return () => window.removeEventListener('popstate', handleChange);
+  }, []);
 
-	useEffect(() => {
-		listeners.push(handleChange);
-		return () => listeners.splice(listeners.indexOf(handleChange), 1);
-	}, []);
+  useEffect(() => {
+    listeners.push(handleChange);
+    return () => listeners.splice(listeners.indexOf(handleChange), 1);
+  }, []);
 
-	function handleChange() {
-		setLocation(getCurrentLocation());
-	}
+  function handleChange() {
+    setLocation(getCurrentLocation());
+  }
 
-	/**
-	 * @param {string} url
-	 */
-	function push(url) {
-		window.history.pushState(null, null, url);
-		notify();
-	}
+  /**
+   * @param {string} url
+   */
+  function push(url) {
+    window.history.pushState(null, null, url);
+    notify();
+  }
 
-	/**
-	 * @param {string} url
-	 */
-	function replace(url) {
-		window.history.replaceState(null, null, url);
-		notify();
-	}
+  /**
+   * @param {string} url
+   */
+  function replace(url) {
+    window.history.replaceState(null, null, url);
+    notify();
+  }
 
-	return {
-		push,
-		replace,
-		pathname,
-		search,
-		hash,
-	};
+  return {
+    push,
+    replace,
+    pathname,
+    search,
+    hash,
+  };
 }

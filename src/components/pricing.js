@@ -1,4 +1,4 @@
-import Price from "./design/price";
+import Price from './design/price';
 
 function Pricing(props) {
   const { id, comicTheme = false } = props;

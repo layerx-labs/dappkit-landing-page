@@ -1,39 +1,38 @@
-import React from "react";
-import { useEffect } from "react";
-import { useExternalScript, useLocation } from "../../hooks";
+import React from 'react';
+import { useEffect } from 'react';
+import { useExternalScript, useLocation } from '../../hooks';
 
-import { GoogleTag, pushGoogleAnalyticsEvent } from "./utils";
+import { GoogleTag, pushGoogleAnalyticsEvent } from './utils';
 
-const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_4;
+const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GA_ID;
 
 const GoogleAnalytics4 = () => {
-	const location = useLocation();
+  const location = useLocation();
 
-	const loadGoogleAnalyticsScript = useExternalScript(
-		`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_4_ID}`
-	);
+  const loadGoogleAnalyticsScript = useExternalScript(
+    `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_4_ID}`,
+  );
 
-	useEffect(() => {
-		if (loadGoogleAnalyticsScript === "loading") return;
+  useEffect(() => {
+    if (loadGoogleAnalyticsScript === 'loading') return;
 
-		GoogleTag("js", new Date());
+    GoogleTag('js', new Date());
 
-		GoogleTag("config", GOOGLE_ANALYTICS_4_ID, {
-			send_page_view: false,
-		});
-	}, [loadGoogleAnalyticsScript]);
+    GoogleTag('config', GOOGLE_ANALYTICS_4_ID, {
+      send_page_view: false,
+    });
+  }, [loadGoogleAnalyticsScript]);
 
-	useEffect(() => {
-		// manually track pageviews to support hash and query parameters for Google Analytics
-		pushGoogleAnalyticsEvent("page_view", {
-			page_path:
-				location.pathname + location?.search ?? "" + location?.hash ?? "",
-			page_search: location.search,
-			page_hash: location.hash,
-		});
-	}, [location]);
+  useEffect(() => {
+    // manually track pageviews to support hash and query parameters for Google Analytics
+    pushGoogleAnalyticsEvent('page_view', {
+      page_path: location.pathname + location?.search ?? '' + location?.hash ?? '',
+      page_search: location.search,
+      page_hash: location.hash,
+    });
+  }, [location]);
 
-	return <></>;
+  return <></>;
 };
 
 export default GoogleAnalytics4;

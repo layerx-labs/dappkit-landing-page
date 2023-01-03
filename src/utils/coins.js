@@ -1,8 +1,4 @@
-export const Coin1 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin1 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="170"
@@ -36,11 +32,7 @@ export const Coin1 = ({
   </svg>
 );
 
-export const Coin2 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin2 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="106"
@@ -74,11 +66,7 @@ export const Coin2 = ({
   </svg>
 );
 
-export const Coin3 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin3 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="85"
@@ -112,11 +100,7 @@ export const Coin3 = ({
   </svg>
 );
 
-export const Coin4 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin4 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="135"
@@ -150,11 +134,7 @@ export const Coin4 = ({
   </svg>
 );
 
-export const Coin5 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin5 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="150"
@@ -188,11 +168,7 @@ export const Coin5 = ({
   </svg>
 );
 
-export const Coin6 = ({
-  className,
-  mainColor = "#BAFF62",
-  sideColor = "#95CC4E",
-}) => (
+export const Coin6 = ({ className, mainColor = '#BAFF62', sideColor = '#95CC4E' }) => (
   <svg
     className={className}
     width="126"

@@ -1,8 +1,8 @@
 export function GoogleTag() {
-  if (process.env.NODE_ENV === "production" || window === undefined) return [];
+  if (process.env.NODE_ENV === 'production' || window === undefined) return [];
 
-	window.dataLayer = window.dataLayer || [];
-	window.dataLayer.push(arguments);
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(arguments);
 }
 
 /**
@@ -12,4 +12,4 @@ export function GoogleTag() {
  * @returns
  */
 export const pushGoogleAnalyticsEvent = (eventName, options = {}) =>
-	GoogleTag("event", eventName, options);
+  GoogleTag('event', eventName, options);

@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import Section from "./design/section";
-import CardLink from "./design/card-link";
-import { sizes } from "../styles/variables";
-import { Nodejs, Nextjs, Angular } from "../utils/brands";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Section from './design/section';
+import CardLink from './design/card-link';
+import { sizes } from '../styles/variables';
+import { Nodejs, Nextjs, Angular } from '../utils/brands';
 
 const { defaultSize } = sizes;
 
 const Grid = styled.ul`
-  margin: ${rem("-25px", defaultSize)} 0;
+  margin: ${rem('-25px', defaultSize)} 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,25 +16,25 @@ const Grid = styled.ul`
 
   li {
     list-style: none;
-    margin: ${rem("25px", defaultSize)};
+    margin: ${rem('25px', defaultSize)};
   }
 `;
 
 function Templates({ id }) {
   const templates = [
     {
-      name: "Node.js",
-      url: "https://stackblitz.com/edit/node-b3cgaa?file=index.js",
+      name: 'Node.js',
+      url: 'https://stackblitz.com/edit/node-b3cgaa?file=index.js',
       img: <Nodejs />,
     },
     {
-      name: "Next.js",
-      url: "https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js",
+      name: 'Next.js',
+      url: 'https://stackblitz.com/edit/nextjs-nzulwe?file=pages/index.js',
       img: <Nextjs />,
     },
     {
-      name: "Angular",
-      url: "https://github.com/taikai/dappkit-testflight",
+      name: 'Angular',
+      url: 'https://github.com/taikai/dappkit-testflight',
       img: <Angular />,
     },
   ];

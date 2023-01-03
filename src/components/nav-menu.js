@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Nav from "./design/nav";
-import Banner from "./design/banner";
+import { useState } from 'react';
+import Nav from './design/nav';
+import Banner from './design/banner';
 
 function NavMenu(props) {
   const { heroIsVisible = true, comicTheme = false } = props;
@@ -8,14 +8,14 @@ function NavMenu(props) {
   const [drawerOpened, setDrawerOpened] = useState(false);
 
   const menu = [
-    { value: "Features", url: "#features" },
-    { value: "Templates", url: "#templates" },
+    { value: 'Features', url: '#features' },
+    { value: 'Templates', url: '#templates' },
     {
-      value: "Community",
-      url: "https://discord.gg/9aUufhzhfm",
+      value: 'Community',
+      url: 'https://discord.gg/9aUufhzhfm',
       external: true,
     },
-    { value: "Docs", url: "https://sdk.dappkit.dev", external: true },
+    { value: 'Docs', url: 'https://sdk.dappkit.dev', external: true },
   ];
 
   return (

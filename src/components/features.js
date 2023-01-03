@@ -1,22 +1,22 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import Section from "./design/section";
-import Card from "./design/card";
-import { sizes, device } from "../styles/variables";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Section from './design/section';
+import Card from './design/card';
+import { sizes, device } from '../styles/variables';
 
 const { defaultSize } = sizes;
 
 const Grid = styled.div`
-  margin: 0 ${rem("-30px", defaultSize)};
+  margin: 0 ${rem('-30px', defaultSize)};
   display: grid;
   grid-auto-flow: column;
-  grid-gap: ${rem("30px", defaultSize)};
+  grid-gap: ${rem('30px', defaultSize)};
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: ${rem("60px", defaultSize)};
+  scroll-padding-left: ${rem('60px', defaultSize)};
 
   &::-webkit-scrollbar {
     display: none;
@@ -24,18 +24,18 @@ const Grid = styled.div`
 
   &:before,
   &:after {
-    content: "";
-    width: ${rem("15px", defaultSize)};
+    content: '';
+    width: ${rem('15px', defaultSize)};
   }
 
   > div {
-    width: calc(100vw - ${rem("120px", defaultSize)});
+    width: calc(100vw - ${rem('120px', defaultSize)});
     scroll-snap-align: start;
   }
 
   @media ${device.s} {
     > div {
-      width: calc(100vw - ${rem("300px", defaultSize)});
+      width: calc(100vw - ${rem('300px', defaultSize)});
     }
   }
 
@@ -94,64 +94,64 @@ const Grid = styled.div`
 function Features({ id }) {
   const items = [
     {
-      title: "Connect to an EVM Blockchain node in 3 lines of code",
+      title: 'Connect to an EVM Blockchain node in 3 lines of code',
       description: [
-        "Connecting is as easy as providing a RPC Url and (optionally) a private key to the ",
+        'Connecting is as easy as providing a RPC Url and (optionally) a private key to the ',
         <span key={1}>WebConnection</span>,
-        " and calling a ",
+        ' and calling a ',
         <span key={2}>connect</span>,
-        " method.",
+        ' method.',
       ],
     },
     {
-      title: "Interact with EVM Smart Contract methods and public data",
+      title: 'Interact with EVM Smart Contract methods and public data',
       description: [
-        "The ",
+        'The ',
         <span key={1}>Model</span>,
-        " class provides two important methods, ",
+        ' class provides two important methods, ',
         <span key={2}>sendTx</span>,
-        " and ",
+        ' and ',
         <span key={3}>callTx</span>,
-        " with which its possible to interact with any deployed contract on the blockchain; The same class also provides all methods, and typings, under the ",
+        ' with which its possible to interact with any deployed contract on the blockchain; The same class also provides all methods, and typings, under the ',
         <span key={4}>contract.methods</span>,
-        " property getter.",
+        ' property getter.',
       ],
     },
     {
-      title: "Deploy standard and custom contracts",
+      title: 'Deploy standard and custom contracts',
       description: [
-        "ERC-20, ERC-1155, ERC-721, or other custom contracts can be deployed to any EVM compatible blockchain. By providing the ",
+        'ERC-20, ERC-1155, ERC-721, or other custom contracts can be deployed to any EVM compatible blockchain. By providing the ',
         <span key={1}>Model</span>,
-        " with a ",
+        ' with a ',
         <span key={2}>Web3Connection</span>,
-        " and an ABI array, the ",
+        ' and an ABI array, the ',
         <span key={3}>deploy()</span>,
-        " function becomes available, providing the required arguments will return a ",
+        ' function becomes available, providing the required arguments will return a ',
         <span key={4}>TransactionReceipt</span>,
-        " holding the new ",
+        ' holding the new ',
         <span key={5}>contractAddress</span>,
-        ". You can even use dappKit to create custom typescript or javascript scripts to interact with any EVM blockchain",
+        '. You can even use dappKit to create custom typescript or javascript scripts to interact with any EVM blockchain',
       ],
     },
     {
-      title: "Web3 Utilities",
+      title: 'Web3 Utilities',
       description: [
-        "dappKit provides its own utilities as well as the ones from ",
+        'dappKit provides its own utilities as well as the ones from ',
         <span key={1}>web3js</span>,
-        ", where first you need to import individually when used and the latter is bundled under the ",
+        ', where first you need to import individually when used and the latter is bundled under the ',
         <span key={2}>Web3Connection.Web3.utils</span>,
-        " property.",
+        ' property.',
       ],
     },
     {
-      title: "Wallet Integration ",
+      title: 'Wallet Integration ',
       description:
-        "Integrates easily with Metamask to sign and submit smart contract transactions in your javascript dapp.",
+        'Integrates easily with Metamask to sign and submit smart contract transactions in your javascript dapp.',
     },
     {
-      title: "Generate a wrapper for your EVM contract",
+      title: 'Generate a wrapper for your EVM contract',
       description:
-        "Interact with your smart contract on your dapp by generating a typescript/javascript wrapper.",
+        'Interact with your smart contract on your dapp by generating a typescript/javascript wrapper.',
     },
   ];
 
@@ -161,12 +161,7 @@ function Features({ id }) {
         {items &&
           Array.isArray(items) &&
           items.map((item, index) => (
-            <Card
-              key={index}
-              color="dark"
-              title={item.title}
-              description={item.description}
-            />
+            <Card key={index} color="dark" title={item.title} description={item.description} />
           ))}
       </Grid>
     </Section>
