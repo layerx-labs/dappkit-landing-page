@@ -1,6 +1,6 @@
-import ButtonLink from "../button-link";
-import { DappKit, DappKitComic } from "../../../utils/brands";
-import * as Styles from "./styles";
+import ButtonLink from '../button-link';
+import { DappKit, DappKitComic } from '../../../utils/brands';
+import * as Styles from './styles';
 
 function Nav(props) {
   const {
@@ -21,7 +21,7 @@ function Nav(props) {
         {banner && <div>{banner}</div>}
         <Styles.Nav>
           <Styles.HamburgerButton
-            className={drawerOpened ? "opened" : undefined}
+            className={drawerOpened ? 'opened' : undefined}
             onClick={drawerOnClick}
             aria-label="Menu"
           />
@@ -33,11 +33,7 @@ function Nav(props) {
                 menu.map((item, index) => (
                   <li key={index}>
                     {item.external ? (
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
                         {item.value}
                       </a>
                     ) : (
@@ -48,21 +44,16 @@ function Nav(props) {
             </ul>
             <ButtonLink
               className="get-started--button"
-              color={heroIsVisible ? "light" : "dark"}
+              color={heroIsVisible ? 'light' : 'dark'}
               url={actionButtonUrl}
               value={actionButtonValue}
               external
             />
-            <ButtonLink
-              className="github--button"
-              url={github}
-              icon="github"
-              external
-            />
+            <ButtonLink className="github--button" url={github} icon="github" external />
           </Styles.Menu>
         </Styles.Nav>
       </Styles.Wrapper>
-      <Styles.Drawer className={drawerOpened ? "opened" : undefined}>
+      <Styles.Drawer className={drawerOpened ? 'opened' : undefined}>
         <ul>
           {menu &&
             Array.isArray(menu) &&
@@ -81,11 +72,7 @@ function Nav(props) {
             value={actionButtonValue}
             external
           />
-          <ButtonLink
-            url="https://github.com/taikai/dappkit"
-            value="GitHub"
-            external
-          />
+          <ButtonLink url="https://github.com/taikai/dappkit" value="GitHub" external />
         </div>
       </Styles.Drawer>
     </>

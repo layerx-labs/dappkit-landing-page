@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import { colors, sizes } from "../../../styles/variables";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import { colors, sizes } from '../../../styles/variables';
 
 const { light, dark } = colors;
 const { defaultSize, border } = sizes;
@@ -11,17 +11,17 @@ export const Wrapper = styled.div`
   background-color: ${light};
   display: flex;
   flex-direction: column;
-  padding: ${rem("50px", defaultSize)};
+  padding: ${rem('50px', defaultSize)};
   text-align: center;
-  box-shadow: ${light} ${rem("10px", defaultSize)} ${rem("10px", defaultSize)} 0
-      ${rem("-2px", defaultSize)},
-    ${dark} ${rem("10px", defaultSize)} ${rem("10px", defaultSize)};
+  box-shadow: ${light} ${rem('10px', defaultSize)} ${rem('10px', defaultSize)} 0
+      ${rem('-2px', defaultSize)},
+    ${dark} ${rem('10px', defaultSize)} ${rem('10px', defaultSize)};
 
   > div:first-child {
     flex: 1;
 
     h3 {
-      margin-bottom: ${rem("20px", defaultSize)};
+      margin-bottom: ${rem('20px', defaultSize)};
       color: ${dark};
 
       span {
@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
     }
 
     p {
-      margin-bottom: ${rem("40px", defaultSize)};
+      margin-bottom: ${rem('40px', defaultSize)};
       color: ${dark};
 
       span {

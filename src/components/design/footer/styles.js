@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import { colors, device, sizes, typography } from "../../../styles/variables";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import { colors, device, sizes, typography } from '../../../styles/variables';
 
 const { light, dark, purple500 } = colors;
 const { bold } = typography;
@@ -8,12 +8,12 @@ const { defaultSize } = sizes;
 
 export const Wrapper = styled.footer`
   background-color: ${light};
-  padding: ${rem("60px", defaultSize)} ${rem("30px", defaultSize)};
+  padding: ${rem('60px', defaultSize)} ${rem('30px', defaultSize)};
   color: ${dark};
 
   > div {
     margin: 0 auto;
-    max-width: ${rem("1240px", defaultSize)};
+    max-width: ${rem('1240px', defaultSize)};
   }
 
   ul {
@@ -34,26 +34,26 @@ export const Columns = styled.div`
 
 export const Support = styled.div`
   flex: 1;
-  margin-bottom: ${rem("50px")};
+  margin-bottom: ${rem('50px')};
 
   p {
-    margin-top: ${rem("10px", defaultSize)};
+    margin-top: ${rem('10px', defaultSize)};
     font-family: ${(props) => props.theme.footerSupportSubtitle};
-    font-size: ${rem("24px", defaultSize)};
-    font-feature-settings: "ss01" on;
+    font-size: ${rem('24px', defaultSize)};
+    font-feature-settings: 'ss01' on;
     line-height: 1.5;
   }
 
   div {
-    margin-top: ${rem("30px", defaultSize)};
+    margin-top: ${rem('30px', defaultSize)};
     display: flex;
     flex-wrap: wrap;
 
     a {
-      margin-top: ${rem("15px")};
+      margin-top: ${rem('15px')};
 
       &:not(:last-child) {
-        margin-right: ${rem("30px")};
+        margin-right: ${rem('30px')};
       }
     }
   }
@@ -66,23 +66,23 @@ export const Support = styled.div`
 export const Menu = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: ${rem("50px")};
+  grid-gap: ${rem('50px')};
   font-family: ${(props) => props.theme.footerMenuFont};
-  font-feature-settings: "ss01" on;
+  font-feature-settings: 'ss01' on;
 
   @media (min-width: 1080px) {
-    grid-template-columns: repeat(2, ${rem("180px", defaultSize)});
+    grid-template-columns: repeat(2, ${rem('180px', defaultSize)});
   }
 
   @media ${device.l} {
-    grid-gap: ${rem("100px")};
+    grid-gap: ${rem('100px')};
   }
 `;
 
 export const ColumnMenu = styled.div`
   ul {
     li {
-      font-size: ${rem("14px", defaultSize)};
+      font-size: ${rem('14px', defaultSize)};
 
       a {
         color: ${dark};
@@ -95,40 +95,40 @@ export const ColumnMenu = styled.div`
       }
 
       &:not(:last-child) {
-        margin-bottom: ${rem("10px", defaultSize)};
+        margin-bottom: ${rem('10px', defaultSize)};
       }
     }
   }
 `;
 
 export const Copyright = styled.div`
-  margin-top: ${rem("100px", defaultSize)};
+  margin-top: ${rem('100px', defaultSize)};
   display: flex;
   flex-direction: column;
 
   > div.copyright {
     flex: 1;
     order: 2;
-    margin-top: ${rem("100px", defaultSize)};
+    margin-top: ${rem('100px', defaultSize)};
 
     svg {
       width: auto;
-      height: ${rem("40px", defaultSize)};
+      height: ${rem('40px', defaultSize)};
     }
 
     span {
       display: flex;
       align-items: center;
-      font-size: ${rem("14px", defaultSize)};
+      font-size: ${rem('14px', defaultSize)};
 
       svg {
-        margin: 0 ${rem("5px", defaultSize)};
+        margin: 0 ${rem('5px', defaultSize)};
         width: auto;
-        height: ${rem("24px", defaultSize)};
+        height: ${rem('24px', defaultSize)};
       }
 
       a {
-        margin-left: ${rem("4px", defaultSize)};
+        margin-left: ${rem('4px', defaultSize)};
         color: ${dark};
         font-weight: ${bold};
         text-decoration: none;
@@ -158,17 +158,17 @@ export const Social = styled.div`
 
   a {
     span {
-      width: ${rem("32px", defaultSize)};
-      height: ${rem("32px", defaultSize)};
+      width: ${rem('32px', defaultSize)};
+      height: ${rem('32px', defaultSize)};
 
       svg {
-        width: ${rem("18px", defaultSize)};
-        height: ${rem("18px", defaultSize)};
+        width: ${rem('18px', defaultSize)};
+        height: ${rem('18px', defaultSize)};
       }
     }
 
     &:not(:last-child) {
-      margin-right: ${rem("20px", defaultSize)};
+      margin-right: ${rem('20px', defaultSize)};
     }
   }
 

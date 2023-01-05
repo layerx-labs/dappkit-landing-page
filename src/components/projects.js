@@ -1,16 +1,9 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import Section from "./design/section";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Section from './design/section';
 // import ButtonLink from "./design/button-link";
-import {
-  Polkamarkets,
-  RealFevr,
-  Lepricon,
-  Onda,
-  Bepro,
-  Subvisual,
-} from "../utils/brands";
-import { sizes, colors } from "../styles/variables";
+import { Polkamarkets, RealFevr, Lepricon, Onda, Bepro, Subvisual } from '../utils/brands';
+import { sizes, colors } from '../styles/variables';
 
 const { defaultSize } = sizes;
 const { purple500 } = colors;
@@ -23,9 +16,9 @@ const Grid = styled.ul`
   justify-content: center;
 
   li {
-    width: ${rem("300px", defaultSize)};
+    width: ${rem('300px', defaultSize)};
     list-style: none;
-    padding: ${rem("30px", defaultSize)};
+    padding: ${rem('30px', defaultSize)};
 
     a {
       display: flex;
@@ -38,14 +31,14 @@ const Grid = styled.ul`
     svg {
       width: 100%;
       height: 100%;
-      max-width: ${rem("250px", defaultSize)};
-      max-height: ${rem("50px", defaultSize)};
+      max-width: ${rem('250px', defaultSize)};
+      max-height: ${rem('50px', defaultSize)};
     }
   }
 
   & + a {
     display: inline-block;
-    margin: ${rem("60px", defaultSize)} 0 0 50%;
+    margin: ${rem('60px', defaultSize)} 0 0 50%;
     transform: translateX(-50%);
     background-color: ${purple500};
 
@@ -57,12 +50,12 @@ const Grid = styled.ul`
 
 function Projects() {
   const projects = [
-    { url: "https://polkamarkets.com", img: <Polkamarkets /> },
-    { url: "https://realfevr.com", img: <RealFevr /> },
-    { url: "https://subvisual.com", img: <Subvisual /> },
-    { url: "https://ondastudio.co", img: <Onda /> },
-    { url: "https://lepricon.io", img: <Lepricon /> },
-    { url: "https://bepro.network", img: <Bepro /> },
+    { url: 'https://polkamarkets.com', img: <Polkamarkets /> },
+    { url: 'https://realfevr.com', img: <RealFevr /> },
+    { url: 'https://subvisual.com', img: <Subvisual /> },
+    { url: 'https://ondastudio.co', img: <Onda /> },
+    { url: 'https://lepricon.io', img: <Lepricon /> },
+    { url: 'https://bepro.network', img: <Bepro /> },
   ];
 
   return (

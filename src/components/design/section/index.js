@@ -1,14 +1,7 @@
-import * as Styles from "./styles";
+import * as Styles from './styles';
 
 function Section(props) {
-  const {
-    id,
-    color = "light",
-    align = "center",
-    title,
-    subtitle,
-    children,
-  } = props;
+  const { id, color = 'light', align = 'center', title, subtitle, children } = props;
 
   return (
     <Styles.Wrapper id={id} color={color} align={align}>

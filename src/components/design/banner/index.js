@@ -1,6 +1,6 @@
-import Icon from "../icon";
-import * as Styles from "./styles";
-import { colors } from "../../../styles/variables";
+import Icon from '../icon';
+import * as Styles from './styles';
+import { colors } from '../../../styles/variables';
 
 const { light } = colors;
 

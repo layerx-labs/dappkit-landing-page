@@ -1,5 +1,5 @@
-import ButtonLink from "../button-link";
-import * as Styles from "./styles";
+import ButtonLink from '../button-link';
+import * as Styles from './styles';
 
 function CardCta(props) {
   const { title, description, ctaUrl, ctaValue } = props;

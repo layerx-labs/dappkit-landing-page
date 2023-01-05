@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { useMemo, useEffect, useState } from "react";
+import { useMemo, useEffect, useState } from 'react';
 
 /**
  * Takes in a sequence of hotKeys and creates a closure by returning
@@ -44,10 +44,7 @@ export const createKeyChecker = (hotkeys = []) => {
  */
 function useHotKey(hotKeys, onMatch) {
   const [hasMatch, setHasMatch] = useState(false);
-  const keyCrawler = useMemo(
-    () => createKeyChecker([].concat(hotKeys)),
-    [hotKeys]
-  );
+  const keyCrawler = useMemo(() => createKeyChecker([].concat(hotKeys)), [hotKeys]);
 
   /**
    * @param {KeyboardEvent} event
@@ -60,8 +57,8 @@ function useHotKey(hotKeys, onMatch) {
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", listen);
-    return () => window.removeEventListener("keydown", listen);
+    window.addEventListener('keydown', listen);
+    return () => window.removeEventListener('keydown', listen);
   });
 
   return hasMatch;

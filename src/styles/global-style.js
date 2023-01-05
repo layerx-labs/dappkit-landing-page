@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { rem } from "polished";
-import { colors, typography, device, sizes } from "./variables";
+import { createGlobalStyle } from 'styled-components';
+import { rem } from 'polished';
+import { colors, typography, device, sizes } from './variables';
 
 const { regular, bold } = typography;
 const { purple500, green500, dark } = colors;
@@ -43,19 +43,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: ${rem("50px", defaultSize)};
+    font-size: ${rem('50px', defaultSize)};
 
     @media ${device.m} {
-      font-size: ${rem("96px", defaultSize)};
+      font-size: ${rem('96px', defaultSize)};
     }
   }
 
   h2 {
-    font-size: ${rem("36px", defaultSize)};
+    font-size: ${rem('36px', defaultSize)};
   }
 
   h3 {
-    font-size: ${rem("28px", defaultSize)};
+    font-size: ${rem('28px', defaultSize)};
     line-height: 1.5;
   }
 

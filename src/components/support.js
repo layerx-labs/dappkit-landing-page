@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { rem } from "polished";
-import Section from "./design/section";
-import ButtonLink from "./design/button-link";
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Section from './design/section';
+import ButtonLink from './design/button-link';
 
 const Buttons = styled.div`
   display: flex;
 
   a:not(:last-child) {
-    margin-right: ${rem("30px")};
+    margin-right: ${rem('30px')};
   }
 `;
 

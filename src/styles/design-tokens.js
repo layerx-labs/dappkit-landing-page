@@ -1,18 +1,8 @@
-import { typography, colors } from "./variables";
+import { typography, colors } from './variables';
 
 const { fontDefault, fontMono, fontComic } = typography;
 
-const {
-  dark,
-  purple100,
-  purple500,
-  green500,
-  green900,
-  orange,
-  brown,
-  blue,
-  lightBlue,
-} = colors;
+const { dark, purple100, purple500, green500, green900, orange, brown, blue, lightBlue } = colors;
 
 export const main = {
   defaultFont: fontDefault,
