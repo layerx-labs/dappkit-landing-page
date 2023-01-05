@@ -4,7 +4,7 @@ import { useExternalScript, useLocation } from '../../hooks';
 
 import { GoogleTag, pushGoogleAnalyticsEvent } from './utils';
 
-const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GA_ID;
+const GOOGLE_ANALYTICS_4_ID = process.env.REACT_APP_GA_ID || 'G-GQSKHBQJ71';
 
 const GoogleAnalytics4 = () => {
   const location = useLocation();
