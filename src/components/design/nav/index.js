@@ -59,7 +59,12 @@ function Nav(props) {
             Array.isArray(menu) &&
             menu.map((item, index) => (
               <li key={index}>
-                <a href={item.url}  rel="noopener noreferrer" onClick={drawerOnClick}>
+                <a
+                  href={item.url}
+                  rel="noopener noreferrer"
+                  target={(item.value === 'Community' || item.value === 'Docs') ? '_blank' : null}
+                  onClick={drawerOnClick}
+                >
                   {item.value}
                 </a>
               </li>
