@@ -59,7 +59,7 @@ function Nav(props) {
             Array.isArray(menu) &&
             menu.map((item, index) => (
               <li key={index}>
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                <a href={item.url}  rel="noopener noreferrer" onClick={drawerOnClick}>
                   {item.value}
                 </a>
               </li>
