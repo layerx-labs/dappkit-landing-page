@@ -34,7 +34,7 @@ function Templates({ id }) {
     },
     {
       name: 'Angular',
-      url: 'https://github.com/taikai/dappkit-testflight',
+      url: 'https://github.com/layerx-labs/dappkit-testflight',
       img: <Angular />,
     },
   ];
