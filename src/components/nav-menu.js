@@ -37,7 +37,7 @@ function NavMenu(props) {
       heroIsVisible={heroIsVisible}
       actionButtonValue="Get Started"
       actionButtonUrl="https://docs.dappkit.dev/start-building"
-      github="https://github.com/taikai/dappkit"
+      github="https://github.com/layerx-labs/dappkit"
       drawerOpened={drawerOpened}
       drawerOnClick={() => {
         setDrawerOpened(!drawerOpened);
