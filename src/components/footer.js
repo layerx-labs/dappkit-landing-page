@@ -68,7 +68,7 @@ function Footer({ comicTheme = false }) {
           <span>
             by
             <a href="https://taikai.network" target="_blank" rel="noopener noreferrer">
-              TAIKAI — Builder Hub
+              LayerX Labs — Web3 Builder Hub
             </a>
           </span>
         </>
