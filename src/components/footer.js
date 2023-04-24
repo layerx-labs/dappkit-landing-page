@@ -16,8 +16,8 @@ function Footer({ comicTheme = false }) {
           external: true,
         },
         {
-          value: 'About',
-          url: 'https://taikai.network/about-us',
+          value: 'About Us',
+          url: 'https://layerx.xyz/about',
           external: true,
         },
         {
