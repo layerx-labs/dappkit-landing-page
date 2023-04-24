@@ -67,7 +67,7 @@ function Footer({ comicTheme = false }) {
           </svg>
           <span>
             by
-            <a href="https://taikai.network" target="_blank" rel="noopener noreferrer">
+            <a href="https://layerx.xyz" target="_blank" rel="noopener noreferrer">
               LayerX Labs — Web3 Builder Hub
             </a>
           </span>
