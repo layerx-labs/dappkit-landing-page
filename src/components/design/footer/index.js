@@ -59,7 +59,7 @@ export function Footer(props) {
             <span>{copyright}</span>
           </div>
           <Styles.Social>
-            <ButtonLink url="https://github.com/taikai/dappkit" icon="github" external />
+            <ButtonLink url="https://github.com/layerx-labs/dappkit" icon="github" external />
             <ButtonLink url="https://discord.gg/9aUufhzhfm" icon="discord" external />
             <ButtonLink url="https://twitter.com/bepronet" icon="twitter" external />
           </Styles.Social>
