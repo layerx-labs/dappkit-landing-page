@@ -12,7 +12,7 @@ function NavMenu(props) {
     { value: 'Templates', url: '#templates' },
     {
       value: 'Community',
-      url: 'https://discord.gg/9aUufhzhfm',
+      url: 'https://discord.gg/LayerX',
       external: true,
     },
     { value: 'Docs', url: 'https://sdk.dappkit.dev', external: true },
