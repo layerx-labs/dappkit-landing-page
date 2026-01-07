@@ -65,8 +65,9 @@ function Nav(props) {
                   </a>
                 ) : (
                   <a href={item.url} onClick={drawerOnClick}>
-                  {item.value}
-                </a>
+                    {item.value}
+                  </a>
+                )}
               </li>
             ))}
         </ul>
